@@ -1,0 +1,28 @@
+#!/bin/bash
+echo "indiquer le dossier d'urls : ";
+read DOSSIERURLS ;
+echo "indiquer le dossier de reception du tableau : ";
+read fichier_tableau ;
+echo "le dossier d'URLs : $DOSSIERURLS" ;
+echo "le fichier contenant le tableau : $fichier_tableau" ;
+cpttableau=1 ;
+echo "<html><head></head><body>" > $fichier_tableau ;
+for fichier in `ls $DOSSIERURLS`
+{
+	compteur=1 ;
+	echo "<table align=\"center\" border =\"1\">" >> $fichier_tableau ;
+	echo "<tr><td colspan=\"3\">tableau $cpttableau</td></tr>" >> $fichier_tableau ;
+	for line in `cat $DOSSIERURLS/$fichier`
+	{
+		wget $line -O ../pages-aspirees/$cpttableau-$compteur.html ;	
+		echo "<tr><td>$compteur</td><td><a href=\"$line\">lien $compteur</a></td><td><a href=\"../pages-aspirees/$cpttableau-$compteur.html\"> PA $cpttableau-$compteur</a></td></tr>" >>$fichier_tableau ;
+		let "compteur=compteur+1" ;
+	}
+	echo "</table>" >> $fichier_tableau ;
+	let "cpttableau=cpttableau+1";
+}
+echo "</body></html>" >> $fichier_tableau ;
+
+
+
+

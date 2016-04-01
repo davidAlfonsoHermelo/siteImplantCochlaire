@@ -1,0 +1,82 @@
+#!/bin/bash
+#la ligne 3 à 6 permettent de dire où prendre les infos et où les mettre
+echo "indiquer le dossier d'urls : ";
+DOSSIERURLS=../urls/
+#read DOSSIERURLS ;
+echo "indiquer le dossier de reception du tableau : ";
+read fichier_tableau ;
+#les lignes de 8 et 9, pour renommer les variables
+echo "le dossier d'URLs : $DOSSIERURLS" ;
+echo "le fichier contenant le tableau : $fichier_tableau" ;
+#compteur de tableau
+cpttableau=1 ;
+#début du script pour le html
+echo "<html><head></head><body>" > $fichier_tableau ;
+#pour chacun des fichiers, dans le dossier urls, fais....
+
+# boucle generale : creation tableaux, aspiration pages, dump, etc...
+for fichier in `ls $DOSSIERURLS`
+{
+	compteur_ligne=1 ;
+	echo "<table align=\"center\" border =\"1\">" >> $fichier_tableau ;
+	echo "<tr><td colspan=\"5\">tableau $cpttableau</td></tr>" >> $fichier_tableau ;
+	
+	# Pour chaque URL dans chaque fichier (ici, fr, en, es)
+	for line in `cat $DOSSIERURLS/$fichier`
+	{
+		wget $line -O ../pages-aspirees/$cpttableau-$compteur_ligne.html ; # ou curl
+
+	# $? exprime comment l'execution de la derniere commande s'est déroulé -> 0 si aucun problème
+		if [ $? == 0 ] 
+			then 
+			encodagefile=$(file -i ../pages-aspirees/$cpttableau-$compteur_ligne.html | cut -f2 -d=); # file -i renvoie l'encodage de la page
+			echo $encodagefile ;
+
+			# si l'encodage est en utf-8 alors on dump la page avec la commande lynx
+			if [ $encodagefile == "utf-8" ]
+				then 
+				lynx -dump -nolist -assume_charset =$encodagefile $line > ../dump-text/$cpttableau-$compteur_ligne.txt ;
+				echo "<tr><td>$compteur_ligne</td><td><a href=\"$line\">lien $compteur</a></td><td><a href=\"../pages-aspirees/$cpttableau-$compteur_ligne.html\"> PA $cpttableau-$compteur_ligne</a></td><td>$encodagefile</td><td><a href=\"../dump-text/$cpttableau-$compteur_ligne.txt\">DUMP $cpttableau-$compteur_ligne</a></td></tr>" >> $fichier_tableau ;
+			
+			# Sinon on cherche l'encodage renvoyé par file dans la liste des encodages conus par iconv
+			else
+				encodageiconv=$(iconv -l | egrep -o "[\-A-Z0-9\:]+" | egrep -i ("\b$encodagefile\b"))
+
+				# Si $encodage n'est pas connu d'iconv on va chercher la declaration de l'encodage dans la page aspirée
+				if [$encodageiconv == ""]
+					then 
+					encodagegrep=$(egrep "charset" ../pages-aspirees/$cpttableau-$compteur_ligne.html |cut -f2 -dcharset= |cut -f1 -d\")
+					#egrep -oi "charset = [\-a-zO-9\:]" ../pages-aspirees/$cpttableau-$compteur.html |cut f2 d=
+					encodageiconv=$(iconv -l | egrep -o "[\-A-Z0-9\:]+" | egrep -i ("\b$encodagegrep\b"))
+
+					# Si l'encodage obtenu avec egrep ne match pas un des encodages connu d'iconv
+					if [$encodageiconv == ""]
+						then
+						echo "<tr><td>$compteur_ligne</td><td><a href=\"$line\">lien $compteur</a></td><td><a href=\"../pages-aspirees/$cpttableau-$compteur_ligne.html\"> PA $cpttableau-$compteur_ligne</a></td><td>$encodagefile</td><td> -- </td></tr>" >> $fichier_tableau ;
+					else
+						#on en est resté là a la revision #####################################################
+
+
+					#iconv essaye de lire la page et de dumper le texter et change l'encodage, et génère un autre fichier txt version utf-8
+				iconv -f $encodage -t utf-8 ../dump-text/$cpttableau-$compteur_ligne.txt > ../dump-text/$cpttableau-$compteur_UTF8.txt
+				echo "<tr><td>$compteur</td><td><a href=\"$line\">lien $compteur</a></td><td><a href=\"../pages-aspirees/$cpttableau-$compteur.html\"> PA $cpttableau-$compteur</a></td><td>$encodage </td><td><a href=\"../dump-text/$cpttableau-$compteur_UTF8.txt\">DUMP $cpttableau-$compteur</a></td></tr>" >> $fichier_tableau ;
+			fi
+		#si wget ne fonctionne pa 
+		else
+			# mets des tirets partout
+			echo "<tr><td>$compteur</td><td><a href=\"$line\">lien $compteur</a></td><td>--</td><td>--</td><td>--</td></tr>" >> $fichier_tableau ; 
+
+		#fi = fin d'un if/else
+		fi ;
+
+		# compte quand-même les lignes même s'il n'y a rien
+		let "compteur=compteur+1" ;
+	}
+	echo "</table>" >> $fichier_tableau ;
+	let "cpttableau=cpttableau+1";
+}
+echo "</body></html>" >> $fichier_tableau ;
+
+
+
+

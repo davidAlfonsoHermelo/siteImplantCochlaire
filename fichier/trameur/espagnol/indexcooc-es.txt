@@ -1,0 +1,122 @@
+﻿
+
+
+
+Modelisation XML de la base textometrique (le metier = le cadre et la trame), importable et echangeable avec d'autres plateformes
+
+
+Jeudi 14 Janvier 2016  19:56:26         Ce document n'est pas encore publie.
+
+
+
+Le Trameur 12.98. Jeudi 14 Janvier 2016  19:56:26
+
+
+
+Fichier traite
+globaldump-2.txt
+
+
+Encodage
+utf-8
+
+
+Nombre d'items
+204981
+
+
+Nombre de délimiteurs
+111604
+
+
+Nombre d'occurrences de forme
+93377
+
+
+Nombre de formes
+13236
+
+
+Nombre d'hapax
+7423
+
+
+Fréquence maximale
+4111
+
+
+Forme maximale
+de
+
+
+Délimiteurs
+. ,:;!?/_-"'()[]{}§$|*><=+ «»
+
+
+Etiquetage Treetagger
+NON
+
+
+
+
+
+
+
+
+1
+1_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+2
+2_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+3
+3_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+4
+4_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+5
+5_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+
+
+index_14_0_2016_20_51_07.xml
+Sommaire
+
+
+1
+1_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+2
+2_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+3
+3_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+4
+4_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+5
+5_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+

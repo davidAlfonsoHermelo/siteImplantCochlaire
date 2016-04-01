@@ -1,0 +1,119 @@
+Blog sobre discapacidad y las experiencias con mi hijo sordo - RSS Blog
+obre discapacidad y las experiencias con mi hijo sordo - Atom
+publisher
+
+Blog sobre discapacidad y las experiencias con mi hijo sordo
+domingo, 10 de octubre de 2010
+COCHLEAR IMPLANT SIMULATION 1
+Cochlear implant simulation (C.I.S.) , es un programa de simulación con
+el que podemos hacernos una idea de como percibe el sonido una persona
+con implante coclear.
+Al final de ésta entrada os dejo un vídeo con una prueba que he
+realizado con parámetros diferentes en el programa, para que veamos
+como funciona.
+Para hacer funcionar el programa debemos tener lo siguiente:
+1.-Una grabación que podeís hacer mediante el micrófono del pc
+utilizando el programa "audacity" que ya os expliqué como funcionaba y
+mediante esto obtenemos un archivo de sonido que se llama "wav"
+2.-El programa C.I.S. lo que va a hacer es a partir de éste archivo
+"wav" transformarla y devolvernosla como el sonido que oye el
+implantado coclear.
+3.-El programa C.I.S. tiene una serie de parámetros que podemos
+modificar para situarnos en varias situaciones cotidianas de la persona
+implantada.
+4.-El sonido que obtenemos del C.I.S. es audio sintetizado.
+La versión que utilizo del programa C.I.S. es 2.0; ha sido desarrollada
+en la Universidad de Granada y finalizada en Diciembre de 2004.
+Los autores de éste programa son:
+Angel de la Torre Vega
+Marta Bastarrica Martí
+Rafael de la Torre Vega
+Manuel Sainz Quevedo
+Este programa tiene todos los derechos reservados.
+Antes de añadir el vídeo os digo que la grabación se hace mediante el
+micrófono del ordenador sin previa configuración para optimizarlo y
+otra cosa en el punto cuatro comento que el sonido que obtenemos del
+C.I.S. es sintetizado ; mi hijo es implantado desde los nueve meses ,
+la plasticidad de su cerebro durante éstos años de niño , ha asimilado
+la percepción auditiva de una forma seguramente más natural que un
+audio sintetizado.
+[EMBED] video
+Considero que éste programa es muy importante para los que decidan la
+prótesis del implante coclear como medio de disminuir su discapacidad
+auditiva. Seguiremos en entradas posteriores hablando sobre éste
+imulador y jugando con los diferentes parámetros para definir
+ituaciones diferentes en un implantado coclear.
+Muy importante:
+Quería dar las gracias a Angel de la Torre Vega , que tras escribirle
+un e-mail pidiendo permiso para divulgar su programa en mi blog , me
+contestó a la mañana siguiente concediendome lo que le pedía. Muchas
+gracias Angel.
+Otro agradecimiento a Manolo (mi marido ) por sus conocimientos
+informáticos, para poderos explicar todas éstas aplicaciones
+interesantes para los que tienen discapacidad auditiva.
+Share This
+Publicado por Matrigar en 18:38
+Enviar por correo electrónicoEscribe un blogCompartir con
+TwitterCompartir con FacebookCompartir en Pinterest
+Etiquetas: simulador del sonido que percibe un implantado coclear
+No hay comentarios:
+Publicar un comentario en la entrada
+Suscribirse a: Enviar comentarios (Atom)
+PlazaToy
+Juguetería Online para niños con discapacidad
+Buscar en el Blog
+Cargando...
+Artículos Populares
+El  sábado pasado nos  invitó GAES  al Parque Warner de Madrid
+para la presentación del procesador Nucleus 6 , que sustituye a
+la...
+años
+El examen es de mi hijo en 5º curso de primaria y tiene diez años y
+como sabéis implantado coclear.Este control consta de un dictado y
+...
+Antes  de   dejar  totalmente  operativa mi tienda online de
+juguetes para niños con discapacidad (www.plazatoy.com) , que
+espero  sea ...
+Muchas veces me han preguntado como me dí cuenta de que mi hijo no
+podía oírme , aquí dejo diez síntomas que me pusier...
+Hace aproximadamente dos meses que mi hijo tiene un nuevo
+procesador el Nucleus CP810, en ésta entrada creo del año 2009
+podeis ver los do...
+Este es el sistema de FM que lleva mi hijo, como podeis ver son dos
+partes la parte más grande es el transmisor con su micrófono,
+normalmen...
+Hoy en casa de la abuela de Manuel hemos visto algunas fotos y en
+ésta , observé que no tenía colocado el audífono del
+implante;después reco...
+El implante coclear es una prótesis  sanitaria implantable, que "no
+cura la sordera", pero que estimulando el nervio auditivo medi...
+el Museo Municipal de Puertollano
+El árbol en el amplio sentido artístico es el punto de partida de
+"Valorarte" la exposición abierta por Laborvalía en el Museo ...
+Hoy viendo los avances en la tecnología de la comunicación como los
+nuevos métodos de telefonía , aplicaciones exclusivas como android
+que s...
+Labels
+accesibilidad de los discapacitados adolescentes Agrupación de personas
+ordas de Zaragoza amigos Asociaciones de Sordos Asza atencion
+ciudadana bucle de inducción bucle magnético desarrollo cognitivo Dia
+internacional del implante coclear diagnóstico precoz de la sordera
+diez síntomas de hipoacusia en el bebé discapacida discapacidad
+educación familiar FIAPAS Gobierno de España hipoacusia implante
+coclear Implante coclear implante coclear en niños implante coclear y
+natación IREDIA juego juegos pc juguetes legal oir con implante coclear
+ONCE otoemisiones policia rehabilitación del implante coclear simulador
+del sonido que percibe un implantado coclear Sordos y periodismo
+Universidad Francisco de Vitoria VODAFONE Zaragoza
+Sobre Rofimo
+Hola, soy Rocío; escribo en éste Blog para explicaros mi experiencia
+con mi hijo Manuel que nació sordo profundo debido a una hipoplasia
+coclear (malformación de la coclea).
+Cuando sospechamos que mi niño era sordo me encontré sin
+información,desorientada, confundida, triste ésto ocurrió hace siete
+años y ahora se me ha ocurrido publicar éstas experiencias por si con
+ellas puedo ayudar a cualquier persona que pase por ésta situación o
+parecida .
+Plaza Toy La plaza del juguete
+Etiquetas
+Con la tecnología de Blogger.

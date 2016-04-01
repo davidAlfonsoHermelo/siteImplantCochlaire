@@ -1,0 +1,111 @@
+#!/bin/bash
+# charset=utf-8
+# by Garganta
+
+exec &> sortie.log
+
+read dossier_urls ;
+read fichier_tableau ;
+echo "le dossier d'URLs : $dossier_urls" ;
+echo "le fichier contenant le tableau : $fichier_tableau" ;
+compteur_tableau=1 ;
+
+motif=((coc(h)?l(é|e)?a(i)?r(e|s)*?)?( )?implant(e|s)*?( )?(coc(h)?l(é|e)?a(i)?r(e|s)*?)?)|(\b( |\')IC\b|\b CI(^-)\b) ;
+contextes_dump= $(egrep -i -1 $motif ../pages_dump/$compteur_tableau-$compteur_ligne.txt) ;
+echo "<html><head></head><body>" > $fichier_tableau ;
+#echo -e "--------------------- TEST ---------------------" > toto.txt ;
+
+# boucle pour chaque fichier d'url dans le dossier
+for fichier in `ls $dossier_urls`
+{
+	#echo -e "\n\n\n-----------TABLEAU : $compteur_tableau -----------\n\n\n" >> toto.txt ;
+	compteur_ligne=1 ;
+	echo "<table align=\"center\" border =\"1\">" >> $fichier_tableau ;
+	echo "<tr><td align = \"center\" colspan=\"9\">Tableau $compteur_tableau </td></tr>" >> $fichier_tableau ;
+	echo "<tr><td>--</td><td>- URL de la page -</td><td>- Page Aspir&eacute;e -</td><td>- Encodage -</td><td>- Converti en -</td><td>- Text Dump -</td><td>- Contexte Dump-</td><td>- Contexte HTML -</td><td>- Index -</td></tr>" >>$fichier_tableau
+	
+	# boucle pour chaque url dans un fichier d'url
+	for line in `cat $dossier_urls/$fichier`
+	{
+		wget $line -O ../pages_aspirees/$compteur_tableau-$compteur_ligne.html ; # curl
+		# si l'execution s'est bien déroulée
+		if [[ $? == 0 ]]
+			then 
+			encodagegrep=$(egrep --binary-file=text -oi -m 1 "meta(.*)charset[^=]*?=*?\"?[^\"\']+?" ../pages_aspirees/$compteur_tableau-$compteur_ligne.html | egrep --binary-file=text -oi "charset[^=]*?=*?\"?[^\"\']+?" | cut -f2 -d= | tr -d " \"" | tr [A-Z] [a-z]) ; # UTF-8 ou ISO-0000
+			
+			echo $encodagegrep ;
+			
+			if [[ $encodagegrep == "utf-8" ]]
+				then
+				lynx -dump -nolist -assume_charset=$encodagegrep -display_charset=$encodagegrep $line > ../pages_dump/$compteur_tableau-$compteur_ligne.txt ;
+				egrep -o "\w+" ../pages_dump/$compteur_tableau-$compteur_ligne.txt | sort | uniq -c | sort -r > ../pages_dump/$compteur_tableau-${compteur_ligne}_index.txt ;
+				contextes_dump= $(egrep -i -1 $motif ../pages_dump/$compteur_tableau-$compteur_ligne.txt) ;
+				# Suite + tableau
+				#echo -e "trouvé premier coup : $encodagegrep\r" >> toto.txt ;
+				echo "<tr><td>Lien n&deg; $compteur_ligne</td><td><a href=\"$line\">URL n&deg;$compteur_ligne</a></td><td><a href=\"../pages_aspirees/$compteur_tableau-$compteur_ligne.html\">PA n&deg;$compteur_ligne</a></td><td>$encodagegrep</td><td>--</td><td><a href=\"../pages_dump/$compteur_tableau-$compteur_ligne.txt\"> Text Dump n&deg;$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-$compteur_ligne.txt\"> Contexte Dump $compteur_tableau-$compteur_ligne</a></td><td> -- </td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_index.txt\">Index n&deg;$compteur_tableau-$compteur_ligne</a></td></tr>" >> $fichier_tableau ;
+				cat ../pages_dump/$compteur_tableau-$compteur_ligne.txt >> ../pages_dump/globaldump-$compteur_tableau.txt ;
+				echo $contextes_dump >../contextes/$compteur_tableau-$compteur_ligne.txt ;
+			else
+				encodageiconv=$(iconv -l | egrep -oi "\b$encodagegrep\b") ;
+				if [[ $encodageiconv == "" ]]
+					then
+					encodagefile=$(file -i ../pages_aspirees/$compteur_tableau-$compteur_ligne.html | cut -f2 -d=) ;
+					encodageiconv=$(iconv -l | egrep -oi "\b$encodagefile\b") ;
+						if [[ $encodagefile == "utf-8" ]]
+						then
+							# echo -e "trouvé du PRESQUE premier coup : $encodagefile\r" >> toto.txt
+							lynx -dump -nolist -assume_charset=$encodagegrep -display_charset=$encodagegrep $line > ../pages_dump/$compteur_tableau-$compteur_ligne.txt ;
+							egrep -o "\w+" ../pages_dump/$compteur_tableau-$compteur_ligne.txt | sort | uniq -c | sort -r > ../pages_dump/$compteur_tableau-${compteur_ligne}_index.txt ;
+							contextes_dump= $(egrep -i -1 $motif ../pages_dump/$compteur_tableau-$compteur_ligne.txt) ;
+							echo "encodage file : $encodafile" ;
+							echo "<tr><td>Lien n&deg; $compteur_ligne</td><td><a href=\"$line\">URL n&deg;$compteur_ligne</a></td><td><a href=\"../pages_aspirees/$compteur_tableau-$compteur_ligne.html\">PA n&deg;$compteur_ligne</a></td><td>$encodagefile</td><td>--</td><td><a href=\"../pages_dump/$compteur_tableau-$compteur_ligne.txt\"> Text Dump n&deg;$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-$compteur_ligne.txt\"> Contexte Dump $compteur_tableau-$compteur_ligne</a></td><td> -- </td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_index.txt\">Index n&deg;$compteur_tableau-$compteur_ligne</a></td></tr>" >> $fichier_tableau ;
+							cat ../pages_dump/$compteur_tableau-$compteur_ligne.txt >> ../pages_dump/globaldump-$compteur_tableau.txt ;
+							echo $contextes_dump > ../contextes/$compteur_tableau-$compteur_ligne.txt ;
+						else	
+							if [[ $encodageiconv == "" ]]
+							then
+								#echo -e "Page morte : $encodagegrep\r" >> toto.txt ;
+							echo "<tr><td>Lien n&deg; $compteur_ligne</td><td><a href=\"$line\">URL n&deg;$compteur_ligne</a></td><td><a href=\"../pages_aspirees/$compteur_tableau-$compteur_ligne.html\">PA n&deg;$compteur_ligne</a></td><td> Non sp&eacute;cifi&eacute; </td><td> -- </td><td> -- </td><td> -- </td><td> -- </td><td> -- </td></tr>" >>$fichier_tableau ;
+							else
+								lynx -dump -nolist -assume_charset=$encodagegrep -display_charset=$encodagegrep $line > ../pages_dump/$compteur_tableau-$compteur_ligne.txt ;
+								iconv -f $encodageiconv -t utf-8 ../pages_dump/$compteur_tableau-$compteur_ligne.txt > ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt ;
+								egrep -o "\w+" ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt | sort | uniq -c | sort -r > ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8_index.txt ;
+								contextes_dump= $(egrep -i -1 $motif ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt) ;
+								# suite + tableau
+								#echo -e "trouvé du PRESQUE deuxième coup : $encodagegrep -> utf-8\r" >> toto.txt ;
+								echo "<tr><td>Lien n&deg; $compteur_ligne</td><td><a href=\"$line\">URL n&deg;$compteur_ligne</a></td><td><a href=\"../pages_aspirees/$compteur_tableau-$compteur_ligne.html\">PA n&deg;$compteur_ligne</a></td><td>$encodagefile</td><td>utf-8</td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt\"> Text Dump n&deg;$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-$compteur_ligne.txt\"> Contexte Dump $compteur_tableau-$compteur_ligne</a></td><td> -- </td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8_index.txt\">Index n&deg;$compteur_tableau-$compteur_ligne</a></td></tr>" >> $fichier_tableau ;
+								cat ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt >> ../pages_dump/globaldump-$compteur_tableau.txt ;
+								echo $contextes_dump > ../contextes/$compteur_tableau-$compteur_ligne.txt ;
+							fi
+						fi
+					
+				else
+					lynx -dump -nolist -assume_charset=$encodagegrep -display_charset=$encodagegrep $line > ../pages_dump/$compteur_tableau-$compteur_ligne.txt ;
+					iconv -f $encodageiconv -t utf-8 ../pages_dump/$compteur_tableau-$compteur_ligne.txt > ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt ;
+					egrep -o "\w+" ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt | sort | uniq -c | sort -r > ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8_index.txt ;
+					contextes_dump= $(egrep -i -1 $motif ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt) ;
+					# suite + tableau
+					#echo -e "trouvé deuxième coup : $encodagegrep -> utf-8\r" >> toto.txt ;
+					echo "<tr><td>Lien n&deg; $compteur_ligne</td><td><a href=\"$line\">URL n&deg;$compteur_ligne</a></td><td><a href=\"../pages_aspirees/$compteur_tableau-$compteur_ligne.html\">PA n&deg;$compteur_ligne</a></td><td>$encodagegrep</td><td>utf-8</td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt\"> Text Dump n&deg;$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-$compteur_ligne.txt\"> Contexte Dump $compteur_tableau-$compteur_ligne</a></td><td> -- </td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8_index.txt\">Index n&deg;$compteur_tableau-$compteur_ligne</a></td></tr>" >> $fichier_tableau ;
+					cat ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt >> ../pages_dump/globaldump-$compteur_tableau.txt ;
+					echo $contextes_dump > ../contextes/$compteur_tableau-$compteur_ligne.txt ;
+				fi
+			fi
+		fi
+		
+		let "compteur_ligne=compteur_ligne+1" ;
+	}
+	echo "</table>" >> $fichier_tableau ;
+	echo "<br />" >> $fichier_tableau ;
+	echo -"<table align=\"center\" border =\"1\">" >> $fichier_tableau ;
+	echo "<tr><td align=\"center\" colspan = \"2\"> Fichiers Globaux du tableau n&deg;$compteur_tableau</td></tr>" >> $fichier_tableau ;
+	echo "<tr><td><a href=\"../pages_dump/globaldump-$compteur_tableau.txt\">Global Dump</a></td><td>- Global Context -</td></tr>" >> $fichier_tableau ;
+	echo "</table><br /><br />" >> $fichier_tableau ;
+	
+	let "compteur_tableau=compteur_tableau+1";
+}
+echo "</body></html>" >> $fichier_tableau ;
+
+
+
+

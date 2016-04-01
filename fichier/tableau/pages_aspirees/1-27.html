@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<!-- START TEMPLATE header fr_FR -->
+<html lang="fr" xmlns:og="http://opengraphprotocol.org/schema/"
+xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta charset="iso-8859-15" />
+<title>Le Repaire des Motards : actualit&eacute;s essais reportages guides moto</title>
+<link rel="stylesheet" type="text/css" href="http://www.lerepairedesmotards.com/forum/css.php?9,css" media="screen" />
+<link rel="stylesheet" href="/css/main.css" media="screen" />
+<link rel="stylesheet" href="/css/responsive.css" media="screen" />
+<link href="/css/fancy_min.css" rel="stylesheet" media="screen" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+<script type="text/javascript" src="http://www.lerepairedesmotards.com/forum/javascript.php?9"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/modernizer.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="/js/selectivizr-min.js"></script>
+<![endif]--> 
+<script src="/js/jquery.fancybox.pack.js"></script>
+<script src="/js/jquery.fancybox-thumbs.min.js"></script>
+<script src="/js/jquery.sidr.min.js"></script>
+<script src="https://apis.google.com/js/plusone.js"></script>
+<script src="http://assets.pinterest.com/js/pinit.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js"></script>
+<script>
+$(document).ready(function() {
+afterLoad:cbpHorizontalMenu.init();		
+WebFont.load({
+    google: {
+      families: ['Bitter:400,700,400italic', 'Ubuntu+Mono']
+    }
+  });
+  
+$('#mobile-menu').sidr({
+  name: 'sidr-main',
+  source: '#menu,#nav_submenu'
+}); 
+  
+ $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    });
+ $('.scrollup').click(function(){
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+    });	
+/* menu */
+var defaultElHeight =  $("#nav_submenu li ul").outerHeight(true);
+    function adjustSubmenuHeight() {
+        var height = 29 + defaultElHeight;
+        $("#nav_submenu").height(height);
+        $("#nav_submenu li ul").css("display", "none");
+        $("#nav_submenu ul:lt(2)").css("display","block");
+    }
+    adjustSubmenuHeight();
+    $("#nav_submenu>ul>li").mouseover(function() {
+        var height = 29 + $(this).children("ul>li>ul").outerHeight(true),
+            currDefaultEl = $("#nav_submenu li ul:lt(2)")
+        $("#nav_submenu").height(height);
+        if(!$(this).find('ul').hasClass('default')) {
+           currDefaultEl.css("display","none");
+            $(this).find('ul').css("display","block");
+        } else {
+           currDefaultEl.css("display","block");
+        }
+    });
+    $("#nav_submenu>ul>li").mouseout(adjustSubmenuHeight);
+/* end menu*/	
+});
+
+$PJ('div.notation a').live('click', function () {
+            thisid = this.id;
+            fch = $PJ('#' + thisid).parent().parent().find('div.rrvalue');
+            actid = $PJ('#' + thisid).attr('actid');
+            myid = fch.attr('id');
+            minusat = myid.search("-");
+            foundmsgid = myid.substring(minusat + 1);
+
+            Phorum.Ajax.call({
+                "call":"rate_replies_rate",
+                "mid":foundmsgid,
+                "rate":actid,
+                "onFailure":function (error) {
+                    alert("Error: " + error);
+                },
+                "onSuccess":function (data) {
+                    fch.html("("+data+")");
+                }
+            });
+   return false;
+});
+</script>
+    <link rel="alternate" type="application/rss+xml" title="Flux RSS" href="http://www.lerepairedesmotards.com/forum/feed.php?9,2244005,type=rss" />
+  
+
+
+  <meta name="description" content=" Bonjour, Etant sourd, je m'exprime oralement sans problème mais je ne peux comprendre la parole qu'avec l'aide de la lecture labiale, et donc la visibilité de face de mon interlocuteur est un pré-requis absolu. Je ne possède que le permis bagnole et j'aimerais passer le permis &amp;quot;gros-cube&amp;quot;" />
+
+
+
+    <!-- Additional meta tags added by Facebook Module: -->
+    <meta property="fb:app_id" content="97410923075" />
+    <meta property="og:title" content="Sourd(ingue) cherche moto-école sur Paris" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.lerepairedesmotards.com/forum/read.php?9,2244005" />
+    <meta property="og:image" content="http://www.lerepairedesmotards.com/forum/templates/emerald/images/logo.png" />
+    <meta property="og:description" content=" Bonjour, Etant sourd, je m'exprime oralement sans problème mais je ne peux comprendre la parole qu'avec l'aide de la lecture labiale, et donc la visibilité de face de mon interlocuteur est un pré-requis absolu. Je ne possède que le permis bagnole et j'aimerais passer le permis &amp;quot;gros-cube&amp;quot;" />
+</head>
+
+<body onload="">
+
+  
+  
+  
+  
+  
+  
+  
+
+<header>
+<div id="logo">
+<a href="/index.php"><img src="/img/logo/lerepaire.png" alt="Accueil" /></a>
+</div>
+<div id="nav_subscribe">
+    
+    
+    
+    <!-- user-info -->
+      
+              <!--Bonjour!-->
+        <a class="login" href="http://www.lerepairedesmotards.com/forum/login.php?9">S'identifier</a> <a>|</a>
+        <a href="/forum/charte.php?msg=Inscription">S'inscrire</a>
+          <!-- end of div id=user-info -->
+
+<!--..........Socials links..........-->
+
+<div id="social_links">
+    <a href="/rss/actu.xml"><img src="/img/icones/rss.png" alt="Fil RSS" /></a>
+    <a href="http://www.facebook.com/LeRepairedesMotards" target="_blank" rel="nofollow"><img src="/img/icones/facebook.png" alt="Facebook" /></a>
+    <a href="http://twitter.com/lerepaire" target="_blank" rel="nofollow"><img src="/img/icones/twitter.png" alt="Twitter" /></a></div>
+<div id="abo">
+      	<form method="post" onSubmit="return Valid(this)" name="abonnement" action="/form.php">
+		<input type="hidden" name="myfile_" value="abonnement">
+        <input type="hidden" name="tymail_" value="merci_abonnement">
+        <input type="hidden" name="typage_" value="/infos/form_ok_abonnement.php">
+        <input name="mail" type="email" onFocus="if (this.value=='S\'inscrire à la Newsletter') this.value=''" onBlur="if (this.value=='') this.value='S\'inscrire à la Newsletter'" id="mail" value="S'inscrire à la Newsletter">
+        <button type="submit" class="buttonok" name="ok_button" role="button" aria-disabled="false">OK</button>
+   </form>  
+   </div>
+</div>
+<!-- ..........MENU .......... -->
+<div id="mobile-header">
+<a id="mobile-menu" href="#menu" ><img src="/img/icones/menu-push.png" alt="Menu"></a>
+</div>
+
+<div id="menu">
+<div id="nav_main_background">
+<!-- ..........MENU.......... -->
+<nav id="nav_main" class="nav_main">
+<span class="dark"></span>
+  <ul>
+   <li>
+   <a href="/actualites/index.php">ACTUALITES</a>     
+    <div class="cbp-hrsub">
+    <div class="cbp-hrsub-inner gradient">    
+      
+    <div>
+     <h4>Comp&eacute;tition piste</h4>
+     <ul>
+     <li><a href="/actualites/24h.php">24h</a></li>
+     <li><a href="/actualites/bol.php">Bol d'Or</a></li>  
+     <li><a href="/actualites/circuits.php">Circuits</a></li>     
+     <li><a href="/actualites/classic.php">Classic</a></li>  
+     <li><a href="/actualites/competition.php">Comp&eacute;tition</a></li> 
+     <li><a href="/actualites/motogp.php">MotoGP</a></li>
+     <li><a href="/actualites/resultats-motogp.php">Résultats MotoGP</a></li>     
+     <li><a href="/actualites/pilotes.php">Pilotes</a></li>   
+     <li><a href="/actualites/sbk.php">Superbike</a></li>     
+     <li><a href="/actualites/wsbk.php">WSBK</a></li>
+     </ul>     
+     <h4>Comp&eacute;tition TT</h4>
+     <ul>
+     <li><a href="/actualites/dakar.php">Dakar</a></li> 
+     <li><a href="/actualites/enduro.php">Enduro</a></li>      
+     <li><a href="/actualites/mx.php">Motocross</a></li>    
+     <li><a href="/actualites/rallye.php">Rallyes</a></li>      
+     <li><a href="/actualites/tt.php">Tout-Terrain</a></li>   
+     </ul>
+    </div>
+    
+    <div>      
+    <h4>Culture</h4>     
+     <ul>
+     <li><a href="/actualites/agenda.php">Agenda</a></li>  
+     <li><a href="/dossiers/films/index.php">Cin&eacute;ma</a></li>    
+     <li><a href="/dossiers/constructeurs/index.php">Constructeurs</a></li> 
+     <li><a href="/actualites/culture.php">Culture</a></li>      
+     <li><a href="/actualites/divers.php">Divers</a></li>      
+     <li><a href="/actualites/dossier.php">Dossiers</a></li>   
+     <li><a href="/actualites/evenement.php">Ev&eacute;nements</a></li>
+     <li><a href="/actualites/livre.php">Livres</a></li>   
+     <li><a href="/actualites/loi.php">L&eacute;gislation</a></li>  
+     </ul>
+     <ul>   
+     <li><a href="/dossiers/marques/index.php">Marques</a></li>    
+     <li><a href="/actualites/meteo.php">M&eacute;t&eacute;o</a></li>         
+     <li><a href="/dossiers/motos/index.php">Motos</a></li>
+     <li><a href="/actualites/people.php">People</a></li>      
+     <li><a href="/dossiers/pilotes/index.php">Pilotes</a></li>
+     <li><a href="/portraits/index.php">Portraits</a></li>     
+     <li><a href="/actualites/prepa.php">Prépas</a></li>     
+     <li><a href="/actualites/recit.php">R&eacute;cits</a></li>   
+     <li><a href="/actualites/reportage.php">Reportages</a></li>      
+     </ul>
+     <ul>
+	 <li><a href="/actualites/salon.php">Salon</a></li>      
+     <li><a href="/actualites/stage.php">Stage</a></li>      
+     <li><a href="/actualites/tech.php">Techno</a></li>      
+     <li><a href="/actualites/tuning.php">Tuning</a></li>      
+     <li><a href="/actualites/video.php">Vid&eacute;os</a></li>
+     <li><a href="/actualites/voyage.php">Voyages</a></li>      
+     </ul>
+	<h4>Diaporamas</h4>
+    <ul>
+    <li><a href="/actualites/diaporamas.php">Les plus belles photos motos</a></li> 
+ 	</ul>
+	<h4>Chroniques</h4>
+    <ul>
+    <li><a href="/chroniques/index.php">Les Kroniks de Koud'pied o'Kick</a></li> 
+ 	</ul>
+    <h4>Humour</h4>
+    <ul>
+    <li><a href="/actualites/crobard.php">Actu croqu&eacute;e et crobards</a></li> 
+ 	</ul>
+    </div>
+    
+    <div>
+     <h4>Economie</h4>
+     <ul>
+     <li><a href="/actualites/assurance.php">Assurance</a></li>
+     <li><a href="/dossiers/constructeurs/index.php">Constructeurs</a></li>    
+     <li><a href="/actualites/economie.php">Economie</a></li>
+     <li><a href="/actualites/emploi.php">Emploi</a></li>      
+     <li><a href="/actualites/ffmc.php">FFMC</a></li>      
+     <li><a href="/actualites/internet.php">Internet</a></li>      
+     <li><a href="/actualites/international.php">International</a></li>
+     <li><a href="/actualites/jeu.php">Jeu</a></li>      
+     <li><a href="/actualites/loi.php">L&eacute;gislation</a></li>    
+     <li><a href="/actualites/promo.php">Promos</a></li>   
+     <li><a href="/actualites/pub.php">Publicit&eacute;</a></li>      
+     <li><a href="/actualites/securite.php">S&eacute;curit&eacute; Routi&egrave;re</a></li>
+     </ul>
+     <h4>Conso</h4>
+    <ul>
+    <li><a href="/actualites/conso.php">Conso</a></li> 
+ 	</ul>
+   </div>
+      
+   <div>
+     <h4>Moto</h4>
+     <ul>
+     <li><a href="/actualites/essais.php">Essais marques</a></li>
+     <li><a href="/essais/motos/index.php">Essais motos</a></li>   
+     <li><a href="/essais/motards/index.php">Essais motards</a></li>      
+     <li><a href="/essais/scooters/index.php">Essais scooters</a></li>      
+     <li><a href="/actualites/nouveaute.php">Nouveaut&eacute;s</a></li>
+     <li><a href="/actualites/prepa.php">Pr&eacute;parations</a></li>     
+     <li><a href="/actualites/rappel.php">Rappel</a></li>      
+     </ul>
+   </div>      
+   </div><!-- /cbp-hrsub-inner -->
+  </div><!-- /cbp-hrsub -->
+</li>
+<!--ESSAIS-->
+<li>
+ <a href="/essais/index.php">ESSAIS</a>
+ <div class="cbp-hrsub">
+ <div class="cbp-hrsub-inner gradient"> 
+ <div>
+ <h4>Essais par marque</h4>
+  <ul>
+   <li><a href="/essais/essais-aprilia.php">Aprilia</a></li>
+   <li><a href="/essais/essais-avinton.php">Avinton</a></li>
+   <li><a href="/essais/essais-buell.php">Buell</a></li>
+   <li><a href="/essais/essais-bmw.php">BMW</a></li>
+   <li><a href="/essais/essais-ducati.php">Ducati</a></li>
+   <li><a href="/essais/essais-harley-davidson.php">Harley-Davidson</a></li>
+   <li><a href="/essais/essais-honda.php">Honda</a></li>
+   <li><a href="/essais/essais-husqvarna.php">Husqvarna</a></li>
+   <li><a href="/essais/essais-indian.php">Indian</a></li>   
+   <li><a href="/essais/essais-kawasaki.php">Kawasaki</a></li>
+   <li><a href="/essais/essais-ktm.php">KTM</a></li>
+   <li><a href="/essais/essais-kymco.php">Kymco</a></li>   
+  </ul>
+  <ul>
+   <li><a href="/essais/essais-moto-guzzi.php">Moto Guzzi</a></li>
+   <li><a href="/essais/essais-moto-morini.php">Moto Morini</a></li>   
+   <li><a href="/essais/essais-mv-agusta.php">MV Agusta</a></li>
+   <li><a href="/essais/essais-peugeot.php">Peugeot</a></li>   
+   <li><a href="/essais/essais-piaggio.php">Piaggio</a></li>      
+   <li><a href="/essais/essais-royal-enfield.php">Royal Enfield</a></li>
+   <li><a href="/essais/essais-suzuki.php">Suzuki</a></li>
+   <li><a href="/essais/essais-triumph.php">Triumph</a></li>
+   <li><a href="/essais/essais-vespa.php">Vespa</a></li>
+   <li><a href="/essais/essais-victory.php">Victory</a></li>
+   <li><a href="/essais/essais-yamaha.php">Yamaha</a></li>
+  </ul>
+ </div>
+ <div>
+   <h4>Essais par type</h4>
+   <ul>
+   <li><a href="/essais/essais-routieres.php">Essais routi&egrave;res</a></li>
+   <li><a href="/essais/essais-roadsters.php">Essais roadsters</a></li>
+   <li><a href="/essais/essais-customs.php">Essais customs</a></li>
+   <li><a href="/essais/essais-collections.php">Essais collections</a></li>
+   <li><a href="/essais/essais-trails.php">Essais trails</a></li>
+   <li><a href="/essais/essais-supermotards.php">Essais supermotards</a></li>
+   <li><a href="/essais/essais-sportives.php">Essais sportives</a></li>
+   <li><a href="/essais/essais-scooters.php">Essais scooters</a></li>
+   <li><a href="/essais/125/index.php">Essais 125</a></li>      
+   </ul>
+ </div>
+ <div>
+   <h4>Avis</h4>
+   <ul>
+    <li><a href="/guides/avis-motos.php">Motos : plus de 1.300 mod&egrave;les</a></li>
+    <li><a href="/guides/avis-casques.php">Casques : pr&egrave;s de 500 mod&egrave;les</a></li>
+    <li><a href="/guides/avis-pneus.php">Pneus : pr&egrave;s de 200 mod&egrave;les</a></li>
+   </ul>
+   <h4>Avis &eacute;quipement</h4>
+   <ul>
+    <li><a href="/guides/avis-equipements.php">Equipements motards</a></li>
+    <li><a href="/guides/avis-equipement-blousons.php">Blousons</a></li>
+    <li><a href="/guides/avis-equipement-gants.php">Gants</a></li>
+    <li><a href="/guides/avis-equipement-bottes.php">Bottes</a></li>
+    <li><a href="/guides/avis-equipement-combinaisons.php">Combinaisons</a></li>                
+   </ul>
+ </div>
+ </div><!-- /cbp-hrsub-inner -->
+ </div><!-- /cbp-hrsub -->
+</li>
+<!--DOSSIERS-->
+<li>
+ <a href="/dossiers/index.php">DOSSIERS</a>
+ <div class="cbp-hrsub">
+ <div class="cbp-hrsub-inner gradient"> 
+ <div>
+ <h4>Dossiers clefs</h4>
+ <ul>
+   <li><a href="/dossiers/films/index.php">Cin&eacute;ma</a></li>    
+   <li><a href="/dossiers/constructeurs/index.php">Constructeurs</a></li> 
+   <li><a href="/dossiers/evenements/index.php">Ev&eacute;nements</a></li>    
+   <li><a href="/dossiers/marques/index.php">Marques</a></li>    
+   <li><a href="/dossiers/motos/index.php">Motos</a></li>
+   <li><a href="/dossiers/pilotes/index.php">Pilotes</a></li> 
+   <li><a href="/portraits/index.php">Portraits</a></li>   
+ </ul>
+  <h4>Occasion</h4>
+  <ul>
+   <li><a href="/guides/cote-moto-occasion.php">La cote occasion sur 12 ans</a></li>
+   <li><a href="/dossiers/cote-argus-estimation-vente-moto-occasion.php">Estimer la valeur de sa moto</a></li>
+  </ul>
+  <h4>Equipement</h4>
+  <ul>
+    <li><a href="/dossiers/casques.php">Casques</a></li>
+    <li><a href="/dossiers/choisir-sa-dorsale.php">Dorsales</a></li>    
+    <li><a href="/dossiers/lexique-materiaux-technologies-equipement-pilote.php">Technologies</a>
+  </ul>
+  <h4>Statistiques</h4>
+  <ul>
+    <li><a href="/dossiers/accident.php">Accidents</a></li>
+    <li><a href="/dossiers/vol-deux-roues.php">Vol</a></li>
+  </ul>
+ </div>
+ 
+<div>
+  <h4>Permis moto</h4>
+  <ul>
+    <li><a href="/conseils/moto-ecole.php">Choisir sa moto-&eacute;cole</a></li>
+    <li><a href="/dossiers/permis-moto-fiches-memo.php">Les fiches (synth&egrave;se)</a></li>
+    <li><a href="/dossiers/permis-moto-fiches.php">Les fiches (compl&egrave;tes)</a></li>
+    <li><a href="/dossiers/recuperation-points-permis.php">Récupérer ses points du permis</a></li>    
+  </ul>
+  <h4>Rouler</h4>
+  <ul>
+    <li><a href="/dossiers/debuter-moto.php">D&eacute;buter en moto</a></li>
+    <li><a href="/dossiers/stages.php">Les stages post-permis</a></li>
+    <li><a href="/dossiers/auto-moto-train-sncf.php">Moto-train</a></li>
+    <li><a href="/dossiers/reglementation-code-de-la-route-monde.php">Code de la route</a>
+    <li><a href="/technique/radars.php">Radars</a></li>
+  </ul>
+  <h4>Voyages</h4>
+  <ul>
+  <li><a href="/voyages/index.php">Tous les voyages</a></li>
+  <li><a href="/voyages/choisir-une-agence-moto.php">Choisir son voyagiste</a></li>
+  </ul>
+ </div>
+ <div>
+ <h4>Technique</h4>
+  <ul>
+    <li><a href="/technique/amortisseurs.php">Amortisseurs</a></li>
+    <li><a href="/technique/batterie.php">Batterie</a></li>
+    <li><a href="/technique/bougies.php">Bougies</a></li>
+    <li><a href="/technique/carburant.php">Carburant</a></li>    
+    <li><a href="/technique/chargeur-de-batterie.php">Chargeur</a></li>
+    <li><a href="/technique/debridage.php">D&eacute;bridage</a></li>
+    <li><a href="/technique/double-embrayage.php">Embrayage</a></li>    
+    <li><a href="/technique/echappement.php">Echappement</a></li>
+    <li><a href="/technique/freins.php">Freins</a></li>
+    <li><a href="/technique/freinage.php">Freinage</a></li>
+    <li><a href="/technique/huile.php">Huile</a></li>
+    <li><a href="/technique/kits.php">Kits</a></li>
+    <li><a href="/technique/pneumatiques.php">Pneumatiques</a></li>
+    <li><a href="/technique/pneus.php">Pneus</a></li>
+    <li><a href="/technique/remisage.php">Remisage</a></li>
+    <li><a href="/technique/rodage.php">Rodage</a></li>
+    <li><a href="/technique/transmission-automatique.php">Transmission</a></li>    
+  </ul>
+ </div>
+ <div>
+ <h4>Fiches</h4>
+  <ul>
+    <li><a href="/technique/fiches/index.php">Fiches Techniques</a> </li>
+    <li><a href="/technique/fiches/comparo-600.php">Comparatifs 600 cm3</a></li>
+    <li><a href="/technique/fiches/comparo-1000.php">Comparatifs +1000 cm3</a></li>
+  </ul>
+  <h4>A faire soi-m&ecirc;me</h4>
+  <ul>
+    <li></li>
+    <li><a href="/technique/pratique/retendre-sa-chaine.php">Retendre sa cha&icirc;ne</a></li>
+    <li><a href="/technique/pratique/entretenir-transmission.php">Entretenir sa transmission</a></li>
+    <li><a href="/technique/pratique/faire-sa-vidange.php">Vidanger sa moto</a></li>    
+    <li><a href="/technique/pratique/vidanger-sa-fourche.php">Vidanger sa fourche</a></li>
+    <li><a href="/technique/bases.php">Changer l'huile de fourche</a></li>
+    <li><a href="/technique/pratique/poser-huileur-chaine.php">Poser un graisseur de cha&icirc;ne</a></li>
+  </ul>
+ </div>
+ </div><!-- /cbp-hrsub-inner -->
+ </div><!-- /cbp-hrsub -->
+</li>
+<!--ANNONCES-->
+<li>
+ <a href="/services/index.php">SERVICES</a>
+ <div class="cbp-hrsub">
+ <div class="cbp-hrsub-inner gradient"> 
+ <div>
+ <h4>Petites annonces</h4>
+   <ul>
+   <li><a href="/annonces/index.php">Les petites annonces motos</a></li> 
+   <li><a href="/annonces/recherche.php">Chercher une moto</a></li> 
+   <li><a href="/annonces/pa_form.php">Déposer une annonce</a></li>
+   <li><a href="/annonces/modif.php">Modifier une annonce</a></li>   
+   <li><a href="/annonces/alerte_form.php">Poster une alerte</a></li>      
+   <li><a href="/annonces/alertes.php">Modifier une alerte</a></li>  
+   </ul>
+   <ul>    
+   <li><a href="/guides/cote-moto-occasion.php">Cote occasion sur 12 ans</a></li>
+   <li><a href="/conseils/occasion.php">Conseils</a></li>
+   <li><a href="/conseils/negociations.php">N&eacute;gocier</a></li>
+   <li><a href="/assurance/arnaques.php">Arnaques</a></li>  
+   </ul>
+ </div>
+ <div>
+ <h4>Marques</h4>
+   <ul>
+   <li><a href="/annonces/occasions-moto-aprilia.php">Aprilia</a></li> 
+   <li><a href="/annonces/occasions-moto-bmw.php">BMW</a></li> 
+   <li><a href="/annonces/occasions-moto-ducati.php">Ducati</a></li> 
+   <li><a href="/annonces/occasions-moto-honda.php">Honda</a></li> 
+   <li><a href="/annonces/occasions-moto-harley.php">Harley-Davidson</a></li>    
+   <li><a href="/annonces/occasions-moto-husqvarna.php">Husqvarna</a></li> 
+   </ul>
+   <ul>   
+   <li><a href="/annonces/occasions-moto-kawasaki.php">Kawasaki</a></li> 
+   <li><a href="/annonces/occasions-moto-ktm.php">KTM</a></li> 
+   <li><a href="/annonces/occasions-moto-peugeot.php">Peugeot</a></li>    
+   <li><a href="/annonces/occasions-moto-suzuki.php">Suzuki</a></li> 
+   <li><a href="/annonces/occasions-moto-triumph.php">Triumph</a></li> 
+   <li><a href="/annonces/occasions-moto-yamaha.php">Yamaha</a></li>                
+   </ul>
+</div>
+<div>
+ <h4>Co-Motorage</h4>
+  <ul>
+	<li><a href="/motostop/index.php">Voir les propositions</a></li>
+    <li><a href="/motostop/motostop_form.php?type=R">Déposer une demande</a></li>  
+    <li><a href="/motostop/motostop_form.php?type=P">Proposer une selle</a></li>      
+  </ul>
+  <h4>Paris en ligne</h4>
+  <ul>
+    <li><a href="/paris/parier.php">Parier</a></li>  
+	<li><a href="/paris/pronostics.php">Voir les pronostics</a></li>
+  </ul>
+  <h4>Gestion de budget</h4>
+  <ul>
+	<li><a href="/budget/form.php">Ajouter une dépense</a></li>
+	<li><a href="/budget/comptes.php">Comptes</a></li>
+    <li><a href="/budget/statistiques.php">Statistiques</a></li>  
+    <li><a href="/budget/index.php">Budget</a></li>      
+  </ul>
+ </div>
+ <div>
+ <h4>Assurance</h4>
+  <ul>
+	<li><a href="/campagnes/adclick.php?bannerid=393" target="_blank" rel="nofollow">Deviser son assurance avec April Moto</a></li>
+	<li><a href="/campagnes/adclick.php?bannerid=394" target="_blank" rel="nofollow">Deviser son assurance avec Assurbike</a></li>    
+    <li><a href="/annonceurs/www/delivery/ck.php?bannerid=24" target="_blank" rel="nofollow">Comparer les assurances</a></li>  
+  </ul>
+ </div>
+ </div><!-- /cbp-hrsub-inner -->
+</div><!-- /cbp-hrsub -->
+</li>     
+<!--FORUMS-->
+<li>
+ <a href="/forum/index.php">FORUMS</a>
+ <div class="cbp-hrsub">
+ <div class="cbp-hrsub-inner gradient"> 
+ <div>
+  <h4>Experts</h4>
+  <ul>
+   <li><a href="/forum/list.php?3">Motos &amp; Motards</a></li>
+   <li><a href="/forum/list.php?2">Technique</a></li> 
+   <li><a href="/forum/list.php?6">Juridique</a></li>       
+   </ul>
+  <h4>Infos</h4> 
+  <ul>
+   <li><a href="/forum/list.php?9">MotoBrev</a></li>
+   </ul>
+ </div> 
+ <div>
+ <h4>Evasion</h4>
+  <ul>
+   <li><a href="/forum/list.php?1">Balades</a></li>          
+   <li><a href="/forum/list.php?14">Tortue</a></li>             
+  </ul>
+  <h4>Essais</h4>
+  <ul>
+   <li><a href="/forum/list.php?8">Motos</a></li>          
+   <li><a href="/forum/list.php?15">Equipements</a></li>          
+   <li><a href="/forum/list.php?17">Roadbooks</a></li>                   
+   </ul>
+ </div> 
+ <div>
+  <h4>Parking</h4>
+  <ul>
+   <li><a href="/forum/list.php?18">Pr&eacute;sentations</a></li> 
+   <li><a href="/forum/list.php?4">Taquin</a></li>                                     
+   <li><a href="/forum/list.php?13">Best Of</a></li>                                     
+   <li><a href="/mur">Le mur</a></li>
+   <li><a href="/chat/index.php">Chat</a></li>
+   </ul>
+  </div>
+  <div>
+  <h4>Puces</h4>
+  <ul>
+   <li><a href="/forum/list.php?19">Achats</a></li>                            
+   <li><a href="/forum/list.php?20">Ventes</a></li>                            
+   <li><a href="/forum/list.php?12">Entraide</a></li> 
+   <li><a href="/forum/list.php?29">Pro</a></li>                                          
+  </ul>
+ </div> 
+ <div>
+  <h4>Infos</h4>
+  <ul>
+    <li><a href="/forum/aide.php">Aide</a></li>
+    <li><a href="/forum/charte.php">Charte</a></li>
+    <li><a href="/forum/moderateurs.php">Modos</a></li>
+    <li><a href="/forum/emoticons.php">Smileys</a></li>
+    <li><a href="/forum/troll.php">Troll</a></li>
+    <li><a href="/detente/quizz.php">quizz</a></li>                                       
+    <li><a href="/forum/control.php?0,panel=friends,action=managefriends">Voir mes amis</a></li>
+    <li><a href="/forum/addon.php?module=lrm_custom_fields,action=usersearch">Membres</a></li>	
+  </ul>
+ </div>  
+ <div>
+  <h4>Profil</h4>
+  <ul>
+    <li><a href="/forum/control.php?panel=summary">Profil</a></li>
+    <li><a href="/forum/pm.php">Messages</a></li>
+    <li><a href="/forum/control.php?panel=user">Infos</a></li>
+    <li><a href="/forum/control.php?panel=sig">Signature</a></li>
+    <li><a href="/forum/control.php?panel=email">Emails</a></li>
+    <li><a href="/forum/control.php?panel=bike_data">Motos</a></li>
+    <li><a href="/forum/control.php?panel=privacy">Options</a></li>
+    <li><a href="/forum/control.php?panel=newsletter_panel">Abonnements</a></li> 
+  </ul>
+ </div>  
+ </div><!-- /cbp-hrsub-inner -->
+ </div><!-- /cbp-hrsub -->
+</li>
+</ul>
+</nav>
+<script src="/js/HorizontalMenu.min.js"></script></div>
+
+<div class="under_menu_container">
+<div id="pub">
+<a href='/campagnes/adclick.php?bannerid=694&amp;zoneid=1&amp;source=&amp;dest=http%3A%2F%2Fwww.gpfrancemoto.com%2Ffr%2FInfos-billetterie.html' target='_blank'><img src='http://www.lerepairedesmotards.com/img/pub/motogp-2016-1000.jpg' width='1000' height='100' alt='' title='' ></a><div id="beacon_694" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src='/campagnes/adlog.php?bannerid=694&amp;clientid=207&amp;zoneid=1&amp;source=&amp;block=28&amp;capping=0&amp;cb=a0c3de90ab02c3f34f2f9c057e132740' width='0' height='0' alt='' /></div>
+</div>
+</div>
+</div>
+<div class="under_menu_container">
+<div id="nav_submenu">
+<ul>
+  <li><a href="/forum/index.php">Forums</a>
+  <ul>
+   <li><a href="/forum/list.php?3">Motos &amp; Motards</a></li>
+   <li><a href="/forum/list.php?2">Technique</a></li> 
+   <li><a href="/forum/list.php?6">Juridique</a></li>       
+   <li><a href="/forum/list.php?9">MotoBrev</a></li>
+   <li><a href="/forum/list.php?1">Balades</a></li>
+   <li><a href="/forum/list.php?4">Taquin</a></li>                                     
+   <li><a href="/forum/list.php?8">Motos</a></li>          
+   <li><a href="/forum/list.php?15">Equipements</a></li>          
+   <li><a href="/forum/list.php?17">Roadbooks</a></li>                   
+   <li><a href="/forum/list.php?19">Achats</a></li>                            
+   <li><a href="/forum/list.php?20">Ventes</a></li>                            
+   <li><a href="/forum/list.php?12">Entraide</a></li>                                      
+   <li><a href="/forum/list.php?18">Pr&eacute;sentations</a></li> 
+   <li><a href="/mur">Le mur</a></li>
+   <li><a href="/chat/index.php">Chat</a></li>
+   <li><a href="/forum/search.php">Chercher sur les forums</a></li>   
+    
+</ul>
+</li>
+<li>
+ <a href="/pratique/index.php">Pratique</a>
+  <ul>
+	<li><a href="/agenda/index.php">Agenda</a></li>
+	<li><a href="/paris/index.php">Pronostics</a></li>
+	<li><a href="/budget/index.php">Budget</a></li>
+	<li><a href="/roadbook/index.php">Roadbooks</a></li>
+	<li><a href="/motostop/index.php">MotoStop</a></li>
+	<li><a href="/guides/annuaire-adresses.php">Adresses</a></li>
+	<li><a href="/guides/annuaire.php">Liens </a></li>
+	<li><a href="/technique/index.php">M&eacute;canique</a></li>    
+	<li><a href="/pratique/meteo.php">M&eacute;t&eacute;o</a></li>
+	<li><a href="/guides/revue-presse.php">Revue de presse </a></li>   
+  </ul>
+</li>
+	
+<li>
+ <a href="/guides/avis/index.php">Avis</a>
+  <ul>
+	 <li><a href="/guides/avis-motos.php">Motos</a></li>
+	 <li><a href="/guides/avis-casques.php">Casques</a></li>
+	 <li><a href="/guides/avis-pneus.php">Pneus</a></li>
+	 <li><a href="/guides/avis-equipements.php">Equipements</a></li>
+	 <li><a href="/guides/avis-moto-ecoles.php">Motos-&eacute;coles</a></li>
+  </ul>
+</li>
+
+<li>
+ <a href="/guides/index.php">Guides</a>
+  <ul>
+	<li><a href="/guides/annuaire-adresses.php">Adresses</a></li>  
+    <li><a href="/guides/annuaire-adresses-casse.php">Casses</a></li>
+    <li><a href="/guides/annuaire-adresses-concessionnaire.php">Concessionnaires</a></li>
+    <li><a href="/guides/circuits.php">Circuits</a></li>
+    <li><a href="/guides/mc.php">Clubs</a> </li>
+	<li><a href="/guides/ecoles.php">Ecoles de pilotage</a></li>
+    <li><a href="/guides/locations.php">Locations</a></li>
+    <li><a href="/guides/annuaire-adresses-moto-ecole.php">Moto-&eacute;coles</a></li>
+    <li><a href="/guides/musees.php">Mus&eacute;es</a></li>      
+	<li><a href="/guides/annuaire.php">Liens</a></li>    
+  </ul>
+</li>
+	
+<li>
+ <a href="/forum/control.php">Mon repaire</a>
+  <ul>
+	 <li><a href="/actualites/favoris.php">Mes actualit&eacute;s</a></li>
+	 <li><a href="/agenda/monagenda.php">Mon agenda</a></li>        
+	 <li><a href="/forum/pm.php">Mes Messages</a></li>
+	 <li><a href="/forum/control.php?0,panel=subthreads">Mes discussions</a></li>
+	 <li><a href="/forum/control.php?panel=newsletter_panel">Mes abonnements</a></li>
+	 <li><a href="/forum/control.php?0,panel=friends,action=managefriends">Mes amis</a></li>
+	 <li><a href="/forum/addon.php?module=lrm_custom_fields,action=usersearch">Chercher un membre</a></li>
+  </ul>
+</li></ul>
+</div>
+<div id="topbarhome">
+  <div id="breadcrumb"><a href="/index.php"><img src="/img/icones/home.png" alt='Accueil'></a>
+
+    
+    
+    
+    
+
+                                      <a  href="http://www.lerepairedesmotards.com/forum/index.php">Communauté</a>
+                                                <a rel="breadcrumb-folder[22]" href="http://www.lerepairedesmotards.com/forum/index.php?22">Espace Infos</a>
+                                                <a rel="breadcrumb-forum[9]" href="http://www.lerepairedesmotards.com/forum/list.php?9">MotoBrev</a>
+                                                Discussion                          <!-- end of div id=breadcrumb -->
+  Sourd(ingue) cherche moto-école sur Paris
+  
+    </div>
+
+   <form id="search" name="search" action="/cherche.php" method="post"> 
+    <input type="search" name="q" id="search2" value="chercher" onFocus="if(value=='chercher') this.value='';" />
+    <button type="submit" class="buttonok" name="search_button" role="button" aria-disabled="false">OK</button>
+   </form>
+  </div>
+</div>
+</header>
+<!--..........ARTICLE..........-->
+<div class="body_container">
+<div class="maincontent">
+<section>
+   
+  <h1 class="uppercase forum-tool">MotoBrev <a class="newsubject view-more bkg-blue" href="http://www.lerepairedesmotards.com/forum/posting.php?9">Nouveau sujet</a></h1>
+
+      
+                
+  <h1 class="clear forum-tool-h2">Sourd(ingue) cherche moto-école sur Paris</h1>    
+  <p class="forum-discussion">
+    <a href="http://www.lerepairedesmotards.com/forum/read.php?9,1091440936,older"><img src="/img/icones/fleche-precedent.gif" alt="Discussion précédente" /></a>
+    <a class="floatright" href="http://www.lerepairedesmotards.com/forum/read.php?9,1091440936,newer"><img src="/img/icones/fleche-suivant.gif" alt="Discussion suivante" /></a>  </p> 
+<!--
+        Discussion précédente Discussion suivante        <div class="description">Envoyé par <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,10710">fradav</a>&nbsp;</div>
+        -->
+      <!-- end of div id=page-info -->
+    
+    
+        
+                                
+    
+   
+<!-- END TEMPLATE header -->
+<script type="text/javascript">
+Phorum.http_path = 'http://www.lerepairedesmotards.com/forum';
+</script>
+<!-- BEGIN TEMPLATE read.tpl -->
+<p class="clear">
+	    <a class="icon icon-feed" href="http://www.lerepairedesmotards.com/forum/feed.php?9,2244005,type=rss">Flux RSS</a>
+	<a class="select-vote" href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244005,sortbyrate=1#msg-2244005"><img src="/img/icones/vote-on.gif" title="Trier par vote" alt="Trier par vote" align="right" /><img src="/img/icones/date-off.gif" title="Trier par date" alt="Trier par date" align="right" /></a>    	
+<p>
+    <!-- BEGIN TEMPLATE paging -->
+<!-- END TEMPLATE paging -->
+ 
+</p>
+
+       
+      
+
+           
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244005#msg-2244005">Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=fradav" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,10710" title="" class="viewpic">                        fradav                        <!-- Avatar code -->
+                                 <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244005" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            29-07-2004 16:11		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Bonjour,<br />
+<br />
+Etant sourd, je m'exprime oralement sans problème mais je ne peux comprendre la parole qu'avec l'aide de la lecture labiale, et donc la visibilité de face de mon interlocuteur est un pré-requis absolu. Je ne possède que le permis bagnole et j'aimerais passer le permis &quot;gros-cube&quot;, ce qui m'amène à un certain nombre de questions :<br />
+<br />
+- Y'aurait-il des <a href="http://www.lerepairedesmotards.com/guides/avis-moto-ecoles-75.php" target="_blank" >moto-écoles plus conseillées sur paris</a> que d'autres pour donner des cours à un sourd? Si oui lesquelles? Le moniteur doit en effet me parler de face, sans casque intégral), et articuler pour que je comprenne quelque chose. Dans ces conditions les moto-écoles typées &quot;usine&quot; ne me sont évidemment pas trop recommandées...<br />
+<br />
+- J'ai déjà pris des cours il y a un certain temps (10 ans!) et ça se passait relativement bien (comme je les prenais en hiver, j'étais quasiment seul avec le mono). A l'époque il était possible d'aménager l'examen de circu en se contentant de me faire suivre la voiture de l'examinateur, étant entendu que je ne pouvais absolument pas comprendre les instructions &quot;téléphonées&quot; dans le casque. Est-ce toujours le cas?<br />
+<br />
+Merci d'avance pour vos réponses!                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244005#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244005,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244014"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244014#msg-2244014">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=Amessylt" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,2114" title="" class="viewpic">                        Amessylt                        <!-- Avatar code -->
+                                 <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244014" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            29-07-2004 16:35		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Salut fradav,<br />
+<br />
+Perso j'ai passé plusieurs cours de circu ainsi que l'examen avec un sourd et il l'a eu le même jour que moi... On faisait plus de pauses pour que l'instructeur lui explique les points à améliorer, les routes à prendre pour qu'il soit un peu devant ou lorsqu'il devait suivre un autre élève. L'examen de circu a aussi été aménagé, il a suivi une autre moto si je me souviens bien, tandis que la voiture de l'examinateur restait derrière.<br />
+Je ne sais pas s'il y a des moto-écoles plus conseillées que d'autre mais la mienne c'était l'auto-moto école gare de l'est, si tu veux aller te renseigner.<br />
+Bon courage pour ton permis !  <img class="mod_smileys_img" src="http://www.lerepairedesmotards.com/forum/../img/emoticons/wink.gif" alt="clin d'oeil" title="clin d'oeil"/>                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244014#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244014,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244016"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244016#msg-2244016">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=Abraham Kadabra" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,8626" title="" class="viewpic">                        Abraham Kadabra                        <!-- Avatar code -->
+                                 <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244016" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            29-07-2004 16:40		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Salut Fradav (#paris ?)<br />
+<br />
+[<a href="http://www.visuf.org/viepratAuto.php" target="_blank"  rel="nofollow">www.visuf.org</a>]<br />
+<br />
+Merci de convertir le lien, j'ai oublié...  <img class="mod_smileys_img" src="http://www.lerepairedesmotards.com/forum/../img/emoticons/perverse.gif" alt="j'aime" title="j'aime"/> <br />
+<br />
+Courage à toi.<br />
+<br />
+<br />
+<br />
+                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244016#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244016,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244023"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244023#msg-2244023">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=Boulbizar" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,2382" title="" class="viewpic">                        Boulbizar                        <!-- Avatar code -->
+                                   <span><img src="http://www.lerepairedesmotards.com/forum/file.php?9,file=241" alt="avatar"
+                          style="width:110px;
+                     height:128px"
+             /></span>
+                  <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244023" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            29-07-2004 16:55		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             [<a href="http://www.visuf.org/viepratAuto.php" target="_blank"  rel="nofollow">www.visuf.org</a>]<br />
+<br />
+<br />
+<br />
+                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244023#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244023,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244032"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244032#msg-2244032">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=fradav" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,10710" title="" class="viewpic">                        fradav                        <!-- Avatar code -->
+                                 <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244032" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            29-07-2004 17:12		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             &gt; <br />
+&gt; [<a href="http://www.visuf.org/viepratAuto.php" target="_blank"  rel="nofollow">www.visuf.org</a>]<br />
+&gt; <br />
+<br />
+Malheureusement sur les 3 écoles recensées sur paris, seule le CER fait aussi moto-école. De plus, je ne pratique absolument pas la LSF, juste la lecture labiale.  C'est plus une bête question de &quot;compréhension humaine&quot; de la part du/des moniteurs que de spécialisation dans la LSF ou autre. Mais merci quand même pour le lien, il peut être utile.                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244032#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244032,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244071"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244071#msg-2244071">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=Monsieur K. (anc. Papy R-One)" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,24" title="" class="viewpic">                        Monsieur K. (anc. Papy R-One)                        <!-- Avatar code -->
+                                 <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244071" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            29-07-2004 19:40		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Le problême, à mon avis ne vient pas tant du faite que tu doives trouver une moto-école adapté, mais qu'il faudra surement que tu trouves un examinateur &quot;adapté&quot; dans ce sens également.<br />
+<br />
+Pour la circulation, toi, tu es sur la moto, et l'examinateur est dans le voiture, derrière toi... et il te donne ses instructions par talkie walkie...<br />
+D'où gros problême pour les examens.<br />
+<br />
+J'ai peur que tu ne doives monter un dossier pour une formation et un examen  adapté en tant qu'handicapé. Essais de te rapprocher de l'assos' qui s'occupe des motards handicapés (je ne sais plus son nom), eux connaissent toutes les ficelles pour monter ça correctement...<br />
+<br />
+<br />
+<br />
+                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244071#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244071,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244072"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244072#msg-2244072">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=deafrocker" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,9093" title="" class="viewpic">                        deafrocker                        <!-- Avatar code -->
+                                   <span><img src="http://www.lerepairedesmotards.com/forum/file.php?9,file=692" alt="avatar"
+                          style="width:110px;
+                     height:128px"
+             /></span>
+                  <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244072" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            29-07-2004 19:41		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Salut à toi Fradav!<br />
+<br />
+Bon ben je suis aussi sourdingue...<br />
+<br />
+Question: portes tu des prothèses auditives? Un implant cochléaire peut être?<br />
+<br />
+Pour ma part, je porte un implant cochléaire à droite ainsi qu'une prothèse normale à gauche (bonjour la consommation au niveau des piles  <img class="mod_smileys_img" src="http://www.lerepairedesmotards.com/forum/../img/emoticons/sad2.gif" alt="pas content" title="pas content"/> ).<br />
+<br />
+Pour ce qui est de la moto-école, ben moi j'ai expliqué mon cas à mon mono et il m'explique tout en me parlant en face (il retire son casque quand on est sur le plateau) et si je lui tourne le dos, il gueule des mots simples, facilement identifiables (STOOOOOOOOOOOOOP ! j'attrape l'embrayage et je freine lol).<br />
+<br />
+Note bien que pour ton confort, si tu portes des prothèses auditives, fais toi faire des embouts auriculaires souples sinon tu vas le sentir passer au moindre choc. Pour le casque, essaie en plusieurs pq certains passent très bien et d'autres pas. Sache aussi que quand je porte un casque, la parole me semble plus compréhensible car les bruits extérieurs sont atténués...<br />
+<br />
+Donc, un conseil: si tu trouves une moto-école spéciale, vas-y, sinon arrange toi avec le mono, tu verras, ils sont sympas.<br />
+<br />
+Tchuss!                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244072#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244072,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244299"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244299#msg-2244299">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=fradav" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,10710" title="" class="viewpic">                        fradav                        <!-- Avatar code -->
+                                 <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244299" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            30-07-2004 16:50		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Salut deafrocker,<br />
+<br />
+&gt; <br />
+&gt; Pour ce qui est de la moto-école, ben moi j'ai expliqué mon cas<br />
+&gt; à mon mono et il m'explique tout en me parlant en face (il<br />
+&gt; retire son casque quand on est sur le plateau) et si je lui<br />
+&gt; tourne le dos, il gueule des mots simples, facilement<br />
+&gt; identifiables (STOOOOOOOOOOOOOP ! j'attrape l'embrayage et je<br />
+&gt; freine lol).<br />
+<br />
+Ouais pareil pour ma première expérience, mono super sympa, ça se passait bien (bon en même temps j'étais tout seul aux cours).<br />
+<br />
+&gt; <br />
+&gt; Note bien que pour ton confort, si tu portes des prothèses<br />
+&gt; auditives, fais toi faire des embouts auriculaires souples<br />
+&gt; sinon tu vas le sentir passer au moindre choc. Pour le casque,<br />
+&gt; essaie en plusieurs pq certains passent très bien et d'autres<br />
+&gt; pas. Sache aussi que quand je porte un casque, la parole me<br />
+&gt; semble plus compréhensible car les bruits extérieurs sont<br />
+&gt; atténués...<br />
+<br />
+J'ai toujours eu des embouts souples (avec sonotones-contour-d'oreille, pour les 2 oreilles), et ça se passe à peu près correctement niveau bruit/choc avec le casque. Sauf qu'une fois le casque mis c'est assez galère de ne pas choper d'effets larsen (je suis &quot;sourd profond&quot; et mes sonotones sont quasi à donf'). Enfin rien d'insurmontable, et surtout y'a que moi que ça gène, pour une fois (ceux qui connaissent comprendront)  <img class="mod_smileys_img" src="http://www.lerepairedesmotards.com/forum/../img/emoticons/wink.gif" alt="clin d'oeil" title="clin d'oeil"/><br />
+<br />
+&gt; <br />
+&gt; Donc, un conseil: si tu trouves une moto-école spéciale, vas-y,<br />
+&gt; sinon arrange toi avec le mono, tu verras, ils sont sympas.<br />
+<br />
+Oui bien sûr, mais je ne crois pas qu'il y ait de moto-écoles &quot;spécialisées&quot; dans la région. Des monos qui pratiquent la LSF sûrement, sauf que la LSF ne me concerne pas (cf. message plus haut). Sinon pour les autres, ça doit dépendre pas mal du type de moto-école. Sur paris j'imagine qu'ils ont tendance à être débordés donc pas trop enclins à s'occuper de &quot;cas particuliers&quot;.<br />
+<br />
+A+,<br />
+<br />
+                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244299#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244299,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244305"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244305#msg-2244305">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=nicoxj900" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,5597" title="" class="viewpic">                        nicoxj900                        <!-- Avatar code -->
+                                   <span><img src="http://www.lerepairedesmotards.com/forum/file.php?9,file=483" alt="avatar"
+                          style="width:110px;
+                     height:128px"
+             /></span>
+                  <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244305" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            30-07-2004 17:13		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Ben n'étant pas sourd (et de surcroit pas en France), je ne peux que vous souhaiter bon courage !<br />
+<br />
+Je ne m'étais jamais posé la question avant, mais c'est vrai que pour la circulation et les discourts il faut des monos motivés.<br />
+<br />
+<br />
+<br />
+                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244305#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244305,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244306"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244306#msg-2244306">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=cesco" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,775" title="" class="viewpic">                        cesco                        <!-- Avatar code -->
+                                   <span><img src="http://www.lerepairedesmotards.com/forum/file.php?9,file=80" alt="avatar"
+                          style="width:110px;
+                     height:128px"
+             /></span>
+                  <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244306" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            30-07-2004 17:22		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             contacte Handicap Moto Solidarité, je pense qu'ils pourront te filer tes tuyaux  <img class="mod_smileys_img" src="http://www.lerepairedesmotards.com/forum/../img/emoticons/wink.gif" alt="clin d'oeil" title="clin d'oeil"/> <br />
+<br />
+[<a href="http://club.bdway.com/hms/" target="_blank"  rel="nofollow">club.bdway.com</a>]<br />
+<br />
+<br />
+<br />
+                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244306#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244306,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244315"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244315#msg-2244315">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=grincheux" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,10184" title="" class="viewpic">                        grincheux                        <!-- Avatar code -->
+                                 <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244315" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            30-07-2004 18:07		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Hello,<br />
+J'ai passé mon permis dernièrement gare de l'Est comme Ammesylt et pendant quelques discussions avec le mono, il m'a parlé d'un de ses élèves sourd. Il m'a dit que ça avait été une expérience très enrichissante pour lui et qu'il appréciait ce genre de situation.<br />
+Va faire un tour là-bas pour voir si Eddy est toujours là!<br />
+<br />
+<br />
+<br />
+                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244315#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244315,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244327"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244327#msg-2244327">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=Cath" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,1320" title="" class="viewpic">                        Cath                        <!-- Avatar code -->
+                                   <span><img src="http://www.lerepairedesmotards.com/forum/file.php?9,file=129" alt="avatar"
+                          style="width:110px;
+                     height:128px"
+             /></span>
+                  <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244327" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            30-07-2004 19:18		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             En tant que monitrice, moi ca ne me derangerait pas du tout de t'apprendre, je l'ai deja fait en auto, mais question technique, j'ai demandé, c'est le flou complet...<br />
+<br />
+Tu aurais posté hier, j'aurais demandé à un inspecteur, j'aurais sans doute eu la reponse officielle...<br />
+<br />
+<br />
+<br />
+                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244327#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244327,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244336"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244336#msg-2244336">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=nicoxj900" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,5597" title="" class="viewpic">                        nicoxj900                        <!-- Avatar code -->
+                                   <span><img src="http://www.lerepairedesmotards.com/forum/file.php?9,file=483" alt="avatar"
+                          style="width:110px;
+                     height:128px"
+             /></span>
+                  <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244336" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            30-07-2004 19:57		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             cath &gt;&gt; il A posté hier  <img class="mod_smileys_img" src="http://www.lerepairedesmotards.com/forum/../img/emoticons/wink.gif" alt="clin d'oeil" title="clin d'oeil"/><br />
+<br />
+<br />
+<br />
+                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244336#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244336,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244358"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244358#msg-2244358">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=Cath" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,1320" title="" class="viewpic">                        Cath                        <!-- Avatar code -->
+                                   <span><img src="http://www.lerepairedesmotards.com/forum/file.php?9,file=129" alt="avatar"
+                          style="width:110px;
+                     height:128px"
+             /></span>
+                  <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244358" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            30-07-2004 21:31		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Merdum, mais en fait, à 16h00, j'etais encore sur le plateau....<br />
+<br />
+<br />
+<br />
+                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244358#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244358,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244377"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244377#msg-2244377">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=deafrocker" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,9093" title="" class="viewpic">                        deafrocker                        <!-- Avatar code -->
+                                   <span><img src="http://www.lerepairedesmotards.com/forum/file.php?9,file=692" alt="avatar"
+                          style="width:110px;
+                     height:128px"
+             /></span>
+                  <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244377" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            31-07-2004 02:04		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Heu? fradav?<br />
+<br />
+Dis, juste un truc en passant...<br />
+<br />
+Si t'es sourd profond, je te conseille vivement l'implant cochléaire. C'est pas évident évident mais l'opération en elle même n'est pas trop douloureuse (c'est la bouffe de l'hosto qui est pénible). Les résultats ne sont pas immédiats mais quand ils sont là ben ça marche bien mieux. Si tu veux des conseils, infos ou quoi que ce soit, contacte moi par mail à l'adresse reprise ds mon profil (deafrocker1@yahoo.fr)<br />
+<br />
+Bonne route et surtout, bon amusement au guidon de ta moto...                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244377#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244377,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244750"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244750#msg-2244750">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=fradav" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,10710" title="" class="viewpic">                        fradav                        <!-- Avatar code -->
+                                 <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244750" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            02-08-2004 10:14		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Cath a écrit:<br />
+<br />
+&gt; En tant que monitrice, moi ca ne me derangerait pas du tout de<br />
+&gt; t'apprendre, je l'ai deja fait en auto, mais question<br />
+&gt; technique, j'ai demandé, c'est le flou complet...<br />
+&gt; <br />
+&gt; Tu aurais posté hier, j'aurais demandé à un inspecteur,<br />
+&gt; j'aurais sans doute eu la reponse officielle...<br />
+&gt; <br />
+<br />
+Et, la prochaine fois que tu en vois un, ça tient toujours pour lui demander? <img class="mod_smileys_img" src="http://www.lerepairedesmotards.com/forum/../img/emoticons/smile.gif" alt="sourire" title="sourire"/><br />
+<br />
+a+,                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244750#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244750,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+            <a name="msg-2244778"></a>
+          
+
+        <div>          
+       <table class="read">
+            <tr >
+		   <td colspan="4" class="message-subject"><a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244778#msg-2244778">Re: Sourd(ingue) cherche moto-école sur Paris</a></td>
+</tr>
+<tr>
+       
+           <td class="message-author" width="200">
+            <a href="/forum/control.php?9,panel=friends,search_name=Tracemaroute" title="Ajouter en ami"><img class="add-friend" src="/img/icones/add-friend-sm.gif" alt="Ajouter en ami"></a>
+                                                  <a href="http://www.lerepairedesmotards.com/forum/profile.php?9,10791" title="" class="viewpic">                        Tracemaroute                        <!-- Avatar code -->
+                                 <!-- -->
+</a>       
+&nbsp;                
+<img src='/img/forum/user-offline.png' alt='' />                       
+                                             
+                       
+          </td>
+          <td >
+                           <!-- Rate information -->
+        <div style="padding:3px 3px 0 3px;width:70px;align:center;font-size:11px">
+        <div id="rrr-2244778" class="rrvalue" style="float:right;font-weight:bold;">0</div>
+        <div class="notation">
+                        &nbsp;
+                    </div>
+        </div>
+                    </td>
+           
+		<td class="message-date" nowrap="nowrap" width="100" align="right">
+            02-08-2004 12:02		</td>
+         </tr>
+        </table>
+        </div>
+
+        <div class="message-read">
+            
+             Hello, bon, moi je suis de Lille donc je ne peux pas t'aider beaucoup.<br />
+<br />
+Mais pendant toute la durée des lecons et le passage du permis, j'etais avec un eleve sourd.<br />
+<br />
+Pour les lecons de plateau, il existe la bonne vieile ardoise et la craie et pour les lecons sur route, souvent il passait derriere moi (car pour lui, inutile de lui mettre une oreillette).<br />
+<br />
+Pour le passage du plateau, l'examinateur a pris du temps pour lui expliquer et pour la route, il lui donner une direction, puis à chaques appels de phare de la voiture, il se rangait sur le coté pour de nouvelles indications.<br />
+<br />
+Comme quoi, quand on tombe sur des gens serieux et passionnés qui prennent leur temps pour expliquer .... ca marche !<br />
+<br />
+Maintenant, je ne connais pas les moto ecoles Parisiennes !<br />
+<br />
+PS: on l'a eu tous les deux du premier coup !<br />
+<br />
+<br />
+<br />
+                        <div class="message-options">
+                                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244778#REPLY" class="buttons"><img src="/img/icones/com.png" alt="Répondre" /></a>
+                <a href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,2244778,quote=1#REPLY" class="buttons"><img src="/img/icones/citation.png" alt="Citer" /></a>
+                           
+            </div>
+
+            
+            
+        
+    </div>
+
+<div>
+    <!-- BEGIN TEMPLATE paging -->
+<!-- END TEMPLATE paging -->
+
+    <!-- CONTINUE TEMPLATE read.tpl -->
+
+<p>
+    <a href="http://www.lerepairedesmotards.com/forum/read.php?9,1091440936,older"><img src="/img/icones/fleche-precedent.gif" alt="Discussion précédente" /> Discussion précédente</a>
+    <a class="alignright" href="http://www.lerepairedesmotards.com/forum/read.php?9,1091440936,newer">Discussion suivante <img src="/img/icones/fleche-suivant.gif" alt="Discussion suivante" /></a>
+</p>
+</div>
+
+<div id="thread-options">
+    <a class="icon icon-printer" href="http://www.lerepairedesmotards.com/forum/read.php?9,2244005,printview,page=1" target="_blank">Aperçu avant impression</a>
+                    <a class="icon icon-feed" href="http://www.lerepairedesmotards.com/forum/feed.php?9,2244005,type=rss">Flux RSS</a>
+        </div>
+
+  <a name="REPLY"></a>
+
+<!-- END TEMPLATE read.tpl -->
+
+<!-- début Google -->
+<div class="google">
+<script type="text/javascript"><!--
+google_ad_client = "pub-2117655243763129";
+/* 468x60, date de création 19/11/08 */
+google_ad_slot = "5724104705";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- end google -->
+
+<!-- necessary -->
+
+<!-- BEGIN TEMPLATE message.tpl -->
+
+<p>&nbsp;</p>
+
+<div class="phorum">
+    <div class="information">
+        Seuls les utilisateurs enregistrés peuvent poster des messages dans ce forum. <a href='/forum/login.php'><img src='/img/forum/facebook.gif' width='212' height='22' alt='Facebook' title='Vous pouvez aussi vous connecter avec votre identifiant Facebook' /></a>                    <p><a href="http://www.lerepairedesmotards.com/forum/login.php?9">Cliquez ici pour vous connecter</a></p>
+                    </div>
+
+</div>
+<!-- END TEMPLATE message.tpl -->
+
+<!-- BEGIN TEMPLATE footer.tpl -->
+</section>
+<!-- begin Google -->
+<script><!--
+google_ad_client = "ca-pub-2117655243763129";
+/* Site - footer */
+google_override_format = true;
+google_ad_slot = "5724104705";
+google_ad_width = 605;
+google_ad_height = 180;
+//-->
+</script>
+<script src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!-- end google -->
+
+</div>
+<div id="sidebar">
+<div class="news-side">
+ <h4>Articles les + comment&eacute;s</h4> 
+  <ul>
+	<li><a href="/chroniques/budget-moto-2000-4000-euros.php" title="Quelle moto pour un débutant ? Pour 2.000 euros, t'as plus rien... Kronik du mardi...">Kronik : Pour 2.000 à 4.000 euros<span>5</span></a></li><li><a href="/actualites/2016/actu_160111-fin-amendes-exces-vitesse.php" title="Le Sénateur de la Vienne dépose une proposition de loi visant à mettre fin aux amendes sur les excès de vitesse de moins de 10 km/h">Fin des amendes sur les petits excès de vitesse<span>24</span></a></li><li><a href="/actualites/2016/actu_160108-pneu-continental-contisportattack-3.php" title="Continental lance le pneu ContiSportAttack 3 qui gagne en adhérence sur sol mouillé avec le RainGrip et se dote de la technologie GripLimitFeedback sans perdre en longévité">Pneu Continental ContiSportAttack 3<span>7</span></a></li><li><a href="/chroniques/bobo-neo-retro.php" title="Moto art de vivre vs moto passion ? Hypster vs motard pur et dur ? une chronique signée Serge Martin">Radio Scoopie : Bobo Néo Rétro<span>21</span></a></li> 
+  </ul>
+</div>
+<div id="pub-300">
+<a href='/campagnes/adclick.php?bannerid=681&amp;zoneid=2&amp;source=&amp;dest=http%3A%2F%2Fwww.allopneus.com%2Fpneu-moto%2F%23utm_source%3Drepairemotards%26utm_medium%3Dpartner_display%26utm_campaign%3D112015_partner_repaire-motards_generique-moto' target='_blank'><img src='http://www.lerepairedesmotards.com/img/pub/allopneus-generique-300.gif' width='300' height='250' alt='' title='' ></a><div id="beacon_681" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src='/campagnes/adlog.php?bannerid=681&amp;clientid=140&amp;zoneid=2&amp;source=&amp;block=37&amp;capping=0&amp;cb=05a9547ffaf651b39264bcfc1d46f23b' width='0' height='0' alt='' /></div></div>
+<div id="pub-txt">
+<h5>Publicit&eacute;s en ligne</h5>
+	<ul><li><a href="/campagnes/adclick.php?bannerid=775" target="_blank" rel="nofollow">Dafy : Soldes jusqu'à -60%</a></li>
+<li><a href="/campagnes/adclick.php?bannerid=780" target="_blank" rel="nofollow">Soldes Motoblouz : foncez</a></li>
+<li><a href="/campagnes/adclick.php?bannerid=761" target="_blank" rel="nofollow">Découvrez le nouveau TomTomRider</a></li>
+<li><a href="/campagnes/adclick.php?bannerid=717" target="_blank" rel="nofollow">Collection IXS 2016</a></li>
+<li><a href="/campagnes/adclick.php?bannerid=742" target="_blank" rel="nofollow">Suzuki Reprise : 1000 euros offerts au-dessus de la cote de l'officiel</a></li>
+<li><a href="/campagnes/adclick.php?bannerid=722" target="_blank" rel="nofollow">Casque AGV K3-SV</a></li>
+<li><a href="/campagnes/adclick.php?bannerid=684" target="_blank" rel="nofollow">AlloPneus : le + grand choix de pneus deux-roues</a></li>
+<li><a href="/campagnes/adclick.php?bannerid=695" target="_blank" rel="nofollow">MotoGP 2016 : 6-7-8 mai 2016</a></li>
+<li><a href="/campagnes/adclick.php?bannerid=59" target="_blank" rel="nofollow">WebTV Moto Journal</a></li>
+</ul><h5>Assurance</h5>
+	<ul>
+<!--<li><a href="/annonceurs/www/delivery/ck.php?bannerid=14" target="_blank" rel="nofollow">Devis assurance en 2mn avec April Moto</a></li>-->
+<li><a href="/campagnes/adclick.php?bannerid=384" target="_blank" rel="nofollow">Devis assurance en 2mn avec April Moto</a></li>
+<li><a href="/campagnes/adclick.php?bannerid=382" target="_blank" rel="nofollow">Devis assurance en 2mn avec Assurbike</a></li>
+</ul></div>
+<!-- info /forum/read.php?9,2244005--><div class="news-side line-top">
+ <h4>Derniers articles</h4>
+  <ul>
+	<li><a href="/actualites/2016/actu_160113-moto-tour-puy-velay-ville-etape.php" title="Après avoir annoncé son arrivée à Nice, le Moto Tour dévoile un peu plus son parcours avec Le Puy-en-Velay comme ville étape"><b>Moto Tour : Le Puy-en-Velay, ville étape</b> <span> | 13.01.2016</span></a></li><li><a href="/actualites/2016/actu_160113-festival-rock-and-cars.php" title="Musique rock et mécaniques américaines à 2 et 4 roues se mêleront à Lavaur (81) pour la 9ème édition du festival Rock'&'Cars les 11 et 12 juin">Festival Rock and Cars <span> | 13.01.2016</span></a></li><li><a href="/actualites/2016/actu_160113-roulages-gratuits-circuit-carole.php" title="La FFM et la FFMC ouvre gratuitement les portes du circuit Carole aux motards lors de 26 week-ends en 2016">Les roulages gratuits du circuit Carole <span> | 13.01.2016</span></a></li><li><a href="/actualites/2016/actu_160113-gants-hiver-macna-pike.php" title="Macna présente les gants hiver Pike réalisés en cuir et tissu extensible et dotés de doublures thermiques, d'une membrane outdry et de renforts en TPU">Gants hiver Macna Pike <span> | 13.01.2016</span></a></li><li><a href="/actualites/2016/actu_160112-dakar-etape9-price.php" title="Toby Price remporte une nouvelle victoire d'étape sur le Dakar et profite d'une chute de Paulo Gonçalves pour creuser l'écart au classement">Dakar : Price creuse l'écart <span> | 12.01.2016</span></a></li><li><a href="/actualites/2016/actu_160112-rappel-kawasaki-w800-2011-2016.php" title="Kawasaki rappelle les W800 des millésimes 2011 à 2016 en raison de problèmes sur le faisceau électrique et les pipes d'admissions">Rappel des Kawasaki W800 2011-2016 <span> | 12.01.2016</span></a></li><li><a href="/actualites/2016/actu_160112-casque-integral-hjc-rpha-11-decos.php" title="Le casque intégral HJC Rpha 11 est désormais disponible à la vente et déjà proposé dans 9 décos différentes">9 décos pour le HJC Rpha 11 <span> | 12.01.2016</span></a></li> 
+  </ul>
+</div>
+<div id="debats">
+ <a href="/forum/index.php" class="whitebigpadd view-more bkg-red">Participez !</a>
+ <h4>Les d&eacute;bats</h4>
+  <ul>
+	<li><a href="/forum/read.php?3,3074649">Je quitte ce site  car il y a des j .....ou c...</a></li><li><a href="/forum/read.php?3,3074645">Conseil dorsale...</a></li><li><a href="/forum/read.php?3,3074023">choix difficile  1200 Vmax</a></li><li><a href="/forum/read.php?3,3073972">Moto pour futur debutant. tdm 900 / fazer 600 / bandit 650 S / bandits 1200 S</a></li><li><a href="/forum/read.php?3,3073913">Fiabilit&eacute; DUCATI</a></li><li><a href="/forum/read.php?3,3073849">: ma nouvelle famille et la solidarite des Motards</a></li> 
+  </ul> 
+</div>
+<ul id="encarts">
+<li class="gradient"><a href="/dossiers/drones-loisirs.php"><h4>dossiers</h4><img src="/img/actu/2016/vignettes/drones-loisirs.jpg" alt="Taille, pilotage, autonomie, législation... tout ce qu'il faut savoir pour choisir et utiliser son drone de loisir" width="120" height="80" /><h5>Drones de loisirs</h5><p>Taille, pilotage, autonomie, législation... tout ce qu'il faut savoir pour choisir et utiliser son drone de loisir</p></a></li><li class="gradient"><a href="/chroniques/budget-moto-2000-4000-euros.php"><h4>chronique</h4><img src="/img/actu/2016/vignettes/budget-moto-2000-4000-euros.jpg" alt="Quelle moto pour un débutant ? Pour 2.000 euros, t'as plus rien... Kronik du mardi..." width="120" height="80" /><h5>Kronik : Pour 2.000 à 4.000 euros</h5><p>Quelle moto pour un débutant ? Pour 2.000 euros, t'as plus rien... Kronik du mardi...</p></a></li><li class="gradient"><a href="/assurance/risque-fausse-declaration-sanction-resiliation.php"><h4>assurance</h4><img src="/img/actu/2016/vignettes/risque-fausse-declaration-sanction-resiliation.jpg" alt="Intentionnelle ou non, la fausse déclaration d'assurance peut aller jusqu'à la nullité du contrat et le remboursement des indemnités perçues. Explications et revue des risques" width="120" height="80" /><h5>Fausse déclaration et sanctions encourues</h5><p>Intentionnelle ou non, la fausse déclaration d'assurance peut aller jusqu'à la nullité du contrat et le remboursement des indemnités perçues. Explications et revue des risques</p></a></li></ul>
+</div><footer>
+ 
+<nav id="nav_sub">
+ <ul>
+    <li><a href="/index.php">Accueil</a></li>
+    <li><a href="/actualites/index.php">Actualités</a></li> 
+    <li><a href="/reportages/index.php">Reportages</a></li>
+    <li><a href="/essais/index.php">Essais</a></li>
+    <li><a href="/actualites/index.php">Dossiers</a></li>      
+    <li><a href="/guides/index.php">Guides</a></li>
+	<li><a href="/forum/">Forums</a></li>
+	<li><a href="/infos/emploi.php">Emploi</a></li>    
+	<li><a href="/infos/contact.php">Contact</a></li>
+ </ul>
+</nav>
+</footer>
+<a href="#" class="scrollup">Top</a>
+</div>
+<!-- curlmark -->
+<!-- img -->
+<!-- img2 -->
+<script>
+<!--
+var BkgClickUrl = "/";
+-->
+</script>
+<div id="copyright">
+  <p>Copyright &copy; Le Repaire des Motards - 1999-2016. 1er site d'information et de services motos.<br />
+  Tous droits r&eacute;serv&eacute;s. <a href="/infos/mentions.php">Mentions l&eacute;gales</a>.</p>
+<div id="xiti-logo">
+<a href="http://www.xiti.com/xiti.asp?s=29032" rel="nofollow" title="WebAnalytics">
+<script type="text/javascript">
+<!--
+Xt_param = 's=29032&p=';
+try { Xt_r = top.document.referrer;}
+catch(e) { Xt_r = document.referrer; }
+Xt_h = new Date();
+Xt_i = '<img width="80" height="15" ';
+Xt_i += 'src="http://logv5.xiti.com/bcg.xiti?'+Xt_param;
+Xt_i += '&hl='+Xt_h.getHours()+'x'+Xt_h.getMinutes()+'x'+Xt_h.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{ Xt_s=screen;Xt_i+='&r='+Xt_s.width+'x'+Xt_s.height+'x'+Xt_s.pixelDepth+'x'+Xt_s.colorDepth;}
+document.write(Xt_i+'&ref='+Xt_r.replace(/[<>"]/g, '').replace(/&/g, '$')+'">');
+-->
+</script>
+<noscript>
+<div id="xiti-logo-noscript">
+<img width="80" height="15" src="http://logv5.xiti.com/bcg.xiti?s=29032&amp;p=&amp;" alt="WebAnalytics" />
+</div>
+</noscript>
+</a>
+</div>
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1173137-1', 'auto');
+  ga('send', 'pageview'); 
+</script></div> <div id="fullscreen" title="Pub">
+<iframe src="http://www.lerepaire.com" id="adiframe" name="ad"></iframe> 
+</div>
+<div id="adfooter-show"><div>Publicit&eacute;</div></div>
+<div id="adfooter">
+<div id="adfooter-hide">R&eacute;duire</div>
+<div id="adfooter-inner"><div id="adfooter-label">ouvrir</div>
+<a href='/campagnes/adclick.php?bannerid=773&amp;zoneid=3&amp;source=&amp;dest=http%3A%2F%2Fwww.dafy-moto.com%2Fsoldes_2016' target='_blank'><img src='http://www.lerepairedesmotards.com/img/pub/dafy-soldes2016-footer.gif' width='1000' height='60' alt='' title='' ></a><script>document.getElementById('adiframe').src = "/img/pub/footer/774.php"</script>
+<style type="text/css">
+.mCSB_scrollTools .mCSB_draggerRail{background:black; }
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background:#E7002C; }
+#adfooter-inner {background:#E7002C;}
+</style><div id="beacon_773" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src='/campagnes/adlog.php?bannerid=773&amp;clientid=217&amp;zoneid=3&amp;source=&amp;block=0&amp;capping=3&amp;cb=1835d2bb02d7abc569dc6e942ed89a9e' width='0' height='0' alt='' /></div></div></div>	<!-- END TEMPLATE footer.tpl -->
+<div id="fb-root"></div>
+               <script>
+		window.fbAsyncInit = function() {
+		  FB.init({appId: '97410923075', status: true, cookie: true,
+			   xfbml: true, oauth:true});
+		  
+		};
+		(function(d) {
+		    var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+		    js = d.createElement('script'); js.id = id; js.async = true;
+		    js.src = '//connect.facebook.net/en_US/all.js';
+		    d.getElementsByTagName('head')[0].appendChild(js);
+		}(document));
+	      </script>
+</body>
+</html>

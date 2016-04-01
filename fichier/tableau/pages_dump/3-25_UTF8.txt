@@ -1,0 +1,330 @@
+RSS Feed
+
+AllDeaf.com
+Perks - Advertise - Spy - Who Quoted Me
+Blogs
+Recent Entries
+Best Entries
+Best Blogs
+Blog List
+Search Blogs
+Go Back   AllDeaf.com > Deaf Interests > Hearing Aids & Cochlear
+Implants
+Reload this Page Choosing a cochlear implant brand
+LIKE AllDeaf on Facebook FOLLOW AllDeaf on Twitter
+User Name User Name_ [ ] Remember Me?
+Password  __________ Log in
+Advertisement
+Register Blogs FAQ Social Groups Calendar Search Today's Posts    Mark
+Forums Read
+Reply
+Thread Tools Display Modes
+Old 09-18-2015, 10:56 AM   #1
+miki
+Registered User
+Join Date: Sep 2015
+Posts: 4
+Likes: 2
+Liked 2 Times in 1 Post
+Choosing a cochlear implant brand
+__________________________________________________________________
+Hello, I'm a young 21 year old medicine student that is deaf.. I think
+that im not
+having enough with the HA so im certainly sure
+I will get implanted( in process of doings the CT scan and such things)
+I have a question... There are INDEPENDENT studies
+howing speech comparision charts and such between the brands?
+Everything seems some biased or studies founded by one brand...
+You can give your personal opinion too.
+please let me know if is allowed to talk about this..
+I did extensive research and my main bet by far
+is AB. ( my ORL told me that they only did Cochlear but is a lie, since
+i contacted AB and they said that they did AB brand too in my hospital)
+Also i'm a long time lurker here and i dont need that the user Hoichi
+posts something against CI. is just irrational fear to
+being excluded. Just grow up. i dont sign and i have my real
+difficulties sometimes, but you get the joy of knowing a multiple of
+people and their ideas and being capable to comunicate to everyone.
+Also sorry for my english, I'm from Barcelona, Spain.
+Thank you much!
+Likes: (2)
+aviateCar, drphil
+miki is offline   Reply With Quote
+View Public Profile
+Find More Posts by miki
+Old 09-18-2015, 01:35 PM   #2
+outthpaw
+outthpaw's Avatar
+Join Date: Jan 2011
+Location: Sparks, NV
+Posts: 1,127
+Likes: 13
+Liked 274 Times in 180 Posts
+Send a message via AIM to soutthpaw
+I posted a thread before about the "Myth" that any one implant company
+has better technology. Rather they each use different approaches to
+design and programming. I can tell you that at least for Cochlear, the
+hardware and software is far ahead of the research and current
+programming knowledge and abilities. In other words there is still tons
+of room for growth with the N6 processor and the various implant
+arrays.
+I've been involved in CI research studies at Cochlear America's and
+talked with and discussed with their auditory perception research team
+on many occasions. One of the things they are currently working on is
+having bilateral implants wirelessly working together to better
+localize and process sound.
+Also those comparison pages like to tote features and numbers that 99%
+of recipients well never use even close to the limits. I.e. The
+imulation rate is one.
+My suggestion is buy or borrow and read this book. Be sure it's the
+econd edition. (First has different cover)
+This book covers the latest/current processors from all 3 brands.
+It explains every feature of all 3 brand devices and all the
+programming options as well as what research has found to be optimal
+programming for recipients. It's factual and non bias. If you are a
+medical student it will make sense to you.
+A lot better than the many biased opinions you will get here.
+Personally for me, I would be a toss up between AB and Cochlear if I
+was doing it all over again.
+__________________
+I choose Happiness over Society
+Likes: (1)
+outthpaw is offline   Reply With Quote
+Find More Posts by soutthpaw
+Old 09-18-2015, 01:43 PM   #3
+Also keep in mind that if you have decent low end hearing the N6 can
+function as a CI and Hearing Aid simultaneously.
+Old 09-19-2015, 06:39 AM   #4
+hello!! Thank you very much for answering..
+I will try to borrow the book from my university library this monday.
+Interesting what you say. I thought that the Cochlear electrodes array
+was at max capability already since there are 22 electrodes that only
+can stimulate one by one and AB has a lot of more(virtuals)(Also I
+understand that our nerve have limits to be stimulated so doesnt matter
+that much the speed of rates.. but more virtuals electrodes and more
+features
+means more possiblities in the future right?). since I will wear the CI
+internal part for the next good 15-20y I want to be sure that wont be
+obsolete soon(even if is 10y) so that is one of my reasons for choosing
+AB...
+Also the acustic stimulation of N6 do you mean the hybrid CI with
+horter array? They no longer do that in Europe since induced
+malformation and ossification of cochlea and the results were not
+better than the full array...( But i would have been a candidate for
+that.) If you dont mean that what do you mean? I do not understand how
+could N6 do that.
+One question too.. Whats the point of conserving residual hearing?
+Would make better hearing with CI or its just to have the chance for
+new terapeutical options in the future?
+Thank you again!!
+And sorry again for my english lol.
+Edit: Also one the reasons i want AB is that they are the only brand
+with access to HA technology that is much wider(more market...) Do you
+think that is a strong reason!
+Last edited by miki; 09-19-2015 at 07:44 AM.
+Old 09-19-2015, 06:08 PM   #5
+Nope they have a new array for the hybrid system that is the same
+length. But it's much thinner. Cochlear can stimulate multiple
+electrodes simultaneously. The #electrodes X PPS = STIMULATION RATE.
+Research show that 900-1200PPS per electrode works best for most
+recipients. 10 channels X1200 = 12000 stimulation rate. I had 2400pps
+on my freedoms and never did well with them. Instant and significant
+improvement when we changed the PPS to 1200. So those comparison sites
+how all the big numbers yet virtually no one even uses them. This is
+marketing hype. Also all 3 brand have very different strategies and
+methods of programming and stimulation. You can't really do direct
+comparison in many ways. Virtual electrodes is just a different
+programming approach. Cochlear can and has researched it and not found
+it worked as well for their devices. The processor chip is so powerful
+there is lots of room for advancement of the tech with the current
+processors from a programming and software perspective. Cochlear is the
+only company with pre processing sound technology on the chip....
+AB is a good product too. Many successful users. As I have Cochlear
+brand, that's what I know about. Spent a few years in bi-lateral
+research studies and got to talk a lot about the technical stuff with
+them. I don't use hearing aids, but thought Cochlear was teaming with
+Phonak or one of the other companies. If you are getting only one side
+done, I'd talk to folks who use HA in the other ear as they well have
+better input.
+Old 09-19-2015, 06:28 PM   #6
+onocativo
+onocativo's Avatar
+Join Date: Sep 2012
+Location: House
+Posts: 7,525
+Likes: 609
+Liked 1,016 Times in 490 Posts
+Your doctor may specifically do CI as his preference. But there are
+probly other doctors in the same building who do AB ... so if you
+prefer another brand you will have to find the doctor who will do that
+pecific brand.
+Kindness is a language which the deaf can hear and the blind can see.
+onocativo is online now   Reply With Quote
+Find More Posts by sonocativo
+Old 09-19-2015, 06:59 PM   #7
+Jane B.
+Join Date: Mar 2011
+Posts: 3,369
+Likes: 272
+Liked 164 Times in 123 Posts
+Quote:
+Originally Posted by soutthpaw View Post
+Phonak is teamed with AB all part of the same corporation any more.
+Jane B. is online now   Reply With Quote
+Find More Posts by Jane B.
+Old 09-19-2015, 07:04 PM   #8
+Originally Posted by Jane B. View Post
+Thanks for clearing that up. For the OP. Have you contacted Cochlear in
+your area and asked to talk, meet with a patient liaison person. They
+can give you lots of info. Come back here after and ask more questions.
+We will try and filter out the marketing hype and help you in your
+choice.
+Old 09-21-2015, 05:17 AM   #9
+BleedingPurist
+Join Date: Jan 2012
+Posts: 552
+Likes: 79
+Liked 52 Times in 31 Posts
+Cochlear's internal device to this day cannot stimulate multiple
+electrodes simultaneously. That requires multiple power sources.
+Cochlear's device has one. The current steering involved in virtual
+channels requires multiple power sources. Cochlear may have dabbled
+with the idea in a lab, but it cannot be done on the currently
+available device.
+Virtual Channels as marketing is like comparing SD TV to HD and calling
+it marketing. The tech is very real as well as the quality difference.
+You're going to be able to watch TV on both, but there is noticeably
+more definition with HD.
+It won't affect speech discrimination just as HD doesn't increase
+facial recognition. Still, AB users overwhelmingly prefer the full 120
+channels. The difference between that and 16 channels is very obvious.
+It is more natural sounding.
+While not FDA approved yet, AB's Electro Aucoustic equipment is already
+in place with existing users. The Mid Scala is both a standard array
+and "hybrid" ready array. Current and new users with residual hearing
+will be able to take advantage of the new Q90 processor's acoustic
+Phonak hearing aid ability upon approval, adding an additional
+dimension to their hearing. A candidate doesn't need to wait for
+approval.
+There is also the fact that due to the current steering capabilities of
+AB's internal, channels can be steered deeper into the cochlea for low
+frequencies. If a recipient winds up losing their residual
+low-frequency hearing, it can be replaced with direct stimulation. This
+is impossible with Cochlear's L24 hybrid array. Once the residual
+hearing is gone, it's gone.
+Current steering is available only with Med El and AB.
+Cochlear's most commonly used strategy is based on a simple 8 electrode
+approach based off of CIS. I must admit I did like using 8 electrodes
+when I tried using an older strategy for a while. The difference is
+those 8 electrodes in play are roved up and down the length of the
+array in Cochlear's device. (Each electrode fires one after another in
+a sequence of 8 electrodes before repeating the sequence and moving the
+8 active electrodes up or down the array depending on the most
+prominent frequencies heard at the moment.)
+BleedingPurist is offline   Reply With Quote
+Find More Posts by BleedingPurist
+Old 10-17-2015, 02:56 PM   #10
+jag
+Join Date: Apr 2006
+Posts: 797
+Liked 1 Time in 1 Post
+I just got my 2nd CI. Since the one I received 9 yrs ago was a Cochlear
+on the left, I went with the same on the right. Cant wait for
+activation in a couple weeks!
+What I told my daughter when she was deciding (her audi was pushing for
+AB vs Cochlear) is look at what they offer that YOU may want, the bells
+and whistles. To me they all do a great job helping people hear, which
+I wont argue with. But what they offer extra might be what you want
+now.
+here in the US those external blue-tooth things were already approved
+for Cochlear, the other 2 were going through the process (may be done
+now). So she went with Cochlear, size of processors was also a concern
+he had. Go with the one You want, if you like what you see about AB go
+for it!
+jag is offline   Reply With Quote
+Find More Posts by jag
+Old 10-18-2015, 02:28 PM   #11
+HOH-ME
+Join Date: Feb 2013
+Posts: 471
+Likes: 5
+Liked 33 Times in 30 Posts
+AB has hands down the best technology on the market. Cochlear is in a
+distant 3rd. Many audis prefer Cochlear because that is what they are
+used to dealing with. Cochlear is fine for someone that has never had
+hearing or has had little hearing over their lifetime, but if you have
+had success with HA's or where late deafened, Cochlear just can't
+provide the array of sound that AB can. Accessories asides, it's what
+is in your head that counts and AB is the best.
+http://cochlearimplanthelp.com/
+HOH-ME is offline   Reply With Quote
+Find More Posts by HOH-ME
+Old 10-18-2015, 03:10 PM   #12
+Originally Posted by jag View Post
+Advanced Bionics Naida Q70 was the first CI processor with wireless and
+Bluetooth streaming on the market, available immediately upon processor
+release in the fall of 2013.
+Cochlear rushed the N6 out to compete with AB's release of the Q70, but
+had significant delays in getting both approval for the wireless
+treaming as well as getting the software ready for release. FDA
+approval wasn't received until a year after AB already had their
+wireless system out and then did not have the software available to
+enable streaming until February of this year.
+Old 12-16-2015, 05:52 PM   #13
+Hey, its confirmed i'm a candidate for CI. I bought the book but didnt
+have time to read it yet...
+In my Hospital they only do Cochlear but if I ask they may consider
+AB(i will probably ask tomorrow) but Im in doubt for ever(so many
+diferent opinions..)
+I really just want the most advanced internal(the array and such) since
+i will have it inside my head for the next 20-30 years at least.(again
+diferents opinions on this topic but seems AB wins on that)
+thanks !
+Old 12-16-2015, 07:30 PM   #14
+appstter
+Join Date: Jun 2012
+Posts: 55
+Likes: 0
+Liked 4 Times in 4 Posts
+Originally Posted by BleedingPurist View Post
+When you say wireless does this still require a neck loop or can it
+connect directly to the device? Reason i ask is my Phonak hearing aids
+require the neckloop while my Resound hearing aids can connect directly
+to my phone with no loop at all.
+appstter is offline   Reply With Quote
+Find More Posts by sappstter
+Old 12-20-2015, 12:36 PM   #15
+Originally Posted by sappstter View Post
+The Phonak ComPilot is still the streamer used today. The neckloop
+provides the connection to the processor. While Resound's system does
+not use a loop, it still must be near your body for reliable streaming
+to the hearing device and it's comparable product to the ComPilot, the
+PhoneClip+, does not have an Aux input as Phonak's product does.
+Phonak and AB have already announced they are moving on to a 2.4
+completely wireless platform for the next generation.
+« Previous Thread | Next Thread »
+Thread Tools
+Show Printable Version Show Printable Version
+Email this Page Email this Page
+Display Modes
+Linear Mode Linear Mode
+Hybrid Mode Switch to Hybrid Mode
+Threaded Mode Switch to Threaded Mode
+Posting Rules
+You may not post new threads
+You may not post replies
+You may not post attachments
+You may not edit your posts
+BB code is On
+Smilies are On
+[IMG] code is On
+HTML code is Off
+Forum Rules
+Forum Jump
+[    Hearing Aids & Cochlear Implants___] Go
+All times are GMT -5. The time now is 01:18 PM.
+[-- Default]
+Contact Us - All Deaf - Archive - Privacy - Advertise - Links - Top
+Join AllDeaf on Facebook!    Follow us on Twitter!
+AllDeaf proudly supports St. Jude Children's Research Hospital
+Copyright © 2002-2016, AllDeaf.com. All Rights Reserved.

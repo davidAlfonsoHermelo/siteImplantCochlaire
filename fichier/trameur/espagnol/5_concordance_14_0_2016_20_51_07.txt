@@ -1,0 +1,149 @@
+﻿
+Concordance (forme) : Sélection de positions
+
+
+
+Modelisation XML de la base textometrique (le metier = le cadre et la trame), importable et echangeable avec d'autres plateformes
+
+
+Jeudi 14 Janvier 2016  19:56:26         Ce document n'est pas encore publie.
+
+
+
+Le Trameur 12.98. Jeudi 14 Janvier 2016  19:56:26
+
+
+
+Fichier traite
+globaldump-2.txt
+
+
+Encodage
+utf-8
+
+
+Nombre d'items
+204981
+
+
+Nombre de délimiteurs
+111604
+
+
+Nombre d'occurrences de forme
+93377
+
+
+Nombre de formes
+13236
+
+
+Nombre d'hapax
+7423
+
+
+Fréquence maximale
+4111
+
+
+Forme maximale
+de
+
+
+Délimiteurs
+. ,:;!?/_-"'()[]{}§$|*><=+ «»
+
+
+Etiquetage Treetagger
+NON
+
+
+
+
+
+
+
+Concordance de Sélection Positions
+
+------------------------------ abbr=title=() ------------------------------
+
+- Por: Olivia Castro Cranwell - Argentina
+anti
+ic Los Anti Implante Coclear abril 30
+
+
+contra esta operación a muerte. Son los
+anti
+IC. Algunos de ellos han llegado
+
+
+con el procesador puesto para un sitio
+anti
+IC, en el facebook. Pueden clicar
+
+
+fe ciega de las que hablan los
+anti
+IC con ironía. Soy una persona
+
+
+por eso que me molesta cuando los
+anti
+IC dicen que los que se implantan
+
+
+animan a romper con lo preestablecido. Los
+anti
+IC tienen miedo, un miedo irracional
+
+
+en estos cuatro años y medio. Los
+anti
+IC son los que se comportan como
+
+
+los puede juzgar como lo hacen los
+anti
+IC, sin la menor compasión. Al
+
+
+eliz.blogspot.fr/2013/04/0407-los-
+anti
+-implante-coclear-por.html&layout =button_count&show_
+
+
+
+
+
+
+
+index_14_0_2016_20_51_07.xml
+Sommaire
+
+
+1
+1_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+2
+2_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+3
+3_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+4
+4_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+5
+5_concordance_14_0_2016_20_51_07.xml
+Concordance (forme) : Sélection de positions
+
+
+

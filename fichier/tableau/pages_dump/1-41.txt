@@ -1,0 +1,97 @@
+
+Contenu | Rechercher | Menus
+Ubuntu-fr
+Communauté francophone d'utilisateurs d'Ubuntu
+Recherche rapide....______________ [Forum________] ok
+_________ _________ connexion / inscription
+Annonce
+L'&eacutequipe de mod&eacuteration vous pr&eacutesente ses meilleurs
+vœux pour l'ann&eacutee 2016.
+Si vous rencontrez des soucis à rester connecté sur le forum (ou si
+vous avez perdu votre mot de passe) déconnectez-vous et
+reconnectez-vous depuis cette page, en cochant la case "Me connecter
+automatiquement lors de mes prochaines visites".
+__________________________________________________________________
+Pages : 1
+lesebas
+Membre
+Langue des signes français (LSF)
+Bonjour,
+Je suis le papa de 2 jumeaux de 4 ans dont un est sourd. Depuis un peu
+plus d'un an, lui et nous (ses parents), apprenons la langue des signes
+français (LSF) ce qui est un très bon support pour l'amener à
+l'oralisation (à parler quoi tongue ). Le seul problème est que le
+centre qui le suit est déjà très chargé et ne pas accepter son frère
+jumeau qui se sent un peu en reste...
+Existe-t-il des logiciels ludiques pour des enfants de cet âge
+permettant l'apprentissage de cette langue? Ou il y-a-t-il un projet de
+ce type dans le monde du logiciel libre?
+Seb.
+Seb
+LMDE
+Hors ligne
+jnq
+Re : Langue des signes français (LSF)
+Bonjour, et l'implant cochléaire vous y avez pensez ?
+Ubuntu 15.10 64 bits Willy
+L'implant cochléaire sera a envisagé si son audition se dégrade un peu
+plus (stable depuis 10 mois) pour l'instant l'appareillage classique
+uffit (surdité sévère mais pas profonde). De toute façon il y a
+beaucoup de mythes autour de l'implant, même si cela reste une avancé
+technologique énorme, cela ne ramène pas une audition normale, loin
+'en faut (dixit certains implantés que nous côtoyons depuis plus d'un
+an maintenant). Enfin cela est complexe, tout dépend de l'âge auquel
+est fait l'implant, de la rééducation faite ensuite...:rolleyes:
+Comme je l'explique le LSF est un support de communication (très utile
+au quotidien pour nous parents), mais cela vient en supplément de
+éances d'orthophonie, psychomotricité... pour lui apprendre le langage
+orale.
+Le LSF l'aide à "être" dans la communication, ce qui n'était pas le cas
+avant (cris, incompréhension...)
+Le but de mon message et de savoir s'il existe des logiciels ludiques
+pour apprendre à son frère jumeau "entendant" un peu de langue des
+ignes pour qu'il ne soit le seul de la famille à ne rien comprendre...
+Il y a un peu de jalousie, c'est pas toujours facile de comprendre le
+handicap à 4 ans hmm
+Dernière modification par lesebas (Le 26/09/2008, à 10:14)
+Je suis implanté cochléaire medel, écoute totalement identique à une
+oreille normale et aucune rééducation.
+Quand aux logiciels ils existent en environnement windows et ne me
+emble pas accessible à un enfant de cet age.
+Wine ne permettra pas forcément un fonctionnement optimal des logiciels
+ous ubuntu.
+Seul un cours me semble une solution valable.
+Dernière modification par jnq (Le 26/09/2008, à 10:27)
+Je pense que la discussion va s'écarter du sujet de ce forum wink . Je
+te réponds sur le "Café":D
+Edit : mon autre sujet:
+http://forum.ubuntu-fr.org/viewtopic.php?id=254895
+Dernière modification par lesebas (Le 26/09/2008, à 11:01)
+Kanor
+Consultant moderateur
+Salut
+Est ce que tu es tombé sur ce lien
+http://linuxfr.org/2003/06/29/13084.html
+?
+Un blog avec du mordant
+Liste de bons liens pour apprendre python et plus
+Voici quelques liens sur la LSF.
+http://www.signes-bebe.com/
+http://lsf.wiksign.org/wiki/Wiksign:Accueil
+http://www.languedessignes.com/principal.htm
+Vincent DEROO
+Invité
+i cela peut être utile, je veux bien adapter les thèmes "ABCDaire"  et
+"Nombre" de Pysycache (http://www.pysycache.org/) en remplaçant les
+initiales par les signes correspondants.
+Cordialement,
+pokoala
+Je suis à la recherche d'un logiciel ou de cartes Anki pour apprendre
+la LSF.
+Auriez vous une suggestion ou des infos?
+Merci à tous.:)
+Pied de page des forums
+Atteindre
+[Logiciels éducatifs__________________________________] Aller
+Flux RSS de la discussion
+Propulsé par FluxBB

@@ -1,0 +1,2108 @@
+﻿
+Concordance (forme) : Sélection de positions
+
+
+
+Modelisation XML de la base textometrique (le metier = le cadre et la trame), importable et echangeable avec d'autres plateformes
+
+
+Jeudi 14 Janvier 2016  19:34:52         Ce document n'est pas encore publie.
+
+
+
+Le Trameur 12.98. Jeudi 14 Janvier 2016  19:34:52
+
+
+
+Fichier traite
+globaldump-1.txt
+
+
+Encodage
+utf-8
+
+
+Nombre d'items
+382370
+
+
+Nombre de délimiteurs
+210305
+
+
+Nombre d'occurrences de forme
+172065
+
+
+Nombre de formes
+16995
+
+
+Nombre d'hapax
+9194
+
+
+Fréquence maximale
+5662
+
+
+Forme maximale
+de
+
+
+Délimiteurs
+. ,:;!?/_-"'()[]{}§$|*><=+ «»
+
+
+Etiquetage Treetagger
+NON
+
+
+
+
+
+
+
+Concordance de Sélection Positions
+
+
+pour qui ? 1. (*) les
+sourds
+de naissance 2. ( ) les
+
+
+les malentendants 3. ( ) les devenus
+sourds
+ou malentendants 4. ( ) les
+
+
+sourds ou malentendants 4. ( ) les
+sourds
+profonds 5. ( ) les sourds
+
+
+les sourds profonds 5. ( ) les
+sourds
+légers 6. ( ) les sourds
+
+
+les sourds légers 6. ( ) les
+sourds
+(marche pas avec les appareils auditifs)
+
+
+A mon avis, il est pour les
+sourds
+(surdité profonde) qui n'entendent rien
+
+
+auditifs, et non pour les malentendants ou
+sourds
+pouvant entendre grâce aux appareils. Puisque
+
+
+on ne pose pas d'implant aux
+sourds
+/ malentendants qui entendent avec des prothèses
+
+
+c'est une chance pour tous les
+sourds
+profonds, une chance d'entendre et
+
+
+choix de ceux qui décident de rester
+sourds
+si il y a une possibilité d
+
+
+l'implant n'est proposé qu'aux
+sourds
+pour lesquels les appareils ne permettent pas
+
+
+langue des signes ni l'univers des
+sourds
+qui va avec; pour ces personnes
+
+
+pas très invisible ! et non, les
+sourds
+qui le font, c'est pas
+
+
+de blé sur le dos des pauvres
+sourds
+profonds ça ! "Passer à l'
+
+
+je ne suis pas intégré avec les
+sourds
+, je suis ingénieur en chimie, voilà
+
+
+va avancer techniquement afin de permettre aux
+sourds
+comme toi, de pouvoir entendre et
+
+
+tel problème, aujourdhui, on implante des
+sourds
+qui en ont besoin, point. Message
+
+
+respecté les implantés car se sont des
+sourds
+quand même lorsque nous enlevons nos processeurs
+
+
+STP respecte nous car nous sommes aussi
+sourds
+mais pas débiles. L'implant n'
+
+
+signes, notamment s’il a rencontré des adultes
+sourds
+. Mais les parcours de vie sont
+
+
+partage sa classe avec deux autres enfants
+sourds
+. Les orthophonistes et les codeuses (
+
+
+petite anecdote j'ai vu des enfants
+sourds
+aller vers leurs camarades entendants, et
+
+
+repli sur oi. Cf la réaction des
+sourds
+face à des implantés, provoquée par
+
+
+faire attention car 1 je connais des
+sourds
+implantés qui n'arrive meme pas à
+
+
+et amenez lui a voir d'autres
+sourds
+!!! C'est bien pour lui
+
+
+malentendant mes parents et mon frère sont
+sourds
+, on ne pratique pas l'implant
+
+
+à 21 mois. Ses grands parents sont
+sourds
+mais pas ses parents. Les grands
+
+
+ses parents. Les grands parents et amis
+sourds
+ont rejete cet implant et notre decision
+
+
+parents ouffront alors regarde http://www.
+sourds
+.net/2011/12/​ [...]
+
+
+, il me semble, c que les
+sourds
+signants ont du mal avec l abstraction
+
+
+convaincre la plupart des parents d'enfants
+sourds
+profonds à la naissance que l'implant
+
+
+la LCP etc... Mais critiquer les
+sourds
+sur le français écrit je trouve ça
+
+
+.. ! Je ne critique pas les
+sourds
+sur leur orthographe, je constate implement
+
+
+exemple) est beaucoup plus répandue chez les
+sourds
+ayant reçu une éducation uniquement en langue
+
+
+recours au LPC comme appui pour les
+sourds
+oralistes fonctionne aussi pour certains. Tout
+
+
+les uns les autres, nous sommes tous
+sourds
+, quelques soit nos types d'appareillages
+
+
+profite de cet argument pour critiquer les
+sourds
+signants. Certes, c'est important mais
+
+
+Il en est de même pour les
+sourds
+signants qui ont lancé ce post contre
+
+
+le sujet indiquent que la proportion des
+sourds
+non oralisés faisant des études upérieures est
+
+
+d'ailleurs également le cas pour les
+sourds
+oralisés ayant une maitrise médiocre du langage
+
+
+que vous obtiendrez viendront des associations de
+sourds
+qui défendent (et ils ont raison)
+
+
+monde des entendants et le monde des
+sourds
+/malentendants.. Par exemple à la télé
+
+
+à comprendre la rancoeur qui anime certains
+sourds
+anti-implant. Dans quel but cette
+
+
+l'implant cochléaire de cette façon! Certains
+sourds
+sont contre l'implant car soit disant
+
+
+ne sont pas des entendants, on est
+sourds
+avant tout parce que justement notre audition
+
+
+:02 je ne fais pas partie des
+sourds
+anti-implants bien au contraire, et
+
+
+voulait me placer dans une école de
+sourds
+loin de chez moi. Pendant quelques
+
+
+n’ai que rarement côtoyé le monde des
+sourds
+mais je n’avais pas ma place dedans
+
+
+transition pour rentrer dans le monde des
+sourds
+. Je ne pouvais plus le nier
+
+
+les choses à ne pas dire aux
+sourds
+J’ai testé pour vous… être malentendante Sourds
+
+
+ne jamais réentendre comme avant. Chez certains
+sourds
+, il existe une forme de discrimination
+
+
+existe une forme de discrimination divisant les
+sourds
+, les implantés et les malentendants. En
+
+
+plus à quel monde j’appartenais. Pour les
+sourds
+j’étais entendante, et pour les entendants
+
+
+qui me sidère dans le monde des
+sourds
+, c’est le manque d’accès à l’information
+
+
+eu de formation pour enseigner aux élèves
+sourds
+ou malentendants, ce qui nous oblige
+
+
+LSF et que tu tombes sur des
+sourds
+plutôt sympas, mais je peux comprendre
+
+
+discrimination dont tu parles entre implantés et
+sourds
+. Salut Sassegra ! Oui j'avais
+
+
+la langue des signes, qui empêcherait les
+sourds
+de s'intégrer et de "faire
+
+
+prendre conscience des difficultés que rencontrent les
+sourds
+. Du coup j'ai appris l'
+
+
+m'a fait découvrir le monde des
+sourds
+et les implications d'un tel handicap
+
+
+beaucoup. Et on oublie aussi que les
+sourds
+pendant la seconde guerre mondiale ont été
+
+
+beaucoup. Et on oublie aussi que les
+sourds
+pendant la econde guerre mondiale ont été
+
+
+venait de l'institut national des jeunes
+sourds
+ou de l'école à 500 mètres
+
+
+de ne pas prendre uniquement des acteurs
+sourds
+c'est justement pour touché le public
+
+
+a beaucoup de films avec des acteurs
+sourds
+mais la masse s'en fou,
+
+
+n'étais pas de faire jouer des
+sourds
+mais de sensibiliser, et on le
+
+
+l'implant fonctionne bien chez les devenus
+sourds
+..... coté négatif = l'
+
+
+= l'implant est inutile chez les
+sourds
+de naissance... je ne cite
+
+
+!! je connais pleins de jeunes enfants
+sourds
+implantés qui parlent horriblement mal..leurs
+
+
+des horreurs que véhiculent en général les
+sourds
+qui ont contre l'implant...
+
+
+l'implant rugby mais je connais des
+sourds
+implantés qui font ces sports là et
+
+
+mais je ss au courant que les
+sourds
+disent que l'implant cochléaire est une
+
+
+par mon similaires (pertenci une association de
+sourds
+, détenteurs de la langue parlée par
+
+
+détriment des loisirs et contacts avec d’autres
+sourds
+ou malentendants. Sa famille est généralement
+
+
+généralement plutôt réticente aux activités proposées aux
+sourds
+et malentendants. L’enfant pourra toujours connaître
+
+
+domestique, serveur, etc. étaient attribués aux
+sourds
+. La langue des signes lui sera-
+
+
+souvent une personne issue d’une école pour
+sourds
+qui, malgré les limites de ses
+
+
+interne avec comme risque majeur : les
+sourds
+et malentendants seront voués à une fonction
+
+
+de deux filles sourdes, petit-fils des
+sourds
+, arrière-petit-fils des sourds, petit
+
+
+fils des sourds, arrière-petit-fils des
+sourds
+, petit-neveu des sourds... :
+
+
+petit-fils des sourds, petit-neveu des
+sourds
+... : le monde des sourds
+
+
+des sourds... : le monde des
+sourds
+risquerait de disparaître à cause des manipulations
+
+
+obligation d'implanter tous les nouveaux-nés
+sourds
+à l'avenir ... Pour moi
+
+
+devraient décider de faire implanter leurs bébés
+sourds
+ou non (malheureusement, ces parents sont
+
+
+médecins de décider tout cela !! Les
+sourds
+NE SONT PAS DES MALADES mais des
+
+
+permettre aux médecins de voir les professionnels
+sourds
+de la santé aussi capables que les
+
+
+aussi donner des cours de culture des
+sourds
+aux futurs médecins ... Témoignage de
+
+
+?? Les parents et même les bébés
+sourds
+ne perdent pas grand chose de ces
+
+
+voit rien du tout! Alors, les
+sourds
+souffrent encore plus du peu d'attention
+
+
+d'un millier de nouveau-nés naissent
+sourds
+et qu'ils sont diagnostiqués trop tardivement
+
+
+Il faudrait un registre national des enfants
+sourds
+, insistent les experts. Car cette affection
+
+
+sourd : J'ai lu que certains
+sourds
+américains (vérité ou légende ? je
+
+
+. 2. Un nombre important des dépistés
+sourds
+sont en réalité des entendants : ce
+
+
+des implantations : en cas d’échec, certains
+sourds
+implantés deviendraient des sourds complets ne captant
+
+
+cas d’échec, certains sourds implantés deviendraient des
+sourds
+complets ne captant aucun son ???
+
+
+dépister : en vérité, la plupart des
+sourds
+se sont opposés à cela donc ils
+
+
+seulement aux premiers mois des nouveaux-nés
+sourds
+et ne s’en occupent plus après cela
+
+
+les implanteurs savaient ce que deviennent les
+sourds
+, peut-être qu’ils changeraient d’avis… ?
+
+
+filière de oins »), tous les
+sourds
+implantés seraient intégrés dans des classes pour
+
+
+cent (à peu près ?) des
+sourds
+(surtout ceux bien entourés de leur
+
+
+Tournai), celle de la Maison des
+sourds
+, celle de l’APEDAF et celle de
+
+
+de formation aux jeunes parents chez les
+sourds
+comme en Norvège : rencontre avec des
+
+
+en Norvège : rencontre avec des adultes
+sourds
+, culture des sourds, langue des signes
+
+
+rencontre avec des adultes sourds, culture des
+sourds
+, langue des signes, etc … puis
+
+
+qu’ils puissent bien communiquer avec leurs bébés
+sourds
+(comme en Suède) et leur donner
+
+
+entendants qui ne signeront jamais comme des
+sourds
+, comme des sourds parents d’enfants sourds.
+
+
+signeront jamais comme des sourds, comme des
+sourds
+parents d’enfants sourds. Donc de toute
+
+
+des sourds, comme des sourds parents d’enfants
+sourds
+. Donc de toute façon qualité de
+
+
+? Quand on parle de bilinguisme, les
+sourds
+ne se rebutent pas, quand on
+
+
+Voilà où est le problème : les
+sourds
+ont peur que leur culture soit opprimée
+
+
+massifs pour l’implantation. Mais il faut des
+sourds
+pour montrer aux gens qu’on existe et
+
+
+notre communauté sourde soit en mutation. Les
+sourds
+de l’avenir auront un implant, signeront,
+
+
+ou ne signeront pas, comme beaucoup de
+sourds
+d’aujourd’hui. La surdité est de toute
+
+
+connaissent très bien les opinions des adultes
+sourds
+et n’hésitent pas à montrer « deux
+
+
+est la reconnaissance de la culture des
+sourds
+dans tout ce **** ?!
+
+
+'éducation par les ourds et pour les
+sourds
+(avec participations des entendants)...
+
+
+Donc ? Donc vouloir faire naître des
+sourds
+ou des entendants est déjà une volonté
+
+
+eux – et d'avoir des enfants
+sourds
+. Bell, avec l’utilisation du téléphone et
+
+
+donne seulement une éducation orale aux jeunes
+sourds
+. Bell proposait de supprimer l'utilisation
+
+
+ainsi supprimer les écoles pour les jeunes
+sourds
+– il décourageait ainsi les associations des
+
+
+comme extermination progressive du groupe ethnique des
+sourds
+: du plan culturel et sociolinguistique.
+
+
+de profits. Bref, ça sort les
+sourds
+du monde des handicapés sur lesquels on
+
+
+aujourd’hui des biotechnologies c’est de maintenir les
+sourds
+dans l’assistance médicale et technologique. (.
+
+
+sourd : Pour la majorité des enfants
+sourds
+, les études sont toujours une vraie
+
+
+pas plus de gens stupides parmi les
+sourds
+que parmi les entendants ; il y
+
+
+une vraie usine à désintégrer. Pourquoi les
+sourds
+, parvenus à un très bon niveau
+
+
+-ils pas d’écoles de devoirs pour enfant
+sourds
+en difficulté scolaire ? Pourquoi y en
+
+
+vous qui sont enseignants ? Des enseignants
+sourds
+, c’est aussi la transmission de la
+
+
+fameuse intégration si désintégrante, dont tant de
+sourds
+ont souffert. C'est aussi sans
+
+
+il faudrait que la grande masse des
+sourds
+anonymes se mobilise pour faire connaître leur
+
+
+présentés aux « nouveaux parents » d’enfants
+sourds
+comme une panacée, à tel point
+
+
+de pensée un peu particulier des enfants
+sourds
+plutôt que de les enseigner comme on
+
+
+parle du temps qu’il fait. Les parents
+sourds
+au moins peuvent corriger le tir à
+
+
+d’implanter : la plasticité neuronale -Seuls les
+sourds
+du 3ème degré sont « implantables »
+
+
+humour sourd. » 2 volumes regard des
+sourds
+" Ed. Silöe - 1997 Ce blog
+
+
+être contre l'implant, il existe des
+sourds
+oralistes qui n'y sont pas pour
+
+
+qui soit. Evidement, il existe des
+sourds
+oralistes, qui sont contre des implants,
+
+
+ce n'est pas que seulement des
+sourds
+lsfistes. Dernière édition par le Mar
+
+
+- 11:57 Evidement, il existe des
+sourds
+oralistes sont contre des Le problème n
+
+
+ou CONTRE. Le problème est que certains
+sourds
+veulent INTERDIRE l'implant cochléaire, et
+
+
+l'interieur...Je connais déja certains
+sourds
+. Tu sais quand meme qu' il
+
+
+comme les entendants... Nous, les
+sourds
+, on ne veut plus voir la
+
+
+ne veut plus voir la disparation des
+sourds
+ni la culture sourde à l'avenir
+
+
+l'avenir, pourquoi implants, laisse les
+sourds
+, comme ils sont naturels... Voir
+
+
+un sourd qui prône les getthos pour
+sourds
+! Nous sommes dans une société d
+
+
+ne connais pas beaucoup d'entendants devenus
+sourds
+puis implantés, et le peu que
+
+
+davantage d'arguments. Et vous, les
+sourds
+, qu'en pensez-vous ?? êtes
+
+
+mais ai vécu longtemps au milieu des
+sourds
+(j'ai eu des pbs qui
+
+
+J'ai malheureusement cotoyé bcp trop de
+sourds
+qui ont été implantés et pour qui
+
+
+condition qu'elle n'utilise pas les
+sourds
+, et spécialement les enfants comme cobayes
+
+
+rééducation,...Vous parlez de "cobayes"
+sourds
+, mais la FRANCE est l'un
+
+
+possibles avant de se lancer. Les adutles
+sourds
+ont de moins bons résultats que les
+
+
+bons résultats que les malentendants ou les
+sourds
+récents, parce que leur aire de
+
+
+première dans la prise en charge des
+sourds
+et muets et des personnes handicapées en
+
+
+'épanouir parfaitement sans ? Nombre d'enfants
+sourds
+ayant eu une éducation adaptée associant LSF
+
+
+n'en doutons pas. Aidons les enfants
+sourds
+à grandir, à s'épanouir en
+
+
+souffrance : j'ai vu beaucoup de
+sourds
+qui avaient honte de leur surdité parce
+
+
+:37:01 Pour les parents d'enfants
+sourds
+: Patience et confiance en son enfant
+
+
+mercredi dans un groupe de 6 enfants
+sourds
+oralisant très bien). Niveau auditif,
+
+
+comportement", déclarent ouvent les psychiatres. Quelques
+sourds
+se suicident. La plupart 'adaptent,
+
+
+avant de 'y engager. Beaucoup de
+sourds
+opérés ou de parents de sourds qui
+
+
+de sourds opérés ou de parents de
+sourds
+qui ont pris la décision de faire
+
+
+urdité post-linguale (c’est à dire devenus
+sourds
+après l’acquisition du langage). Les premiers
+
+
+Les premiers enfants opérés étaient aussi des
+sourds
+post-linguaux. En 1990, aux Etats
+
+
+résultats chez les adultes et les enfants
+sourds
+post - linguaux. La perception de
+
+
+« Les implants cochléaires chez les enfants
+sourds
+», qui analyse les conséquences psychologiques
+
+
+mis clairement en évidence chez les enfants
+sourds
+les effets bénéfiques de l’acquisition de la
+
+
+int (Les implants cochléaires chez les enfants
+sourds
+, Editions du Conseil de l’Europe, Strasbourg
+
+
+fait clinique démontré par nombre d’observations d’enfants
+sourds
+présentant des difficultés psychologiques. Un enfant
+
+
+la demande parentale Les parents d'enfants
+sourds
+désirent le mieux pour leur enfant afin
+
+
+d'une pathologie déficitaire centrale chez les
+sourds
+. Si les aires corticales primaires ont
+
+
+des consultations psychologiques de parents d'enfants
+sourds
+préalables aux implantations cochléaires, il est
+
+
+pas d'enfants ni d'adultes nés
+sourds
+. A part le problème que tu
+
+
+net sont souvent des témoignages de devenus
+sourds
+, de ourds oralisants, ou de parents
+
+
+ourds oralisants, ou de parents d'enfants
+sourds
+. Il me semble important que les
+
+
+même ! Vous comparez les réunions de
+sourds
+pratiquant la LSF à des réunions ectaires
+
+
+ces congrès, bien qu'organisés par des
+sourds
+pratiquant la LSF, étaient invités des
+
+
+invités des médecins, des psychologues, des
+sourds
+implantés, devenus sourds ou sourds de
+
+
+des psychologues, des sourds implantés, devenus
+sourds
+ou sourds de naissance, des oralistes,
+
+
+, des sourds implantés, devenus sourds ou
+sourds
+de naissance, des oralistes, des ourds
+
+
+qu'il y a des groupes de
+sourds
+qui tiennent parfois des propos qui peuvent
+
+
+implants qu'il faut mettre tous les
+sourds
+dans le même panier ! La plupart
+
+
+un clivage important entre ourds oralistes et
+sourds
+pro-lsf. Ce que je peux
+
+
+:08:08 En ce qui concerne les
+sourds
+implantés que je connais, dans 3
+
+
+implants classique sont intéressants principalement pour les
+sourds
+profonds de naissance qui apprendront à entendre
+
+
+Les implants cochléaires sont destinés uniquement aux
+sourds
+très profonds. Ils ne peuvent donc
+
+
+n'est prescrit je crois qu'aux
+sourds
+totaux (ou presque) de naissance.
+
+
+de vouloir à tout prix mettre les
+sourds
+dans la case de la "normalité"
+
+
+suis éducatrice dans une institution de jeunes
+sourds
+et pour ma part, la première
+
+
+interprète... Il me semble que les
+sourds
+étaient visés. Beaucoup de parents sourds
+
+
+les sourds étaient visés. Beaucoup de parents
+sourds
+ont des enfants sourds et auraient sans
+
+
+Beaucoup de parents sourds ont des enfants
+sourds
+et auraient sans doute aimé pouvoir suivre
+
+
+villes il y a "la maison des
+sourds
+" où tu peux aller te renseigner
+
+
+suis éducateur sourd travaillant auprès des enfants
+sourds
+avec handicaps associés, je pratique la
+
+
+leur vie quotidienne, l'education des enfants
+sourds
+. Il n'y a pas une
+
+
+des illusions. J'ai vu les enfants
+sourds
+intègrés dans une classe entendante. Ce
+
+
+cours ... Ben, ce sont les
+sourds
+qui 'adaptent au monde des entendants
+
+
+vie. Il n'y a que les
+sourds
+"signant" qui ne le considère plus
+
+
+! Alors comment devons nous nommer les
+sourds
+implantés qui ne parlent pas mais qui
+
+
+sa direction. On demande à ces enfants
+sourds
+de se faire opérer (mais ça
+
+
+l'occasion de rencontrer d'anciens enfants
+sourds
+devenus adultes et qui, sur le
+
+
+answer Je suis maman de quatre enfants
+sourds
+et dès la naissance du premier la
+
+
+si évidents. Citation: Avoir des enfants
+sourds
+a été une richesse pour ma part
+
+
+le désir fort des parents des enfants
+sourds
+. Désirer que l'enfant ait une
+
+
+un diplôme, c'est légitime. Les
+sourds
+peuvent réussir leur parcours scolaire si les
+
+
+qui, alors qu'ils ne ont que
+sourds
+, sont en passe de devenir des
+
+
+suis issue d'une grande famille de
+sourds
+ignants. Je suis moi-même entendante,
+
+
+du tout ! Je connais des enfants
+sourds
+implantés pleinement épanouis, heureux, qui oralisent
+
+
+juifs chaque année." http://www.
+sourds
+.net/2011/06/ [...]
+
+
+-video/ => que le monde des
+sourds
+signant est vent debout contre le dépistage
+
+
+dans un INJS (institut national des jeunes
+sourds
+) et je ne vais pas donner
+
+
+Ses parents sont ourds et sont formateurs
+sourds
+donc sa langue des signes est bien
+
+
+s'apprend ! Pour en revenir aux
+sourds
+, pour savoir comment les accompagner, le
+
+
+est parfois donnée aux parents d'enfants
+sourds
+, leur permettant en théorie de choisir
+
+
+sourd ou encore d'êtres (humains)
+sourds
+. La surdité affecte l'ouïe mais
+
+
+langage. est parfois plus difficile. Certains
+sourds
+/malentendants ont des difficultés à oraliser,
+
+
+et d’autres pas du tout ; certains
+sourds
+/malentendants pratiquent la langue des signes,
+
+
+/MmThIPQhUV6/embed/simple Le rejet de certains
+sourds
+face au mot malentendant : La dame
+
+
+jamais senti handicapé. Ma tribu comprenait des
+sourds
+comme des entendants. Ils faisaient des
+
+
+spécialisé. Les cours étaient faits pour les
+sourds
+, et se déroulaient en petit comité
+
+
+d’applaudir… Le concept de « dialogue de
+sourds
+» me fait rire, car les
+
+
+sourds » me fait rire, car les
+sourds
+sont très bavards. Ils communiquent très
+
+
+ouci. La langue des signes permet aux
+sourds
+de s’épanouir pleinement. Alors, où se
+
+
+Un entendant vivant dans une famille de
+sourds
+sera considéré comme handicapé, tout comme
+
+
+culture des entendants comme de celle des
+sourds
+. De plus, il est humain d’avoir
+
+
+pense très souvent améliorer la condition des
+sourds
+en supprimant leur déficience auditive avec les
+
+
+« intégrer ». Cette volonté d’intégrer les
+sourds
+à la société peut parfois tourner à
+
+
+orale. Or, apprendre la parole aux
+sourds
+peut être compliqué ; certains n’arrivent pas
+
+
+l’Internet, est sourd. de Ronsard, sont
+sourds
+. Se pose alors une question fondamentale
+
+
+y a un ghetto sourd, que les
+sourds
+vivent dans leur propre bulle. Mais
+
+
+: il faut sensibiliser aussi bien les
+sourds
+que les entendants. La langue des
+
+
+ignore le fait. De l'autres les
+sourds
+et malentendants considère parfois que je n
+
+
+'ont jamais eu de contact avec des
+sourds
+et qui au début, ont des
+
+
+pourquoi, je n'ai jamais connu de
+sourds
+, et on en entend pas tellement
+
+
+me demandais si toi, ou d'autres
+sourds
+sur le forum, vous aviez vu
+
+
+en institut, soit en intervenant auprès de
+sourds
+intégrés à des classes "normales")
+
+
+'ai jamais compris les gens interdisant aux
+sourds
+de signer entre eux ... Merde
+
+
+des signes et avec des acteurs réellement
+sourds
+pour nous donner une vraie image (
+
+
+sur le site : http://www.
+sourds
+.net/2011/12/​ [...]
+
+
+y a des écoles spécialisées pour enfants
+sourds
+! renseigne toi ! La communauté sourde
+
+
+SOURDS-MUETS COURS DE LSF Pour les
+sourds
+et entendants implant cochléaire qui a bougé
+
+
+qui a bougé ?? Enfants de parents
+sourds
+cours de danse contemporaine pour sourds et
+
+
+parents sourds cours de danse contemporaine pour
+sourds
+et entendants, tous ages Une aide
+
+
+tous ages Une aide humanitaire pour les
+sourds
+, comment la faire? travailler avec des
+
+
+comment la faire? travailler avec des enfants
+sourds
+et mal-entendants !! urgent! je
+
+
+urgent! je recherche des parents d'enfants
+sourds
+sur bruxelles Recherche forum des malentendants Plus
+
+
+? 1. (*) Je suis totalement
+sourds
+2. ( ) Je suis malentendant
+
+
+C'est un fait que beaucoup de
+sourds
+ont du mal avec l'anglais..
+
+
+vos retours d'expérience en tant que
+sourds
+ou malentendants quant à votre intégration dans
+
+
+parce qu'il y avait d'autres
+sourds
+intégrés, c'est là qu'on
+
+
+entendants, on s'éclate plus avec les
+sourds
+, et si on a des conversations
+
+
+fini), alors qu'avec les amis
+sourds
+, y en a, on se connait
+
+
+seulement hier. Franchement, je plains les
+sourds
+et les malentendants qui sont seuls,
+
+
+désert social de discuter avec des potes
+sourds
+... bref, je suis pour l
+
+
+tinostar] ) alors qu'avec les amis
+sourds
+, y en a, on se connait
+
+
+que les ourds sont muets, Les "
+sourds
+-muets" qui vendent des babioles Peut-
+
+
+contenu illicite) / Groupe LDLC Forum
+sourds
+et malentendants Bonjour à tous. Bienvenue
+
+
+tous. Bienvenue à ce forum adressé aux
+sourds
+oralistes et ignants. Ce forum permet
+
+
+Rechercher [20aqwp0.png] implant cochléaire Forum
+sourds
+et malentendants :: Qui suis je?
+
+
+se rejoignent bcp de parents d'enfants
+sourds
+et implantés ... http://enfants
+
+
+veut ou non entendre. La majorité des
+sourds
+ne veulent pas entendre, ils se
+
+
+elle ne connaissait rien le monde des
+sourds
+depuis l ecole peciale pour sourds
+
+
+des sourds depuis l ecole peciale pour
+sourds
+, elle s est rassurée que je
+
+
+oeil sur les messages concernant les enfants
+sourds
+... ouais les parents sont inquiets
+
+
+les parents sont inquiets de leur enfants
+sourds
+par manque des infos des ourds .
+
+
+ourds .. oui il y a des
+sourds
+sans implantés qui vivent comme les autres
+
+
+vivent comme les autres .. aussi les
+sourds
+appareillés " non implanté " parlent tres
+
+
+est important pr vous et vos enfants
+sourds
+... c est pas obligé d
+
+
+est pas obligé d implanter vos enfants
+sourds
+ils pourront etre appareillé sans abimer le
+
+
+essayez d aller voir les associations des
+sourds
+pr vous donner des infos ..
+
+
+et aller voir des parents d'enfants
+sourds
+et porteutrs d'implants et regarder bien
+
+
+est une aide considérable pour les enfants
+sourds
+profond et total... amicalement ,
+
+
+daxtom oui vous savez que les enfants
+sourds
+ne peuvent pas decider à se faire
+
+
+etre ils ont besoin des infos des
+sourds
+non implantés pour savoir si c est
+
+
+l implant cochleaire est pour les devenus
+sourds
+ou les sourds majeurs .. mais
+
+
+est pour les devenus sourds ou les
+sourds
+majeurs .. mais pas pour les
+
+
+sur comme on a fait rencontrer des
+sourds
+bcp de souds je n'ai jamais
+
+
+exemple en France 88% illettrés chez les
+sourds
+et un taux de chômage équivalent !
+
+
+qu’en Suède c’est tout l’inverse les enfants
+sourds
+sont comme les autres, ils ont
+
+
+à l’inverse de la France 88% des
+sourds
+ont l’équivalent d’un BAC +2 et
+
+
+pays du monde concernant le monde des
+sourds
+et leurs prises en charge ! Nous
+
+
+dont supérieurs (universités, facultés) pour les
+sourds
+et malentendants. Jules pourra donc s’épanouir
+
+
+de grandes choses pour la communauté des
+sourds
+et du handicap en général. Merci
+
+
+j'ai appris à communiquer avec des
+sourds
+dans leur langue, celle qu'ils
+
+
+j'ai appris à communiquer avec des
+sourds
+dans leur langue, celle qu'ils
+
+
+suis pas là pour être contre les
+sourds
+qui sont contre l'implant et qui
+
+
+4 heures !!!! :d) Les
+sourds
+sont archaïques et refusent l'évolution technologique
+
+
+par l'individu plus tard. Mes amis
+sourds
+sont forts, ont du caractère, sont
+
+
+? Nb: le sujet est ici les
+sourds
+de naissance et sourd pré-linguaux et
+
+
+sourd pré-linguaux et non les devenus
+sourds
+. Laurielle is offline Réponse avec
+
+
+un peu comme post ... des
+sourds
+qui ne veulent pas de "remédiation"
+
+
+précoce pour agrandir leur cercle de vrais-
+sourds
+-pas-handicapés ?? C'est une
+
+
+est significatif c'est que les parents
+sourds
+( un ou les deux) en
+
+
+auprès des familles parents entendants d'enfants
+sourds
+diagnostiqué tôt, il est encore trop
+
+
+relation et communication. A quand des professionnels
+sourds
+dans ces réseaux? Le témoignage de
+
+
+la suite (en y intergrant des professionels
+sourds
+par exemple: qui peux mieux parler
+
+
+une éducation bilingue à tous les enfants
+sourds
+bien sur et non les autres.
+
+
+d'action médico-psychologue pour les enfants
+sourds
+. Vieux 09/11/2012, 23h29
+
+
+sans votre accord. forums Les enfants
+sourds
+porteurs d'implants cochléaires Forum pour parents
+
+
+'implants cochléaires Forum pour parents d'enfants
+sourds
+qui portent ou vont porter des implants
+
+
+Connexion Connexion [t8u6id.png] Les enfants
+sourds
+porteurs d'implants cochléaires :: A
+
+
+contraintre à rester dans des groupes de
+sourds
+. C'est une vision étrange de
+
+
+reconnais la culture sourde. Celle de parents
+sourds
+, éduquant leur enfant (sourd ou entendant
+
+
+enfants implantés Je connais pas mal de
+sourds
+qui ont été implantés très tôt et
+
+
+de concentration, et quand je vois des
+sourds
+, ça fait du bien de ne
+
+
+sons venus d'ailleurs, très métalliques,
+sourds
+, des bruits de casseroles et de
+
+
+que stagiaire auprès d'enfants et adolescents
+sourds
+implantés... Je ne suis pas
+
+
+en 6éme en intégration de groupe(4
+sourds
+dans une classe d'entendants) à
+
+
+suis maman entendante de deux enfants nées
+sourds
+profonds (génétique). Mon fils Benjamin
+
+
+regrettent l'opération. alors que d'autres
+sourds
+appareillés peuvent aussi très bien comprendre au
+
+
+'on aurait pas dit qu'ils soient
+sourds
+. Donc il ne faut pas non
+
+
+, ou suite a une surdité tardive,
+sourds
+profonds, sans pression pour ou contre
+
+
+je voudrais ouligner c'est que certains
+sourds
+réticent à l'implant change d'avis
+
+
+complétant l'un l'autre. Pour les
+sourds
+, la vue est essentielle, et pour
+
+
+projet, les problématiques de l'accueil des
+sourds
+etc etc... Et quelques vidéos
+
+
+ultérieurement leur communication avec un public de
+sourds
+. Professeure sourde confirmée de langue des
+
+
+sensibiliser à la LSF, aux problématiques des
+sourds
+(santé++), etc... Et
+
+
+faisaient pression sur des familles de patients
+sourds
+pour les convaincre de préférer la LSF
+
+
+entendants, mais c'est parce que les
+sourds
+n'ont pas la même appréhension de
+
+
+eux de lsf parlé !! Si certains
+sourds
+ne veulent pas de l'implant c
+
+
+la fac serait une ouverture pour les
+sourds
+vers la lutte contre les implants cochléaires
+
+
+plus une étude a constaté que les
+sourds
+parlant la lsf avait un niveau de
+
+
+de la connerie ! Pour avoir des
+sourds
+dans mon entourage, je me permet
+
+
+sur les problèmes sociaux que rencontrent les
+sourds
+implantés ! Ils sont rejetés par les
+
+
+'ils parlent bizarrement" et par les
+sourds
+non implantés qui considèrent qu'ils renient
+
+
+face à l'opposition d'associations de
+sourds
+, allant jusqu'à faire des sittings
+
+
+19:56 - concernant les sittings de
+sourds
+devant le service d'ORL, cela
+
+
+population sourde est contre l'implant. Les
+sourds
+ont été longtemps délaissés et on ne
+
+
+la paire). Appareils utilisés par les
+sourds
+non implantés ("le gros truc marron
+
+
+pas d'autres mesures. Je demanderais aux
+sourds
+que je rencontre sur mon site.
+
+
+charge à 100% l'appareillage des jeunes
+sourds
+(via les pénalités financières des entreprises
+
+
+la ociété doit respecter l'opinion des
+sourds
+qui s'opposent à l'implantation pour
+
+
+le pire des handicaps, d'ailleur les
+sourds
+sont malheureux" Par contre, lui prone
+
+
+informés sur les problèmes que rencontrent les
+sourds
+. Vous pourrez de cette façon connaître
+
+
+faire avec nous finalement... Bcp de
+sourds
+ont demandé de parler du cancer &
+
+
+changer les choses. En tout cas les
+sourds
+ont besoin des soignants et il ne
+
+
+décision de la famille. Les parents d’enfants
+sourds
+choisissent généralement ils sont convaincus que celle
+
+
+Au niveau national, des services d’aide aux
+sourds
+à domicile pour la prise en charge
+
+
+pour la prise en charge des enfants
+sourds
+leur permet d’accéder à un enseignement et
+
+
+« oralisantes » et refusée par les
+sourds
+) Il faut essayer d’ouvrir le plus
+
+
+implantation. Le problème vient des familles de
+sourds
+qui s’opposent au dépistage. Lorsque les
+
+
+qui s’opposent au dépistage. Lorsque les parents
+sourds
+viennent en consultation pour savoir si l’enfant
+
+
+dos !) Ces actions ont mené les
+sourds
+à s’isoler et rechercher l’indépendance. En
+
+
+les jours nos ORL reçoivent des adolescents
+sourds
+qui viennent pour une implantation, mais
+
+
+une analyse sémiologique fine de l’expression des
+sourds
+? Dans ce cas il s’agit d’une
+
+
+qualifiés ,exprès dans les services d’accueils des
+sourds
+; de plus cet enseignement sur 1
+
+
+le problème du choix des parents d’enfants
+sourds
+qui veulent pérenniser la surdité et de
+
+
+y est), mais mes parents sont
+sourds
+, c’est dire i je me sens
+
+
+je vous dirais de continuer : les
+sourds
+le méritent. Je suis désolée de
+
+
+CERTAINS (et je dis bien certains)
+sourds
+vis-à-vis de l’implant. Cependant
+
+
+habilitée à en parler. Reste que les
+sourds
+sont si peu intégrés dans notre société
+
+
+..) 3) contacte des assos de
+sourds
+muets...parle leur de ton projet
+
+
+30 euros.). Les profs sont des
+sourds
+muets de l'association des sourds et
+
+
+des sourds muets de l'association des
+sourds
+et muets de l'isere, formés
+
+
+seul (sans les parents, pour les
+sourds
+adultes par ex) en consultation et
+
+
+ensibiliser le public ou échanger avec des
+sourds
+. voilou, vous pouvez me contacter par
+
+
+et les personnes au contact permanent des
+sourds
+: famille/ professionnels de santé etc
+
+
+dans un service hospitalier d'accueil des
+sourds
+. Pour le certif', on était
+
+
+à eu lieu la 1ere rencontre picnic
+sourds
+/entendants avec des étudiants de PO et
+
+
+Nous ne fumes pas nombreux ( 4
+sourds
+, 4 PO, 6 PSA) mais
+
+
+puissent prendre en charge des malentendants et
+sourds
+! 12-11-2008, 02:50 Aucune
+
+
+"entendants" que dans le monde des "
+sourds
+" (donc je connais assez bien leur
+
+
+bonne pratique pour le uivi des enfants
+sourds
+, et fait appel aux institutions et
+
+
+choqués que les députes disent que les
+sourds
+sont anormaux et malades comme des transverses
+
+
+18978 Mon conjoint travaille avec des enfants
+sourds
+et il est aussi contre ce test
+
+
+région ,des centres d'accueil pour les
+sourds
+où leurs sont présentées les différentes solutions
+
+
+... Dans les CHU , les
+sourds
+peuvent être pris en charge par certains
+
+
+a ses relations avec les associations de
+sourds
+-muets Entre autres sujets, le professeur
+
+
+débat. Le problème avec les asso de
+sourds
+-muets est qu'ils ont tenté de
+
+
+ces soins pour leurs enfants. Ils sont
+sourds
+-muets, et sont contents si leurs
+
+
+connaissance actuelles, une partie de la population
+sourds
+/muets se considère à l'écart
+
+
+se rencontrer, fréquenter et marier qu'entre
+sourds
+... cet isolement se voit aussi
+
+
+le point de vue de tous les
+sourds
+muets. On va se renseigner donc
+
+
+la fac serait une ouverture pour les
+sourds
+vers la lutte contre les implants cochléaires
+
+
+plus une étude a constaté que les
+sourds
+parlant la lsf avait un niveau de
+
+
+le LSF n'est pas destiné aux
+sourds
+, mais aux étudiants en médecine. Je
+
+
+décision de la famille. Les parents d’enfants
+sourds
+choisissent généralement ils sont convaincus que celle
+
+
+Au niveau national, des services d’aide aux
+sourds
+à domicile pour la prise en charge
+
+
+pour la prise en charge des enfants
+sourds
+leur permet d’accéder à un enseignement et
+
+
+« oralisantes » et refusée par les
+sourds
+) Il faut essayer d’ouvrir le plus
+
+
+implantation. Le problème vient des familles de
+sourds
+qui s’opposent au dépistage. Lorsque les
+
+
+qui s’opposent au dépistage. Lorsque les parents
+sourds
+viennent en consultation pour savoir si l’enfant
+
+
+dos !) Ces actions ont mené les
+sourds
+à s’isoler et rechercher l’indépendance. En
+
+
+les jours nos ORL reçoivent des adolescents
+sourds
+qui viennent pour une implantation, mais
+
+
+une analyse sémiologique fine de l’expression des
+sourds
+? Dans ce cas il s’agit d’une
+
+
+qualifiés ,exprès dans les services d’accueils des
+sourds
+; de plus cet enseignement sur 1
+
+
+le problème du choix des parents d’enfants
+sourds
+qui veulent pérenniser la surdité et de
+
+
+? 1. (*) Je suis totalement
+sourds
+2. ( ) Je suis malentendant
+
+
+le long terme, il y a des
+sourds
+qui doivent repasser sur le billard (
+
+
+amuse : en ce moment, plein de
+sourds
+adultes se font implanter, alors que
+
+
+le lot quotidien de la majorité des
+sourds
+[:spamafote] Même le plus dévoué
+
+
+l'isolement, il faut rencontrer d'autres
+sourds
+. Ca implique souvent d'apprendre la
+
+
+ça m'intéresserai de voir des gens
+sourds
+et éventuellement apprendre la langue des signes
+
+
+'on trouve notre place nul part les
+sourds
+sont "heureux" comme ils sont d
+
+
+profil answer Il y a des
+sourds
+qui portent un implant sur une oreille
+
+
+La rééducation est aussi nécessaire chez les
+sourds
+qui n'ont jamais entendu avant l
+
+
+sujet, je pense que bon nombre de
+sourds
+et malentendants possèdent d'autres facultés en
+
+
+que les ourds sont muets, Les "
+sourds
+-muets" qui vendent des babioles Peut-
+
+
+y a , c'est que les
+sourds
+peuvent passer le permis. n°19395284 1.
+
+
+:16:09 Permis de conduire pour les
+sourds
+et les malentendants : un petit pas
+
+
+la-route/permis-de-cond​uire-pour -les-
+sourds
+-et-les-ma​lentendants-un-petit-pas-de
+
+
+vitesse. :) Du coup, les malentendants/
+sourds
+chez nous sont en boite automatique.
+
+
+
+
+
+
+
+index_14_0_2016_19_48_19.xml
+Sommaire
+
+
+1
+1_concordance_14_0_2016_19_48_19.xml
+Concordance (forme) : Sélection de positions
+
+
+2
+2_concordance_14_0_2016_19_48_19.xml
+Concordance (forme) : Sélection de positions
+
+
+3
+3_concordance_14_0_2016_19_48_19.xml
+Concordance (forme) : Sélection de positions
+
+
+4
+4_concordance_14_0_2016_19_48_19.xml
+Concordance (forme) : Sélection de positions
+
+
+

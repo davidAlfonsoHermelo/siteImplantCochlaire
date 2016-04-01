@@ -1,0 +1,1707 @@
+
+
+
+                  
+                  
+        
+                                
+            
+      
+      
+      
+      
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+      <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-FR" lang="fr-FR">
+      
+      <head>
+                                    
+      
+            
+      
+      <link rel="stylesheet" type="text/css" href="/extension/digital/design/forumsante/stylesheets/site.css"/>
+      
+            <link rel="stylesheet" type="text/css" href="/extension/digital/design/forumsante/stylesheets/jquery.lightbox-0.5.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/extension/digital/design/forumsante/javascript/visio/css/lnkWcb.css"/>
+      
+      <script language="JavaScript" type="text/javascript" src="/extension/digital/design/forumsante/javascript/jquery-1.7.1.min.js"></script>
+      <script language="JavaScript" type="text/javascript" src="/extension/digital/design/forumsante/javascript/forumsante.js"></script>
+      <script language="JavaScript" type="text/javascript" src="/extension/digital/design/forumsante/javascript/placeholders.min.js"></script>
+     
+      <!--[if lt IE 10]>
+      <script language="JavaScript" type="text/javascript" src="/extension/digital/design/forumsante/javascript/html5shivtemp.js"></script>
+      <![endif]-->
+
+      <!--[if lte IE 8]>
+      <script type="text/javascript" src="/extension/digital/design/forumsante/javascript/roundies.js"> </script>
+      <script type="text/javascript" src="/extension/digital/design/forumsante/javascript/json/json2.js"> </script>
+      
+      
+      
+      <script type="text/javascript">
+         $(document).ready(function(){
+            DD_roundies.addRule('.petit-orange a', '8px');
+            DD_roundies.addRule('.moyen-orange a', '8px');
+            DD_roundies.addRule('#inscriptionevent .content', '14px');
+            DD_roundies.addRule('.moyen-gris a', '8px');
+            DD_roundies.addRule('.grand-orange a', '8px');
+            DD_roundies.addRule('#titreDept', '8px');
+            DD_roundies.addRule('#forumCompteBox', '10px');
+            DD_roundies.addRule('#listeCatForum li', '7px');
+            DD_roundies.addRule('#listeFicheBulletin li a', '7px');
+         });
+      </script>
+      
+      <![endif]-->
+      
+      
+                <script type="text/javascript">
+          
+
+/**
+ * jQuery lightBox plugin
+ * This jQuery plugin was inspired and based on Lightbox 2 by Lokesh Dhakar (http://www.huddletogether.com/projects/lightbox2/)
+ * and adapted to me for use like a plugin from jQuery.
+ * @name jquery-lightbox-0.5.js
+ * @author Leandro Vieira Pinho - http://leandrovieira.com
+ * @version 0.5
+ * @date April 11, 2008
+ * @category jQuery plugin
+ * @copyright (c) 2008 Leandro Vieira Pinho (leandrovieira.com)
+ * @license CCAttribution-ShareAlike 2.5 Brazil - http://creativecommons.org/licenses/by-sa/2.5/br/deed.en_US
+ * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
+ */
+
+(function($){$.fn.lightBox=function(settings){settings=jQuery.extend({overlayBgColor:'#000',overlayOpacity:0.8,fixedNavigation:false,imageLoading:"/design/forumsante/images/lightbox-ico-loading.gif",imageBtnPrev:"/design/forumsante/images/lightbox-btn-prev.gif",imageBtnNext:"/design/forumsante/images/lightbox-btn-next.gif",imageBtnClose:"/design/forumsante/images/lightbox-btn-close.gif",imageBlank:"/design/forumsante/images/lightbox-blank.gif",containerBorderSize:10,containerResizeSpeed:400,txtImage:'Image',txtOf:'of',keyToClose:'c',keyToPrev:'p',keyToNext:'n',imageArray:[],activeImage:0},settings);var jQueryMatchedObj=this;function _initialize(){_start(this,jQueryMatchedObj);return false;}
+function _start(objClicked,jQueryMatchedObj){$('embed, object, select').css({'visibility':'hidden'});_set_interface();settings.imageArray.length=0;settings.activeImage=0;if(jQueryMatchedObj.length==1){settings.imageArray.push(new Array(objClicked.getAttribute('href'),objClicked.getAttribute('title')));}else{for(var i=0;i<jQueryMatchedObj.length;i++){settings.imageArray.push(new Array(jQueryMatchedObj[i].getAttribute('href'),jQueryMatchedObj[i].getAttribute('title')));}}
+while(settings.imageArray[settings.activeImage][0]!=objClicked.getAttribute('href')){settings.activeImage++;}
+_set_image_to_view();}
+function _set_interface(){$('body').append('<div id="jquery-overlay"></div><div id="jquery-lightbox"><div id="lightbox-container-image-box"><div id="lightbox-container-image"><img id="lightbox-image"><div style="" id="lightbox-nav"><a href="#" id="lightbox-nav-btnPrev"></a><a href="#" id="lightbox-nav-btnNext"></a></div><div id="lightbox-loading"><a href="#" id="lightbox-loading-link"><img src="'+settings.imageLoading+'"></a></div></div></div><div id="lightbox-container-image-data-box"><div id="lightbox-container-image-data"><div id="lightbox-image-details"><span id="lightbox-image-details-caption"></span><span id="lightbox-image-details-currentNumber"></span></div><div id="lightbox-secNav"><a href="#" id="lightbox-secNav-btnClose"><img src="'+settings.imageBtnClose+'"></a></div></div></div></div>');var arrPageSizes=___getPageSize();$('#jquery-overlay').css({backgroundColor:settings.overlayBgColor,opacity:settings.overlayOpacity,width:arrPageSizes[0],height:arrPageSizes[1]}).fadeIn();var arrPageScroll=___getPageScroll();$('#jquery-lightbox').css({top:arrPageScroll[1]+(arrPageSizes[3]/10),left:arrPageScroll[0]}).show();$('#jquery-overlay,#jquery-lightbox').click(function(){_finish();});$('#lightbox-loading-link,#lightbox-secNav-btnClose').click(function(){_finish();return false;});$(window).resize(function(){var arrPageSizes=___getPageSize();$('#jquery-overlay').css({width:arrPageSizes[0],height:arrPageSizes[1]});var arrPageScroll=___getPageScroll();$('#jquery-lightbox').css({top:arrPageScroll[1]+(arrPageSizes[3]/10),left:arrPageScroll[0]});});}
+function _set_image_to_view(){$('#lightbox-loading').show();if(settings.fixedNavigation){$('#lightbox-image,#lightbox-container-image-data-box,#lightbox-image-details-currentNumber').hide();}else{$('#lightbox-image,#lightbox-nav,#lightbox-nav-btnPrev,#lightbox-nav-btnNext,#lightbox-container-image-data-box,#lightbox-image-details-currentNumber').hide();}
+var objImagePreloader=new Image();objImagePreloader.onload=function(){$('#lightbox-image').attr('src',settings.imageArray[settings.activeImage][0]);_resize_container_image_box(objImagePreloader.width,objImagePreloader.height);objImagePreloader.onload=function(){};};objImagePreloader.src=settings.imageArray[settings.activeImage][0];};function _resize_container_image_box(intImageWidth,intImageHeight){var intCurrentWidth=$('#lightbox-container-image-box').width();var intCurrentHeight=$('#lightbox-container-image-box').height();var intWidth=(intImageWidth+(settings.containerBorderSize*2));var intHeight=(intImageHeight+(settings.containerBorderSize*2));var intDiffW=intCurrentWidth-intWidth;var intDiffH=intCurrentHeight-intHeight;$('#lightbox-container-image-box').animate({width:intWidth,height:intHeight},settings.containerResizeSpeed,function(){_show_image();});if((intDiffW==0)&&(intDiffH==0)){if($.browser.msie){___pause(250);}else{___pause(100);}}
+$('#lightbox-container-image-data-box').css({width:intImageWidth});$('#lightbox-nav-btnPrev,#lightbox-nav-btnNext').css({height:intImageHeight+(settings.containerBorderSize*2)});};function _show_image(){$('#lightbox-loading').hide();$('#lightbox-image').fadeIn(function(){_show_image_data();_set_navigation();});_preload_neighbor_images();};function _show_image_data(){$('#lightbox-container-image-data-box').slideDown('fast');$('#lightbox-image-details-caption').hide();if(settings.imageArray[settings.activeImage][1]){$('#lightbox-image-details-caption').html(settings.imageArray[settings.activeImage][1]).show();}
+if(settings.imageArray.length>1){$('#lightbox-image-details-currentNumber').html(settings.txtImage+' '+(settings.activeImage+1)+' '+settings.txtOf+' '+settings.imageArray.length).show();}}
+function _set_navigation(){$('#lightbox-nav').show();$('#lightbox-nav-btnPrev,#lightbox-nav-btnNext').css({'background':'transparent url('+settings.imageBlank+') no-repeat'});if(settings.activeImage!=0){if(settings.fixedNavigation){$('#lightbox-nav-btnPrev').css({'background':'url('+settings.imageBtnPrev+') left 15% no-repeat'}).unbind().bind('click',function(){settings.activeImage=settings.activeImage-1;_set_image_to_view();return false;});}else{$('#lightbox-nav-btnPrev').unbind().hover(function(){$(this).css({'background':'url('+settings.imageBtnPrev+') left 15% no-repeat'});},function(){$(this).css({'background':'transparent url('+settings.imageBlank+') no-repeat'});}).show().bind('click',function(){settings.activeImage=settings.activeImage-1;_set_image_to_view();return false;});}}
+if(settings.activeImage!=(settings.imageArray.length-1)){if(settings.fixedNavigation){$('#lightbox-nav-btnNext').css({'background':'url('+settings.imageBtnNext+') right 15% no-repeat'}).unbind().bind('click',function(){settings.activeImage=settings.activeImage+1;_set_image_to_view();return false;});}else{$('#lightbox-nav-btnNext').unbind().hover(function(){$(this).css({'background':'url('+settings.imageBtnNext+') right 15% no-repeat'});},function(){$(this).css({'background':'transparent url('+settings.imageBlank+') no-repeat'});}).show().bind('click',function(){settings.activeImage=settings.activeImage+1;_set_image_to_view();return false;});}}
+_enable_keyboard_navigation();}
+function _enable_keyboard_navigation(){$(document).keydown(function(objEvent){_keyboard_action(objEvent);});}
+function _disable_keyboard_navigation(){$(document).unbind();}
+function _keyboard_action(objEvent){if(objEvent==null){keycode=event.keyCode;escapeKey=27;}else{keycode=objEvent.keyCode;escapeKey=objEvent.DOM_VK_ESCAPE;}
+key=String.fromCharCode(keycode).toLowerCase();if((key==settings.keyToClose)||(key=='x')||(keycode==escapeKey)){_finish();}
+if((key==settings.keyToPrev)||(keycode==37)){if(settings.activeImage!=0){settings.activeImage=settings.activeImage-1;_set_image_to_view();_disable_keyboard_navigation();}}
+if((key==settings.keyToNext)||(keycode==39)){if(settings.activeImage!=(settings.imageArray.length-1)){settings.activeImage=settings.activeImage+1;_set_image_to_view();_disable_keyboard_navigation();}}}
+function _preload_neighbor_images(){if((settings.imageArray.length-1)>settings.activeImage){objNext=new Image();objNext.src=settings.imageArray[settings.activeImage+1][0];}
+if(settings.activeImage>0){objPrev=new Image();objPrev.src=settings.imageArray[settings.activeImage-1][0];}}
+function _finish(){$('#jquery-lightbox').remove();$('#jquery-overlay').fadeOut(function(){$('#jquery-overlay').remove();});$('embed, object, select').css({'visibility':'visible'});}
+function ___getPageSize(){var xScroll,yScroll;if(window.innerHeight&&window.scrollMaxY){xScroll=window.innerWidth+window.scrollMaxX;yScroll=window.innerHeight+window.scrollMaxY;}else if(document.body.scrollHeight>document.body.offsetHeight){xScroll=document.body.scrollWidth;yScroll=document.body.scrollHeight;}else{xScroll=document.body.offsetWidth;yScroll=document.body.offsetHeight;}
+var windowWidth,windowHeight;if(self.innerHeight){if(document.documentElement.clientWidth){windowWidth=document.documentElement.clientWidth;}else{windowWidth=self.innerWidth;}
+windowHeight=self.innerHeight;}else if(document.documentElement&&document.documentElement.clientHeight){windowWidth=document.documentElement.clientWidth;windowHeight=document.documentElement.clientHeight;}else if(document.body){windowWidth=document.body.clientWidth;windowHeight=document.body.clientHeight;}
+if(yScroll<windowHeight){pageHeight=windowHeight;}else{pageHeight=yScroll;}
+if(xScroll<windowWidth){pageWidth=xScroll;}else{pageWidth=windowWidth;}
+arrayPageSize=new Array(pageWidth,pageHeight,windowWidth,windowHeight);return arrayPageSize;};function ___getPageScroll(){var xScroll,yScroll;if(self.pageYOffset){yScroll=self.pageYOffset;xScroll=self.pageXOffset;}else if(document.documentElement&&document.documentElement.scrollTop){yScroll=document.documentElement.scrollTop;xScroll=document.documentElement.scrollLeft;}else if(document.body){yScroll=document.body.scrollTop;xScroll=document.body.scrollLeft;}
+arrayPageScroll=new Array(xScroll,yScroll);return arrayPageScroll;};function ___pause(ms){var date=new Date();curDate=null;do{var curDate=new Date();}
+while(curDate-date<ms);};return this.unbind('click').click(_initialize);};})(jQuery);
+        </script>
+      
+         <!--[if IE 6]>
+          <script language="JavaScript" type="text/javascript" src="/extension/digital/design/forumsante/javascript/DD_belatedPNG.js"></script>
+          <script>
+            DD_belatedPNG.fix('a');
+            DD_belatedPNG.fix('img');
+            DD_belatedPNG.fix('input');
+            DD_belatedPNG.fix('div');
+            DD_belatedPNG.fix('label');
+            DD_belatedPNG.fix('h3');
+          </script>
+        <![endif]-->
+      
+        
+                                              
+
+
+    
+    
+           
+        <title>
+        Forum Santé - 
+                    appareil auditif ou implant cocleaire                 </title>
+        
+    
+	
+    
+  	 <meta name="description" content="Retrouvez tout ce qu'il faut savoir autour de la santé et du bien-être : conseils, actualité, forum de discussion avec réponses de pharmaciens." />
+  
+
+
+
+  
+  	
+  
+  <meta name="google-site-verification" content="2x0L70l6Mt9lScIYkaC38zBbV_PF8kV3pfPOg-65AF0" />
+	
+    
+    
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <meta http-equiv="Content-language" content="fr-FR" />
+
+    
+               
+        
+
+   
+       <link rel="stylesheet" type="text/css" href="/extension/digital/design/forumsante/stylesheets/../../ewp/stylesheets/clients/forumsante/forumsante.css" />
+
+   
+        
+              
+        <link rel="shortcut icon" type="image/x-icon" href="/extension/digital/design/forumsante/images/faviconFS.ico" />
+        <meta name="apple-itunes-app" content="app-id=520838037">
+        <meta name="p:domain_verify" content="69e6db874e3f5836e3d7cd3a2f9a41fd"/>
+      
+      </head>
+      
+      
+      <script type="text/JavaScript">
+        var siteAccess = "/";
+        if(siteAccess == '/'){siteAccess = '';}
+        var folderDesign = "/extension/digital/design/forumsante/"
+              </script>
+      
+      <body class="node_18458 sujet_forum    " >
+      
+      
+        
+      
+                       
+            
+      
+       
+           
+          
+          
+<div id="blackScreen"></div>
+
+<div id="alertConnect">
+    <img src="/extension/digital/design/forumsante/images/close.png" class="close"/>
+    <div class="content"></div>
+    
+        <div class="popinBtnConnect">
+       <div style="text-align:center; width:175px; border-right:1px solid #d2d1d6; float:left;">
+         <span class="orange">Vous avez déjà un compte ?</span>
+         <div class="bouton" style="width:85px;margin:7px auto 0 auto;"><input class="maj autoConnect" value="Connexion"/></div>
+       </div>
+       <div style="text-align:center; width:155px; float:left;">
+                  <span class="orange">Pas encore membre ?</span>
+         <div class="bouton" style="width:92px;margin:7px auto 0 auto;"><a href="/Mon-compte/Inscrivez-vous-gratuitement" class="maj">Inscription</a></div>
+       </div>
+       <div style="clear:both"></div>
+    </div>
+       
+</div>
+          
+          
+            <div id="global"> 
+                                 
+<div id="header">  <a id="logo" href="http://forumsante.com" title="Forumsanté - Accueil"></a>
+
+    
+    
+                                             
+
+
+
+            <div class="partage_barre">
+
+                                          
+                                                                  
+                                          
+
+                 <span class="txt_partage"></span>
+
+                 <input type="hidden" class="idNodePartage" value="7531"/>
+                 <input id="urlPartage_7531" type="hidden" class="urlToPartage" value=""/>
+
+                  <ul class="partageBtns">
+
+                     
+                                                                <li class="btnFB">
+                          <a class="partage_fb" href="http://www.facebook.com/sharer.php?u=http://forumsante.com/&t=forumsanté" target="_blank" title="partager sur Facebook"></a>
+                      </li>
+                      
+
+                      
+                                            
+
+                      
+                                            
+                      
+                                            
+
+                      
+                                                                    
+                        <script type="text/JavaScript">
+                          $(document).ready(function(){
+                             $('.partage_imprimer').unbind().click(function(){
+                               window.print();
+                             });
+                          });
+                        </script>
+                        
+
+                      <li class="btnImprimer">
+                          <a class="partage_imprimer" href="javascript:void(0);" title="Imprimer"></a>
+                      </li>
+                      
+
+                      
+                                            
+                                            
+                      
+                                            
+
+                      
+                                                                  <li class="like_fb">
+                        <iframe src="//www.facebook.com/plugins/like.php?href=http://forumsante.com/&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
+                      </li>
+                     
+
+                  </ul>
+
+                  <div style="clear:both"></div>
+
+
+
+              
+              
+              <script type="text/JavaScript">
+
+                $('.partageBtns').find('a').unbind().click(function(){
+                    var element = $(this).attr('id').split('_')[1];
+                    var idNodePartage = $(this).closest('.partage_barre').find('.idNodePartage').val();
+                    $.ajax({
+                       type: "POST",
+                       url: "/ezjscore/call/digitalAnonyme::trackingPartage",
+                       data: "idNodePartage="+idNodePartage+"&attribute="+element,
+                       dataType : "json"
+                    });
+                });
+
+              </script>
+              
+
+
+        </div>
+
+    <a id="accespharmaciens"  href="javascript:void(0)" title="Accès pharmacien">Accès pharmaciens</a>
+  
+
+   
+
+
+    <ul id="mainMenu" >
+
+                     <li class="conseil">
+            <a href="http://forumsante.com/Conseil-Sante" title="Conseil Santé">Conseil Santé<div class="cacheWhite"></div></a>
+            <div class="sousMenu">
+                <ul> 
+                   
+                   
+                  <div class="blocCat " >
+                    <div class="titleCat" style="color:#dc0063">Beauté</div>           
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#dc0063">></span> Chirurgie esthétique</div> 
+                                                    <ul style="border:1px solid #dc0063">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Beaute/Chirurgie-esthetique/Protheses-mammaires" title="Prothèses mammaires">Prothèses mammaires</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Beaute/Chirurgie-esthetique/Traitement-hormonal-transsexuel-quelle-precaution-medicale" title="Traitement hormonal transsexuel : quelle précaution médicale ?">Traitement hormonal transsexuel : quelle précaution médicale ?</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#dc0063">></span> Dermatologie</div> 
+                                                    <ul style="border:1px solid #dc0063">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Beaute/Dermatologie/Belle-pour-le-printemps" title="Belle pour le printemps !">Belle pour le printemps !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Beaute/Dermatologie/Comment-avoir-de-beaux-pieds-apres-l-hiver" title="Comment avoir de beaux pieds après l'hiver ?">Comment avoir de beaux pieds après l'hiver ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Beaute/Dermatologie/En-finir-avec-l-acne" title="En finir avec l'acné">En finir avec l'acné</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Beaute/Dermatologie/Kyste-sous-la-peau-faut-il-s-inquieter" title="Kyste sous la peau, faut-il s'inquiéter ?">Kyste sous la peau, faut-il s'inquiéter ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Beaute/Dermatologie/L-epilation-definitive-une-bonne-idee" title="L’épilation définitive, une bonne idée ? ">L’épilation définitive, une bonne idée ? </a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Beaute/Dermatologie/Une-peau-bien-hydratee" title="Une peau bien hydratée">Une peau bien hydratée</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#dc0063">></span> Maquillage</div> 
+                                                    <ul style="border:1px solid #dc0063">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Beaute/Maquillage/Comment-rajeunir-son-regard" title="Comment rajeunir son regard ?">Comment rajeunir son regard ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Beaute/Maquillage/Du-glamour-pour-les-mamans" title="Du glamour pour les mamans !">Du glamour pour les mamans !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Beaute/Maquillage/Etre-belle-pour-un-mariage-et-pour-une-soiree" title="Être belle pour un mariage et pour une soirée">Être belle pour un mariage et pour une soirée</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Beaute/Maquillage/Nos-astuces-pour-reussir-votre-maquillage" title="Nos astuces pour réussir votre maquillage">Nos astuces pour réussir votre maquillage</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#dc0063">></span> Psoriasis : halte aux idées reçues !</div> 
+                                                    <ul style="border:1px solid #dc0063">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Beaute/Psoriasis-halte-aux-idees-recues/Le-Psoriasis-ce-qu-il-faut-savoir" title="Le Psoriasis: ce qu'il faut savoir">Le Psoriasis: ce qu'il faut savoir</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Beaute/Psoriasis-halte-aux-idees-recues/Les-idees-recues-sur-le-Psoriasis" title="Les idées reçues sur le Psoriasis !!!">Les idées reçues sur le Psoriasis !!!</a></li>
+                                                    </ul>
+                       </div>
+                                      </div>
+                  
+                   
+                  <div class="blocCat " >
+                    <div class="titleCat" style="color:#8483bc">Bien-être</div>           
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#8483bc">></span> Canicule</div> 
+                                                    <ul style="border:1px solid #8483bc">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Canicule/Canicule-conseils-pour-rafraichir-son-interieur-naturellement" title="Canicule : conseils pour rafraîchir son intérieur naturellement">Canicule : conseils pour rafraîchir son intérieur naturellement</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Canicule/Les-tongs-peuvent-etre-dangereuses-pour-la-sante" title="Les tongs peuvent être dangereuses pour la santé">Les tongs peuvent être dangereuses pour la santé</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#8483bc">></span> Compléments alimentaires</div> 
+                                                    <ul style="border:1px solid #8483bc">
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#8483bc">></span> Médecines douces</div> 
+                                                    <ul style="border:1px solid #8483bc">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Medecines-douces/Etre-en-forme-pendant-l-hiver-mode-d-emploi" title="Être en forme pendant l'hiver : mode d'emploi">Être en forme pendant l'hiver : mode d'emploi</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Medecines-douces/Homeopathie-efficace-par-nature" title="Homéopathie, efficace par nature">Homéopathie, efficace par nature</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Medecines-douces/Huiles-essentielles-utilisations-et-proprietes" title="Huiles essentielles, utilisations et propriétés">Huiles essentielles, utilisations et propriétés</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#8483bc">></span> Sommeil</div> 
+                                                    <ul style="border:1px solid #8483bc">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Sommeil/Bien-dormir-commence-en-journee" title="Bien dormir commence en journée">Bien dormir commence en journée</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Sommeil/Ce-qu-il-faut-faire-avant-de-se-coucher" title="Ce qu'il faut faire avant de se coucher">Ce qu'il faut faire avant de se coucher</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Sommeil/Comment-se-preparer-a-dormir" title="Comment se préparer à dormir ?">Comment se préparer à dormir ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Sommeil/Les-effets-du-changement-d-heure-sur-notre-sante" title="Les effets du changement d’heure sur notre santé">Les effets du changement d’heure sur notre santé</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Sommeil/Pipi-au-lit-enuresie-que-faire" title="Pipi au lit (énurésie) : que faire ?">Pipi au lit (énurésie) : que faire ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Sommeil/Quelles-methodes-naturelles-pour-mieux-dormir" title="Quelles méthodes naturelles pour mieux dormir ? ">Quelles méthodes naturelles pour mieux dormir ? </a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Sommeil/Trouble-du-Sommeil-Meme-la-nuit-les-ados-accros-a-leur-smartphone" title="Trouble du Sommeil : Même la nuit, les ados accros à leur smartphone">Trouble du Sommeil : Même la nuit, les ados accros à leur smartphone</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#8483bc">></span> Stress</div> 
+                                                    <ul style="border:1px solid #8483bc">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Stress/Fini-le-stress-place-au-chant" title="Fini le stress, place au chant !">Fini le stress, place au chant !</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Stress/Le-stress-se-gere" title="Le stress se gère">Le stress se gère</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#8483bc">></span> Zen attitude</div> 
+                                                    <ul style="border:1px solid #8483bc">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Bien-etre/Zen-attitude/Yoga-et-Meditation-une-rentree-Zen" title="Yoga et Méditation = une rentrée Zen !">Yoga et Méditation = une rentrée Zen !</a></li>
+                                                    </ul>
+                       </div>
+                                      </div>
+                  
+                   
+                  <div class="blocCat " >
+                    <div class="titleCat" style="color:#c5409b">Forme</div>           
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#c5409b">></span> Mental</div> 
+                                                    <ul style="border:1px solid #c5409b">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Forme/Mental/Entretenir-sa-memoire" title="Entretenir sa mémoire">Entretenir sa mémoire</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Forme/Mental/Les-enfants-gauchers-sont-ils-plus-intelligents-que-les-droitiers" title="Les enfants gauchers sont-ils plus intelligents que les droitiers ?">Les enfants gauchers sont-ils plus intelligents que les droitiers ?</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#c5409b">></span> Minceur</div> 
+                                                    <ul style="border:1px solid #c5409b">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Forme/Minceur/Mincir-mon-objectif-beaute-et-sante" title="Mincir : mon objectif beauté et santé">Mincir : mon objectif beauté et santé</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#c5409b">></span> Sport</div> 
+                                                    <ul style="border:1px solid #c5409b">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Forme/Sport/10mn-par-jour-pour-se-remettre-a-la-gym" title="10mn par jour pour se remettre à la gym !">10mn par jour pour se remettre à la gym !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Forme/Sport/Bien-organiser-son-programme-sportif" title="Bien organiser son programme sportif">Bien organiser son programme sportif</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Forme/Sport/Cet-hiver-je-choisis-tout-sauf-le-ski" title="Cet hiver, je choisis tout… sauf le ski !">Cet hiver, je choisis tout… sauf le ski !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Forme/Sport/Comment-avoir-de-belles-fesses" title="Comment avoir de belles fesses ?">Comment avoir de belles fesses ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Forme/Sport/Comment-eviter-les-accidents-de-ski" title="Comment éviter les accidents de ski ?">Comment éviter les accidents de ski ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Forme/Sport/Le-velo-electrique-oui-c-est-du-sport" title="Le vélo électrique, oui c'est du sport !">Le vélo électrique, oui c'est du sport !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Forme/Sport/Mal-de-dos-les-postures-a-adopter-pour-ne-jamais-en-souffrir" title="Mal de dos : les postures à adopter pour ne jamais en souffrir ">Mal de dos : les postures à adopter pour ne jamais en souffrir </a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Forme/Sport/Reprendre-le-sport-en-douceur" title="Reprendre le sport en douceur ">Reprendre le sport en douceur </a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Forme/Sport/Se-remettre-au-sport-en-toute-securite" title="Se remettre au sport en toute sécurité">Se remettre au sport en toute sécurité</a></li>
+                                                    </ul>
+                       </div>
+                                      </div>
+                  
+                   
+                  <div class="blocCat " >
+                    <div class="titleCat" style="color:#aecc17">Nutrition</div>           
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#aecc17">></span> Digestion</div> 
+                                                    <ul style="border:1px solid #aecc17">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Digestion/Aide-au-repas-des-personnes-agees" title="Aide au repas des personnes âgées">Aide au repas des personnes âgées</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Nutrition/Digestion/Lendemains-difficiles-nos-solutions-pour-les-fetes" title="Lendemains difficiles, nos solutions pour les fêtes">Lendemains difficiles, nos solutions pour les fêtes</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#aecc17">></span> Habitudes alimentaires</div> 
+                                                    <ul style="border:1px solid #aecc17">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Bien-manger-pour-avoir-des-dents-saines" title="Bien manger pour avoir des dents saines">Bien manger pour avoir des dents saines</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Demi-ecreme-bio-de-soja-d-amande-cru-Quel-lait-choisir" title="Demi-écrémé, bio, de soja, d’amande, cru... Quel lait choisir ?">Demi-écrémé, bio, de soja, d’amande, cru... Quel lait choisir ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Fruits-et-legumes-le-regard-des-enfants" title="Fruits et légumes, le regard des enfants">Fruits et légumes, le regard des enfants</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Intoxication-alimentaire-Les-gestes-d-hygienes-indispensables-dans-les-cuisines" title="Intoxication alimentaire : Les gestes d’hygiènes indispensables dans les cuisines">Intoxication alimentaire : Les gestes d’hygiènes indispensables dans les cuisines</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/L-aeuf-et-ses-bienfaits-pour-la-sante" title="L'œuf et ses bienfaits pour la santé">L'œuf et ses bienfaits pour la santé</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Le-beurre-ami-ou-ennemi" title="Le beurre : ami ou ennemi ?">Le beurre : ami ou ennemi ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Le-chocolat-un-aliment-sante" title="Le chocolat, un aliment santé ?">Le chocolat, un aliment santé ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Mes-3-bonnes-resolutions-nutrition-pour-2014" title="Mes 3 bonnes résolutions nutrition pour 2014">Mes 3 bonnes résolutions nutrition pour 2014</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Mon-programme-detox" title="Mon programme détox">Mon programme détox</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Petit-dejeuner-pas-tous-egaux-face-a-l-appetit" title="Petit-déjeuner : pas tous égaux face à l’appétit">Petit-déjeuner : pas tous égaux face à l’appétit</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Quels-aliments-pour-avoir-une-belle-peau-de-beaux-ongles-et-de-beaux-cheveux" title="Quels aliments pour avoir une belle peau, de beaux ongles, et de beaux cheveux ?">Quels aliments pour avoir une belle peau, de beaux ongles, et de beaux cheveux ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Repas-de-fetes-regalez-vous-sans-culpabiliser-!" title="Repas de fêtes : régalez-vous, sans culpabiliser !  ">Repas de fêtes : régalez-vous, sans culpabiliser !  </a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Nutrition/Habitudes-alimentaires/Vert-noir-rouge-blanc-quels-sont-les-bienfaits-du-the" title="Vert, noir, rouge, blanc… quels sont les bienfaits du thé ?">Vert, noir, rouge, blanc… quels sont les bienfaits du thé ?</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#aecc17">></span> Recettes Santé</div> 
+                                                    <ul style="border:1px solid #aecc17">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Recettes-Sante/Club-sandwich-concombre-mozzarella-et-haddock" title="Club sandwich concombre, mozzarella et haddock">Club sandwich concombre, mozzarella et haddock</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Recettes-Sante/Le-melon-bon-et-leger" title="Le melon : bon et léger">Le melon : bon et léger</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Recettes-Sante/L-aubergine-ne-la-boudez-pas" title="L’aubergine : ne la boudez pas !">L’aubergine : ne la boudez pas !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Recettes-Sante/Recette-a-base-d-insectes-hamburger-aux-vers-tenebrion" title="Recette à base d’insectes : hamburger aux vers ténébrion">Recette à base d’insectes : hamburger aux vers ténébrion</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Nutrition/Recettes-Sante/Sabayon-au-jasmin-et-aux-framboises" title="Sabayon au jasmin et aux framboises">Sabayon au jasmin et aux framboises</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#aecc17">></span> Régimes</div> 
+                                                    <ul style="border:1px solid #aecc17">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Regimes/8-astuces-anti-regime" title="8 astuces anti-régime !">8 astuces anti-régime !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Regimes/Comment-mettre-son-homme-au-regime" title="Comment mettre son homme au régime ?">Comment mettre son homme au régime ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Regimes/Le-regime-cretois-tout-un-art-de-vivre" title="Le régime crétois tout un art de vivre">Le régime crétois tout un art de vivre</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Regimes/Les-regimes-sans-danger" title="Les régimes sans danger">Les régimes sans danger</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Regimes/Manger-et-vivre-sain" title="Manger et vivre sain">Manger et vivre sain</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Regimes/Manger-sans-gluten-dangereux-pour-la-sante" title="Manger sans gluten : dangereux pour la santé ? ">Manger sans gluten : dangereux pour la santé ? </a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Nutrition/Regimes/Nutrition-les-pieges-a-eviter-pour-ne-pas-grossir-en-ete" title="Nutrition : les pièges à éviter pour ne pas grossir en été">Nutrition : les pièges à éviter pour ne pas grossir en été</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Nutrition/Regimes/Regime-pour-avoir-un-ventre-plat-rapidement" title="Régime pour avoir un ventre plat rapidement">Régime pour avoir un ventre plat rapidement</a></li>
+                                                    </ul>
+                       </div>
+                                      </div>
+                  
+                   
+                  <div class="blocCat alignRight" >
+                    <div class="titleCat" style="color:#ed877f">Prévention</div>           
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> Alcool</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Alcool/Dependance-a-l-alcool-A-partir-de-quand-devient-on-alcoolique" title="Dépendance à l’alcool : A partir de quand devient-on alcoolique ?">Dépendance à l’alcool : A partir de quand devient-on alcoolique ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Alcool/La-cirrhose-du-foie-sans-alcool" title="La cirrhose du foie sans alcool">La cirrhose du foie sans alcool</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/Alcool/Le-nouveau-remede-naturel-pour-eviter-la-gueule-de-bois" title="Le nouveau remède naturel pour éviter la gueule de bois">Le nouveau remède naturel pour éviter la gueule de bois</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> AVC : Accident Vasculaire Cérébral</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/AVC-Accident-Vasculaire-Cerebral/AVC-La-fibrillation-auriculaire" title="AVC : La fibrillation auriculaire">AVC : La fibrillation auriculaire</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/AVC-Accident-Vasculaire-Cerebral/AVC-Les-facteurs-de-risque" title="AVC : Les facteurs de risque">AVC : Les facteurs de risque</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/AVC-Accident-Vasculaire-Cerebral/AVC-les-gestes-qui-sauvent" title="AVC : les gestes qui sauvent">AVC : les gestes qui sauvent</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/AVC-Accident-Vasculaire-Cerebral/AVC-Moyens-de-prevention-et-traitements" title="AVC : Moyens de prévention et traitements">AVC : Moyens de prévention et traitements</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/AVC-Accident-Vasculaire-Cerebral/Les-consequences-d-un-AVC" title="Les conséquences d’un AVC ">Les conséquences d’un AVC </a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> Cancer</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Cancer/Cancer-du-sein-ce-qu-il-faut-savoir" title="Cancer du sein : ce qu'il faut savoir">Cancer du sein : ce qu'il faut savoir</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Cancer/Cancer-du-sein-nos-reponses-a-vos-questions" title="Cancer du sein : nos réponses à vos questions">Cancer du sein : nos réponses à vos questions</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Cancer/Mes-grains-de-beaute-je-les-surveille-comment" title="Mes grains de beauté, je les surveille comment ?">Mes grains de beauté, je les surveille comment ?</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/Cancer/Prevenir-le-cancer-du-sein" title="Prévenir le cancer du sein">Prévenir le cancer du sein</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> DMLA</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/DMLA/DMLA" title="DMLA">DMLA</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> Guêpes, méduses, moustiques</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/Guepes-meduses-moustiques/Moustiques-guepes-meduses-Declarez-leur-la-guerre" title="Moustiques, guêpes, méduses... Déclarez-leur la guerre !">Moustiques, guêpes, méduses... Déclarez-leur la guerre !</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> Hygiène bucco-dentaire</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Hygiene-bucco-dentaire/Enfants-apprendre-les-bons-gestes-et-surveiller-les-caries" title="Enfants : apprendre les bons gestes et surveiller les caries !">Enfants : apprendre les bons gestes et surveiller les caries !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Hygiene-bucco-dentaire/La-prevention-quotidienne-des-caries" title="La prévention quotidienne des caries">La prévention quotidienne des caries</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/Hygiene-bucco-dentaire/Seniors-prevenir-infections-et-perte-de-dents" title="Seniors : prévenir infections et perte de dents">Seniors : prévenir infections et perte de dents</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> Hygiène et propreté</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Hygiene-et-proprete/5-solutions-pour-eviter-un-virus-une-grippe-ou-un-rhume-en-hiver" title="5 solutions pour éviter un virus, une grippe, ou un rhume en hiver">5 solutions pour éviter un virus, une grippe, ou un rhume en hiver</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Hygiene-et-proprete/Grippe-on-se-vaccine-ou-non" title="Grippe : on se vaccine ou non ?">Grippe : on se vaccine ou non ?</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/Hygiene-et-proprete/Les-sechoirs-a-main-sont-ils-pleins-de-microbes" title="Les séchoirs à main sont-ils pleins de microbes ?">Les séchoirs à main sont-ils pleins de microbes ?</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> Jambes lourdes</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Jambes-lourdes/Bas-de-compression-pourquoi-faire" title="Bas de compression : pourquoi faire ? ">Bas de compression : pourquoi faire ? </a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Jambes-lourdes/Comment-assurer-le-retour-veineux" title="Comment assurer le retour veineux ? ">Comment assurer le retour veineux ? </a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Jambes-lourdes/Comment-entretenir-ses-bas-de-compression" title="Comment entretenir ses bas de compression ? ">Comment entretenir ses bas de compression ? </a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/Jambes-lourdes/Ne-prenez-pas-le-probleme-a-la-legere" title="Ne prenez pas le problème à la légère">Ne prenez pas le problème à la légère</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> Maladies cardiovasculaires</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Maladies-cardiovasculaires/700-000-diabetiques-s-ignorent-et-vous" title="700 000 diabétiques s’ignorent...          et vous ?">700 000 diabétiques s’ignorent...          et vous ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Maladies-cardiovasculaires/Cholesterol-le-risque-silencieux" title="Cholestérol le risque silencieux">Cholestérol le risque silencieux</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Maladies-cardiovasculaires/Conseils-sur-la-dyslipidemie" title="Conseils sur la dyslipidémie">Conseils sur la dyslipidémie</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Maladies-cardiovasculaires/Hypertension-arterielle-prevenir-vaut-mieux-que-guerir" title="Hypertension artérielle : prévenir vaut mieux que guérir">Hypertension artérielle : prévenir vaut mieux que guérir</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Maladies-cardiovasculaires/L-hypertension-se-traite" title="L’hypertension se traite">L’hypertension se traite</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Maladies-cardiovasculaires/Pompe-a-insuline-une-alternative-therapeutique-au-diabete" title="Pompe à insuline, une alternative thérapeutique au diabète">Pompe à insuline, une alternative thérapeutique au diabète</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Maladies-cardiovasculaires/Prevenir-les-risques-de-maladies-cardiovasculaires" title="Prévenir les risques de maladies cardiovasculaires">Prévenir les risques de maladies cardiovasculaires</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/Maladies-cardiovasculaires/Suivi-diabetique-et-regles-hygieno-dietetiques" title="Suivi diabétique et règles hygiéno-diététiques">Suivi diabétique et règles hygiéno-diététiques</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> Ostéoporose</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/Osteoporose/Osteoporose-les-bons-aliments-pour-la-prevenir" title="Ostéoporose : les bons aliments pour la prévenir">Ostéoporose : les bons aliments pour la prévenir</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> Protection solaire</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Protection-solaire/Bronzer-en-securite" title="Bronzer en sécurité">Bronzer en sécurité</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Protection-solaire/Bronzer-sans-soleil-facile" title="Bronzer sans soleil : facile ">Bronzer sans soleil : facile </a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Protection-solaire/C-est-l-ete-on-adopte-la-Sun-attitude" title="C'est l'été, on adopte la "Sun attitude"">C'est l'été, on adopte la "Sun attitude"</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Protection-solaire/Comprendre-les-effets-du-soleil-sur-la-peau" title="Comprendre les effets du soleil sur la peau">Comprendre les effets du soleil sur la peau</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Protection-solaire/Le-soleil-et-la-peau-fragile-des-enfants" title="Le soleil et la peau fragile des enfants">Le soleil et la peau fragile des enfants</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Protection-solaire/Quand-trop-de-soleil-abime-la-peau" title="Quand trop de soleil abîme la peau">Quand trop de soleil abîme la peau</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Protection-solaire/Trouver-le-bon-indice-solaire" title="Trouver le bon indice solaire">Trouver le bon indice solaire</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/Protection-solaire/Un-bronzage-sous-haute-protection" title="Un bronzage sous haute protection">Un bronzage sous haute protection</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#ed877f">></span> Sevrage tabagique</div> 
+                                                    <ul style="border:1px solid #ed877f">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Sevrage-tabagique/Comment-arreter-de-fumer" title="Comment arrêter de fumer ?">Comment arrêter de fumer ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Sevrage-tabagique/Dependance-au-tabac-les-indices" title="Dépendance au tabac : les indices">Dépendance au tabac : les indices</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Sevrage-tabagique/La-cigarette-electronique-est-elle-sans-risque" title="La cigarette électronique est-elle sans risque ?">La cigarette électronique est-elle sans risque ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Prevention/Sevrage-tabagique/Reussir-une-vie-sans-tabac" title="Réussir une vie sans tabac">Réussir une vie sans tabac</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Prevention/Sevrage-tabagique/Tabac-quelle-methode-pour-arreter" title="Tabac : quelle méthode pour arrêter ?">Tabac : quelle méthode pour arrêter ?</a></li>
+                                                    </ul>
+                       </div>
+                                      </div>
+                  
+                   
+                  <div class="blocCat " style="clear:both">
+                    <div class="titleCat" style="color:#cd6e21">Psycho</div>           
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#cd6e21">></span> Dépression</div> 
+                                                    <ul style="border:1px solid #cd6e21">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Depression/Burn-out-symptomes-et-traitements" title="Burn-out : symptômes et traitements ">Burn-out : symptômes et traitements </a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Psycho/Depression/Seriez-vous-depressif-sans-le-savoir" title="Seriez-vous dépressif sans le savoir ?">Seriez-vous dépressif sans le savoir ?</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#cd6e21">></span> Famille</div> 
+                                                    <ul style="border:1px solid #cd6e21">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/1-Francais-sur-4-fouille-dans-le-portable-de-son-conjoint" title="1 Français sur 4 fouille dans le portable de son conjoint">1 Français sur 4 fouille dans le portable de son conjoint</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/Attentats.-Comment-en-parler-aux-enfants" title="Attentats. Comment en parler aux enfants ?">Attentats. Comment en parler aux enfants ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/Bebe-Jouez-avec-lui-dans-la-voiture-et-sur-la-plage" title="Bébé : Jouez avec lui dans la voiture et sur la plage">Bébé : Jouez avec lui dans la voiture et sur la plage</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/Bebe-que-faire-a-la-campagne-ou-par-mauvais-temps" title="Bébé : que faire à la campagne ou par mauvais temps ?">Bébé : que faire à la campagne ou par mauvais temps ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/Comment-gerer-le-stress-des-examens-scolaires" title="Comment gérer le stress des examens scolaires ?">Comment gérer le stress des examens scolaires ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/Dis-maman-il-existe-pour-de-vrai-le-Pere-Noel" title="Dis maman, il existe pour de vrai le Père Noël ? ">Dis maman, il existe pour de vrai le Père Noël ? </a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/Divorce-comment-en-parler-aux-enfants" title="Divorce, comment en parler aux enfants ?">Divorce, comment en parler aux enfants ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/Ecole-maternelle-Votre-enfant-est-il-pret-a-devenir-propre" title="Ecole maternelle : Votre enfant est-il prêt à devenir propre ?">Ecole maternelle : Votre enfant est-il prêt à devenir propre ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/Enfants-faut-il-etre-plus-souple-pendant-les-vacances" title="Enfants : faut-il être plus souple pendant les vacances ?">Enfants : faut-il être plus souple pendant les vacances ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/Quel-jouet-pour-quel-age" title="Quel jouet pour quel âge ?">Quel jouet pour quel âge ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/Rentree-des-classes-notre-guide-antistress" title="Rentrée des classes : notre guide antistress !">Rentrée des classes : notre guide antistress !</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Psycho/Famille/Vacances-en-famille-dejouez-les-galeres" title="Vacances en famille : déjouez les galères !">Vacances en famille : déjouez les galères !</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#cd6e21">></span> Jeux</div> 
+                                                    <ul style="border:1px solid #cd6e21">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Psycho/Jeux/Jeux-video-toutes-accros" title="Jeux vidéo : toutes accros !">Jeux vidéo : toutes accros !</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#cd6e21">></span> Vivre son handicap</div> 
+                                                    <ul style="border:1px solid #cd6e21">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Vivre-son-handicap/Cancer-du-sein-Le-soutien-psychologique" title="Cancer du sein : Le soutien psychologique">Cancer du sein : Le soutien psychologique</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Psycho/Vivre-son-handicap/Peur-de-l-avion-le-remede" title="Peur de l'avion, le remède">Peur de l'avion, le remède</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Psycho/Vivre-son-handicap/Se-reconstruire-apres-un-cancer-du-sein" title="Se reconstruire après un cancer du sein">Se reconstruire après un cancer du sein</a></li>
+                                                    </ul>
+                       </div>
+                                      </div>
+                  
+                   
+                  <div class="blocCat " >
+                    <div class="titleCat" style="color:#1d6aad">Santé</div>           
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Alzheimer</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Alzheimer/Alzheimer-Parkinson-mieux-accompagner-le-malade" title="Alzheimer, Parkinson : mieux accompagner le malade">Alzheimer, Parkinson : mieux accompagner le malade</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Alzheimer/L-Ice-Bucket-Challenge-un-nouveau-pas-dans-la-lutte-contre-la-maladie-de-Charcot" title="L’Ice Bucket Challenge, un nouveau pas dans la lutte contre la maladie de Charcot ?">L’Ice Bucket Challenge, un nouveau pas dans la lutte contre la maladie de Charcot ?</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Alzheimer/Maladie-d-Alzheimer-les-aides-et-les-aidants" title="Maladie d'Alzheimer : les aides et les aidants">Maladie d'Alzheimer : les aides et les aidants</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Asthme et allergies</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Asthme-et-allergies/Asthme-comment-vivre-avec" title="Asthme : comment vivre avec">Asthme : comment vivre avec</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Asthme-et-allergies/Asthme-La-therapie-par-inhalation" title="Asthme : La thérapie par inhalation">Asthme : La thérapie par inhalation</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Asthme-et-allergies/Bien-vivre-son-asthme" title="Bien vivre son asthme">Bien vivre son asthme</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Asthme-et-allergies/La-rhinite-allergique-traitez-la-efficacement" title="La rhinite allergique, traitez-là efficacement">La rhinite allergique, traitez-là efficacement</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Cancer</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Cancer/Ablation-des-ovaires-consequences-et-necessites" title="Ablation des ovaires, conséquences et nécessités">Ablation des ovaires, conséquences et nécessités</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Douleurs</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Douleurs/Acouphenes-savoir-les-reperer-et-les-traiter" title="Acouphènes : savoir les repérer et les traiter">Acouphènes : savoir les repérer et les traiter</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Douleurs/Aigreurs-d-estomac-1-Francais-sur-3-est-concerne" title="Aigreurs d'estomac : 1 Français sur 3 est concerné">Aigreurs d'estomac : 1 Français sur 3 est concerné</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Douleurs/Deremboursement-des-medicaments-anti-arthrosiques-comment-eviter-les-effets-secondaires" title="Déremboursement des médicaments anti-arthrosiques : comment éviter les effets secondaires ?">Déremboursement des médicaments anti-arthrosiques : comment éviter les effets secondaires ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Douleurs/Mal-de-dos-ne-courbons-plus-l-echine" title="Mal de dos : ne courbons plus l'échine !">Mal de dos : ne courbons plus l'échine !</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Douleurs/Pas-tous-egaux-face-a-la-douleur" title="Pas tous égaux face à la douleur…">Pas tous égaux face à la douleur…</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Hygiène bucco-dentaire</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Hygiene-bucco-dentaire/Ados-quand-commencer-un-traitement-orthodontique" title="Ados : quand commencer un traitement orthodontique ?">Ados : quand commencer un traitement orthodontique ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Hygiene-bucco-dentaire/Adultes-maux-de-dents-ce-qui-est-normal-ou-pas" title="Adultes : maux de dents, ce qui est normal ou pas">Adultes : maux de dents, ce qui est normal ou pas</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Hygiene-bucco-dentaire/Bruxisme-combattez-le-dent-pour-dent-!" title="Bruxisme : combattez-le dent pour dent ! ">Bruxisme : combattez-le dent pour dent ! </a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Hygiene-bucco-dentaire/Comment-choisir-le-meilleur-dentifrice-et-la-meilleure-brosse-a-dents" title="Comment choisir le meilleur dentifrice et la meilleure brosse à dents ?">Comment choisir le meilleur dentifrice et la meilleure brosse à dents ?</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Hygiene-bucco-dentaire/Je-veux-de-belles-dents-je-m-y-prends-comment" title="Je veux de belles dents, je m'y prends comment ?">Je veux de belles dents, je m'y prends comment ?</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Maintien à domicile</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maintien-a-domicile/Aidant-familial-Comment-rester-en-forme" title="Aidant familial, Comment rester en forme">Aidant familial, Comment rester en forme</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maintien-a-domicile/Insuffisance-respiratoire-Comment-choisir-son-oxygenotherapie-a-domicile" title="Insuffisance respiratoire : Comment choisir son oxygénothérapie à domicile ?">Insuffisance respiratoire : Comment choisir son oxygénothérapie à domicile ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maintien-a-domicile/Maintien-a-domicile-des-solutions-existent" title="Maintien à domicile : des solutions existent !">Maintien à domicile : des solutions existent !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maintien-a-domicile/Maintien-a-domicile-Fauteuil-de-repos-et-lit-medicalise" title="Maintien à domicile : Fauteuil de repos et lit médicalisé">Maintien à domicile : Fauteuil de repos et lit médicalisé</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maintien-a-domicile/Materiel-medical-a-domicile-qui-en-a-besoin" title="Matériel médical à domicile, qui en a besoin ?">Matériel médical à domicile, qui en a besoin ?</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Maintien-a-domicile/Quel-materiel-medical-choisir" title="Quel matériel médical choisir ?">Quel matériel médical choisir ?</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Maladies rénales</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Maladies-renales/Reins-comment-les-preserver-pourquoi-sont-ils-indispensables" title="Reins, comment les préserver pourquoi sont-ils indispensables ?">Reins, comment les préserver pourquoi sont-ils indispensables ?</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Maman & bébé</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Alimentation-de-bebe-allaitement-ou-biberon" title="Alimentation de bébé, allaitement ou biberon ?">Alimentation de bébé, allaitement ou biberon ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Allergies-de-la-maman-et-alimentation-de-Bebe" title="Allergies de la maman et alimentation de Bébé">Allergies de la maman et alimentation de Bébé</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Astuces-et-conseils-pour-la-future-maman" title="Astuces et conseils pour la future maman">Astuces et conseils pour la future maman</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Bebe-Premiers-jours-a-la-maison-apres-l-accouchement" title="Bébé : Premiers jours à la maison après l’accouchement">Bébé : Premiers jours à la maison après l’accouchement</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Bebe-ne-supporte-pas-le-lait-1er-age-Video" title="Bébé ne supporte pas le lait 1er âge - Vidéo">Bébé ne supporte pas le lait 1er âge - Vidéo</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Choisir-le-bon-professionnel-de-sante" title="Choisir le bon professionnel de santé">Choisir le bon professionnel de santé</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Fete-des-meres-idees-cadeaux-de-dernieres-minutes" title="Fête des mères : idées cadeaux de dernières minutes">Fête des mères : idées cadeaux de dernières minutes</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Grosses-chaleurs-Ce-qu-il-faut-faire-avec-bebe" title="Grosses chaleurs : Ce qu'il faut faire avec bébé">Grosses chaleurs : Ce qu'il faut faire avec bébé</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Grosses-chaleurs-Ce-qu-il-faut-eviter-de-faire-avec-bebe" title="Grosses chaleurs: Ce qu'il faut éviter de faire avec bébé">Grosses chaleurs: Ce qu'il faut éviter de faire avec bébé</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/La-rougeole-est-de-retour" title="La rougeole est de retour">La rougeole est de retour</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Le-rendez-vous-Forum-Sante-des-mamans-et-des-bebes" title="Le rendez-vous Forum Santé des mamans et des bébés">Le rendez-vous Forum Santé des mamans et des bébés</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Les-consultations-medicales-pendant-la-grossesse" title="Les consultations médicales pendant la grossesse">Les consultations médicales pendant la grossesse</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Les-depistages-et-les-examens-biologiques" title="Les dépistages et les examens biologiques">Les dépistages et les examens biologiques</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/L-alimentation-des-bebes" title="L’alimentation des bébés">L’alimentation des bébés</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Maux-de-bebe-Les-reconnaitre-et-les-soulager" title="Maux de bébé : Les reconnaître et les soulager ">Maux de bébé : Les reconnaître et les soulager </a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Maux-de-grossesse-les-soulager-au-naturel" title="Maux de grossesse : les soulager au naturel">Maux de grossesse : les soulager au naturel</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Peridurale-episiotomie-forceps-cesarienne-ce-que-les-femmes-detestent" title="Péridurale, épisiotomie, forceps, césarienne... ce que les femmes détestent !">Péridurale, épisiotomie, forceps, césarienne... ce que les femmes détestent !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Premiers-bobos-et-petites-maladies-de-l-enfant" title="Premiers bobos et petites maladies de l'enfant">Premiers bobos et petites maladies de l'enfant</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Quand-donner-du-lait-de-vache-a-Bebe-Video" title="Quand donner du lait de vache à Bébé ? Vidéo">Quand donner du lait de vache à Bébé ? Vidéo</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Que-savez-vous-des-laits-infantiles" title="Que savez-vous des laits infantiles ?">Que savez-vous des laits infantiles ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Quel-est-le-meilleur-moment-pour-sevrer-mon-enfant" title="Quel est le meilleur moment pour sevrer mon enfant ?">Quel est le meilleur moment pour sevrer mon enfant ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Quel-lait-a-la-sortie-de-la-maternite" title="Quel lait à la sortie de la maternité ? ">Quel lait à la sortie de la maternité ? </a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Regurgitation-de-Bebe-que-faire" title="Régurgitation de Bébé : que faire ? ">Régurgitation de Bébé : que faire ? </a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Rester-en-forme-pendant-la-grossesse" title="Rester en forme pendant la grossesse">Rester en forme pendant la grossesse</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Royal-Baby-2-accouchement-apres-terme-ce-qu-il-faut-savoir" title="Royal Baby 2 : accouchement après terme, ce qu'il faut savoir">Royal Baby 2 : accouchement après terme, ce qu'il faut savoir</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Maman-bebe/Tetine-ou-pouce-pour-bebe-avantages-et-inconvenients" title="Tétine ou pouce pour bébé : avantages et inconvénients ">Tétine ou pouce pour bébé : avantages et inconvénients </a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Maux du quotidien</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/Allergies-aux-pollens-symptomes-et-traitements" title="Allergies aux pollens : symptômes et traitements">Allergies aux pollens : symptômes et traitements</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/Assez-d-etre-fatigue" title="Assez d’être fatigué !">Assez d’être fatigué !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/Cette-annee-j-evite-le-rhume" title="Cette année, j'évite le rhume !">Cette année, j'évite le rhume !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/Et-si-j-etais-enceinte" title="Et si j'étais enceinte...">Et si j'étais enceinte...</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/Ete-la-saison-des-bobos" title="Été : la saison des bobos">Été : la saison des bobos</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/L-oeil-rouge" title="L'oeil rouge">L'oeil rouge</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/Maladies-d-hiver-Comment-les-guerir-et-les-prevenir" title="Maladies d'hiver : Comment les guérir et les prévenir ?">Maladies d'hiver : Comment les guérir et les prévenir ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/Maux-de-tete-ou-migraines-Comment-faire-la-difference" title="Maux de tête ou migraines : Comment faire la différence ?">Maux de tête ou migraines : Comment faire la différence ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/Paracetamol-aspirine-anti-inflammatoire" title="Paracétamol, aspirine, anti-inflammatoire">Paracétamol, aspirine, anti-inflammatoire</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/Prevenir-et-guerir-des-maux-de-l-hiver" title="Prévenir et guérir des maux de l'hiver">Prévenir et guérir des maux de l'hiver</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/Rhumes-entre-allergies-et-virus" title="Rhumes : entre allergies et virus">Rhumes : entre allergies et virus</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Maux-du-quotidien/Se-soigner-avec-les-plantes" title="Se soigner avec les plantes ">Se soigner avec les plantes </a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Médicaments génériques</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Medicaments-generiques/Essais-de-medicaments-comment-ca-marche" title="Essais de médicaments : comment ça marche ?">Essais de médicaments : comment ça marche ?</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Medicaments-generiques/Medicaments-generiques-la-sante-a-de-l-avenir" title="Médicaments génériques, la santé a de l'avenir">Médicaments génériques, la santé a de l'avenir</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Ophtalmologie</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Ophtalmologie/Comment-choisir-ses-lunettes-de-soleil" title="Comment choisir ses lunettes de soleil ?">Comment choisir ses lunettes de soleil ?</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Ophtalmologie/Faut-il-se-faire-operer-de-la-myopie" title="Faut-il se faire opérer de la myopie ?">Faut-il se faire opérer de la myopie ?</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Problèmes veineux</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Problemes-veineux/Phlebite-consultez-en-urgence" title="Phlébite : consultez en urgence !">Phlébite : consultez en urgence !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Problemes-veineux/Problemes-veineux-jambes-lourdes-traitements" title="Problèmes veineux, jambes lourdes : traitements">Problèmes veineux, jambes lourdes : traitements</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Problemes-veineux/Que-savez-vous-des-bas-de-contention" title="Que savez-vous des bas de contention ?">Que savez-vous des bas de contention ?</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Problemes-veineux/Varices-les-traitements-les-plus-efficaces" title="Varices : les traitements les plus efficaces  ">Varices : les traitements les plus efficaces  </a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Santé animale</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Sante-animale/Laver-son-chien-ou-son-chat-comment-et-a-quelle-frequence" title="Laver son chien ou son chat : comment et à quelle fréquence ?">Laver son chien ou son chat : comment et à quelle fréquence ?</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#1d6aad">></span> Voyages</div> 
+                                                    <ul style="border:1px solid #1d6aad">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Voyages/Les-amours-de-vacances-combien-de-temps-durent-ils" title="Les amours de vacances : combien de temps durent-ils ?">Les amours de vacances : combien de temps durent-ils ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Voyages/Moustiques-Avez-vous-la-tactique" title="Moustiques : Avez-vous la tactique ?">Moustiques : Avez-vous la tactique ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sante/Voyages/Quels-medicaments-dans-ma-trousse-de-voyage" title="Quels médicaments dans ma trousse de voyage">Quels médicaments dans ma trousse de voyage</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sante/Voyages/Vacances-quoi-emporter-dans-sa-trousse-de-pharmacie" title="Vacances : quoi emporter dans sa trousse de pharmacie ?">Vacances : quoi emporter dans sa trousse de pharmacie ?</a></li>
+                                                    </ul>
+                       </div>
+                                      </div>
+                  
+                   
+                  <div class="blocCat " >
+                    <div class="titleCat" style="color:#7cbfae">Sexualité</div>           
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#7cbfae">></span> Contraception</div> 
+                                                    <ul style="border:1px solid #7cbfae">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Contraception/6-erreurs-a-ne-pas-faire-quand-on-prend-la-pilule" title="6 erreurs à ne pas faire quand on prend la pilule">6 erreurs à ne pas faire quand on prend la pilule</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Contraception/Envie-d-avoir-un-bebe-Testez-votre-fertilite" title="Envie d’avoir un bébé ? Testez votre fertilité !">Envie d’avoir un bébé ? Testez votre fertilité !</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sexualite/Contraception/La-contraception-sans-tabou" title="La contraception sans tabou">La contraception sans tabou</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#7cbfae">></span> Maladies sexuelles </div> 
+                                                    <ul style="border:1px solid #7cbfae">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sexualite/Maladies-sexuelles/Cystite-Symptomes-et-traitements" title="Cystite : Symptômes et traitements ">Cystite : Symptômes et traitements </a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#7cbfae">></span> Plaisir</div> 
+                                                    <ul style="border:1px solid #7cbfae">
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/C-est-decide-je-m-offre-un-sex-toy" title="C'est décidé.. je m'offre un sex-toy !">C'est décidé.. je m'offre un sex-toy !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/En-ete-notre-libido-a-chaud" title="En été, notre libido a chaud !">En été, notre libido a chaud !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/Flibanserin-le-viagra-feminin-une-revolution-sexuelle" title="Flibanserin, le viagra féminin : une révolution sexuelle ?">Flibanserin, le viagra féminin : une révolution sexuelle ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/La-sexualite-chez-les-seniors-Le-sexe-apres-50-ans" title="La sexualité chez les seniors : Le sexe après 50 ans">La sexualité chez les seniors : Le sexe après 50 ans</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/Le-rapport-sexuel-ideal-ne-dure-pas-plus-de-13-minutes" title="Le rapport sexuel idéal ne dure pas plus de 13 minutes">Le rapport sexuel idéal ne dure pas plus de 13 minutes</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/Orgasme-surpuissant-le-Deep-Spot-le-nouveau-point-G" title="Orgasme surpuissant, le Deep Spot, le nouveau point G !">Orgasme surpuissant, le Deep Spot, le nouveau point G !</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/Probleme-d-erection-la-creme-qui-va-tout-changer" title="Problème d’érection : la crème qui va tout changer">Problème d’érection : la crème qui va tout changer</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/Quelle-sexualite-pendant-la-grossesse" title="Quelle sexualité pendant la grossesse ?">Quelle sexualité pendant la grossesse ?</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/Secheresse-vaginale-un-traitement-personnalise" title="Sécheresse vaginale, un traitement personnalisé">Sécheresse vaginale, un traitement personnalisé</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/Soft-bondage-Ce-nouveau-jeu-qui-agremente-la-vie-sexuelle" title="Soft bondage : Ce nouveau jeu qui agrémente la vie sexuelle">Soft bondage : Ce nouveau jeu qui agrémente la vie sexuelle</a></li>
+                                                       <li ><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/Special-femmes-Plaisir-desir-Comment-rallumer-la-flamme" title="Spécial femmes : Plaisir, désir… Comment rallumer la flamme ?">Spécial femmes : Plaisir, désir… Comment rallumer la flamme ?</a></li>
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sexualite/Plaisir/Zoom-sur-l-ejaculation-precoce" title="Zoom sur l'éjaculation précoce">Zoom sur l'éjaculation précoce</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#7cbfae">></span> Préservatifs</div> 
+                                                    <ul style="border:1px solid #7cbfae">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sexualite/Preservatifs/Preservatifs-Mettez-du-piment-dans-votre-vie-intime" title="Préservatifs : Mettez du piment dans votre vie intime">Préservatifs : Mettez du piment dans votre vie intime</a></li>
+                                                    </ul>
+                       </div>
+                                           <div class="sousBlocCat">
+                          <div class="titleSousCat"> <span style="color:#7cbfae">></span> Sexualité des ados</div> 
+                                                    <ul style="border:1px solid #7cbfae">
+                                                       <li style="border:0"><a href="http://forumsante.com/Conseil-Sante/Sexualite/Sexualite-des-ados/Sexualite-des-ados-comment-en-parler" title="Sexualité des ados, comment en parler ?">Sexualité des ados, comment en parler ?</a></li>
+                                                    </ul>
+                       </div>
+                                      </div>
+                                  <div style="clear:both;height:20px"></div> 
+               </ul>
+            </div>
+       </li>
+       
+       <!--[if IE 9]>
+          
+           <style>
+            #header #mainMenu li.conseil .sousMenu .blocCat .sousBlocCat span{padding:1px 0 0 7px;
+           </style>
+          
+       <![endif]-->
+       
+       <!--[if lt IE 9]>
+          
+        <![endif]-->
+
+       
+              <li class="actus">
+            <a class="only" href="http://forumsante.com/Actualites" title="Actualités">Actualités</a>
+       </li>
+
+       
+
+
+             <li class="clickcollect">
+            <a class="only" href="/Click-Collect" title="Click & Collect">Click & Collect</a>
+       </li>
+
+
+       
+              <li class="infos">
+           <a class="only" href="http://forumsante.com/Pages/Medicaments" title="Médicaments">Médicaments</a>
+       </li>
+
+                     <li class="quisommes">
+            <a href="http://forumsante.com/Pages/Qui-sommes-nous/Nos-services" title="Qui sommes-nous ?">Qui sommes-nous ?<div class="cacheWhite"></div></a>
+            <div class="sousMenu ssmenureseau">
+                <ul>  <li  ><a href="http://forumsante.com/Pages/Qui-sommes-nous/Nos-services" title="Nos services">Nos services</a></li>  <li style="border:0" ><a href="http://forumsante.com/Pages/Qui-sommes-nous/Ou-nous-trouver" title="Où nous trouver ?">Où nous trouver ?</a></li>  </ul>
+            </div>
+       </li>
+
+              <li class="contacts">
+            <a class="only" href="http://forumsante.com/Pages/Contacts" title="Contacts">Contacts</a>
+       </li>
+
+    </ul>
+
+    <div id="monCompte">
+            <span class="btnMonCompte maj" href="http://forumsante.com/Mon-compte" title="Mon compte">Mon compte</span>
+      
+
+
+  <div class="compteOffLine">
+   <span class="orange maj">Mon compte</span>
+     <div class="content">
+        
+  <style>
+  #formLogin .bouton.load, #formLoginCommand .bouton.load{background:url("/extension/digital/design/forumsante/images/loading2.gif") top center no-repeat;border:0;font-size:0;display:block !important;position:relative !important;}
+  #formLogin .bouton.load input, #formLoginCommand .bouton.load input{font-size:0;background:none;display:block !important;}
+  #formLoginCommand .bouton.load{background:url("/extension/digital/design/forumsante/images/loading.gif") top center no-repeat;bottom:auto !important;left:auto !important}
+  </style>
+
+
+    
+
+<form method="post" id="formLogin">
+    <input type="hidden" name="RedirectURI" value="Forum/Enfants/Enfants-ados/appareil-auditif-ou-implant-cocleaire?login=ok" />
+
+    <div  id="champLogin">
+      <label>Pseudo</label> <input class="halfbox" type="text" size="10" name="Login" id="id1" value="" tabindex="1" />
+    </div>
+
+    <div id="champPass">
+      <label>Mot de passe</label> <input class="halfbox" type="password" size="10" name="Password" id="id2" value="" tabindex="1" />
+    </div>
+
+    
+    <div class="bouton" style="margin-top:5px;width:100px;float:right;margin:5px 21px 0 0"><input type="button" class="maj LoginButton" value="Connexion"/></div>
+    <div style="clear:both"></div>
+
+</form>
+
+
+<div style="clear:both;"></div>
+
+
+
+<script type="text/JavaScript">
+    $('#id1,#id2').unbind().keyup(function( event ) {
+      if ( event.which == 13 ) {
+        $(this).closest('form').find('.LoginButton').click();
+      }
+    })
+
+    $('.LoginButton').unbind().click(function(){
+      var element = $(this);
+      if($(this).closest('form').find('#id1').val().length == 0 || $(this).closest('form').find('#id2').val().length == 0){
+        displayAlerte('Merci d\'indiquer un login et un mot de passe'); return false;
+      }
+      $(this).closest('div').addClass('load');
+      $.ajax({type: "POST",url: siteAccess+"/ezjscore/call/forumsanteFrontAnonyme::login",data: "l="+$(this).closest('form').find('#id1').val()+"&p="+$(this).closest('form').find('#id2').val(),dataType: "json",
+          success: function(msg){
+           if(msg.content=='error'){
+            element.closest('div').removeClass('load');
+             displayAlerte('Login ou mot de passe invalides.');
+           } else {
+             window.location.reload();
+           }
+          }
+      });
+    })
+</script>
+
+                <div class="boxMember">
+           <div><a href="/Mon-compte/Inscrivez-vous-gratuitement" class="maj">> Inscrivez-vous</a></div>
+           <div style="font-size:10px;margin:6px 5px 0 0;cursor:pointer;" class="forgotPassBtn orange"> > Mot de passe oublié ?</div>
+        </div>
+    </div>
+     <div class="forgotPass">
+                  <br /><span>Veuillez indiquer votre pseudo <br />ou votre adresse mail :</span><br /><br />
+         <input style="width:205px;" type="text" name="forgotParam"/><br /><br />
+         <div style="text-align:center" class="return">
+            <img src="/extension/digital/design/forumsante/images/loading2.gif" alt="Chargement"/>
+            <div class="content orange smallMention" style="margin-bottom:5px;"></div>
+         </div>
+         <div class="btn">
+           <div style="width:55px;float:left;margin-left:47px;" class="bouton"><input type="button" value="valider" class="ok"/></div>
+           <div style="width:59px;margin-left:9px;float:left;" class="boutonCancel"><input type="button" value="annuler" class="cancel"/></div>
+         </div>
+     </div>
+  </div>
+
+  
+  <script type="text/JavaScript">
+  $(document).ready(function(){
+
+    $('.forgotPassBtn').mouseenter(function() {
+      $(this).css('text-decoration','underline');
+    }).mouseleave(function(){
+      $(this).css('text-decoration','none');
+    });
+
+    $('.forgotPass').find('.cancel').click(function(){
+       $('.forgotPass').fadeOut('fast',function(){
+          $(this).closest('.compteOffLine').find('.content').fadeIn('fast');
+       });
+    });
+
+
+    $('.forgotPass').find('.ok').click(function(){
+      $('.forgotPass').find('.return').find('img').show();
+      $('.forgotPass').find('.return').find('.content').empty();
+      $('.forgotPass').find('.btn').hide();
+      var paramForgot = $(this).closest('.compteOffLine').find('.forgotPass').find('input:first').val();
+      var domaine = 'http://forumsante.com';
+      var url = document.location.href.split('/');
+      if(url[3] == 'ezForumsante'  ) { domaine += '/'+url[3]; }
+
+      $.ajax({type: "POST",url: siteAccess+"/ezjscore/call/forumsanteFrontAnonyme::forgotPass",data: "paramForgot="+paramForgot+"&domaine="+domaine,dataType: "json",
+          success: function(msg){
+           $('.forgotPass').find('.btn').show();
+           $('.forgotPass').find('.return').find('img').hide();
+           if(msg.content=='error'){
+             $('.forgotPass').find('.return').find('.content').append('Désolé, aucun compte n\'a été trouvé...');
+           } else {
+             $('.forgotPass').find('.return').find('.content').empty();
+             $('.forgotPass').fadeOut('fast',function(){
+                $(this).closest('.compteOffLine').find('.content').fadeIn('fast');
+             });
+             displayAlerte('Un mail contenant votre nouveau mot de passe vous a été envoyé à l\'adresse '+msg.content);
+           }
+          }
+      });
+    });
+
+    $('.forgotPassBtn').click(function(){
+        $(this).closest('.compteOffLine').find('.content').fadeOut('fast',function(){
+         $(this).closest('.compteOffLine').find('.forgotPass').delay('200').fadeIn('fast');
+       });
+    });
+
+
+  });
+  </script>
+  
+
+
+    </div>
+
+
+            <form method="post" name="formRecherche" id="formRecherche" action="http://forumsante.com/Recherche">
+        <input type="text" name="valueRecherche" id="valueRecherche" placeholder="entrez un mot-clé"/>
+        <input type="submit" alt="OK" value="Rechercher" id="okRecherche"/>
+      </form>  
+
+                <a href="http://forumsante.com/Forum" id="accesForum" class="btnHomeOrange h58" >ACCÉDER AU FORUM</a>
+    <div id="loginBackground" ></div>
+</div>
+  <div id="ariane">
+
+      
+  <a href="http://forumsante.com" title="Forumsanté">Forumsanté</a> > 
+                  
+              
+            
+            
+      Forum
+      
+            
+      
+       >       
+            
+              
+            
+       
+                                   <a href="/Forum/Enfants" title="Enfants & ado"> 
+            
+      Enfants & ado
+      
+       </a>       
+      
+       >       
+            
+              
+            
+       
+                                   <a href="/Forum/Enfants/Enfants-ados" title="Enfants & ados"> 
+            
+      Enfants & ados
+      
+       </a>       
+      
+       >       
+            
+              
+            
+            
+      appareil auditif ou implant cocleaire
+      
+            
+      
+            
+    
+</div>
+
+                                        
+                                                                        
+          
+                                                                   <div id="mainContent" class="radius " > 
+                          
+                              
+<h2>Echangez sur notre forum.</h2>
+<h4>Un pharmacien expert vous répond<br /> et vous conseille gratuitement.</h4>
+<h1>Forum</h1>
+
+<div id="forumCompteBox">
+     <div id="connexion">
+       <span class="orange">Déjà un compte ?</span>
+       <div class="bouton" style="width:90px;margin:7px auto 0 auto;"><input class="maj autoConnect" type="button" value="Connexion"/></div>
+     </div>
+     <div id="inscription">
+              <span class="orange">Pas encore membre ?</span>
+       <div class="bouton" style="width:92px;margin:7px auto 0 auto;"><a href="/Mon-compte/Inscrivez-vous-gratuitement" class="maj">Inscription</a></div>
+     </div>
+     <div style="clear:both"></div>
+</div>	
+
+
+
+<div id="searchForum" >
+    <form method="post" name="formRecherche" id="formRecherche" action="/Recherche">
+    <div>Rechercher sur le forum</div>
+    <input type="text" name="valueRecherche" id="valueRecherche"/>
+    <input type="hidden" name="searchForum" value="1"/>
+    <input type="image" style="vertical-align:middle;" src="/extension/digital/design/forumsante/images/ok.png" alt="OK" id="okRecherche"/>
+  </form>
+</div>
+
+<ul id="listeCatForum" >      <li >
+    <a href="/Forum/Beaute" title="Beauté ">Beauté </a>
+  </li>      <li >
+    <a href="/Forum/Bien-etre/Bien-etre" title="Bien-être">Bien-être</a>
+  </li>      <li class="current">
+    <a href="/Forum/Enfants/Enfants-ados" title="Enfants ">Enfants </a>
+  </li>      <li >
+    <a href="/Forum/Maman" title="Maman ">Maman </a>
+  </li>      <li >
+    <a href="/Forum/Sante/Sante" title="Santé">Santé</a>
+  </li>      <li >
+    <a href="/Forum/Se-soigner" title="Se soigner">Se soigner</a>
+  </li>      <li >
+    <a href="/Forum/Seniors/Alzheimer" title="Séniors">Séniors</a>
+  </li>      <li >
+    <a href="/Forum/Sexualite/Sexualite" title="Sexualité">Sexualité</a>
+  </li></ul>
+<div style="clear:both;height:10px;"></div>
+
+
+
+
+<script type="text/JavaScript">
+
+$(document).ready(function(){
+
+	$('#listeCatForum').find('li').not('.current').mouseover(function() { $(this).addClass('current'); }).mouseout(function(){ $(this).removeClass('current'); });
+
+
+
+});
+
+</script>
+
+ 
+
+
+<style type="text/css"> 
+ .conteneurEditPost{width:50px;float:right;margin-right:8px;margin-bottom:10px;}
+ .conteneurEditPost.save{width:83px}
+</style>
+
+
+
+<h3 class="maj gris">Enfants & ados</h3>
+<a id="retour"  style="top:193px;"  href="javascript:void(0);" rel="/Forum/Enfants/Enfants-ados" title="Retour">Retour</a>
+
+   
+
+
+
+
+<table id="tableForum" cellpadding="0" cellspacing="0">
+
+    <tr id="firstCol"> 
+      <th width="25%" class="first"></th>   
+      <th width="75%" class="last" align="right"> <img id="createPost"   class="disconnected"  title="Répondre" alt="Répondre" src="/extension/digital/design/forumsante/images/createPost.png"/> &nbsp;&nbsp; </th> 
+    </tr>
+    
+    
+             <tr >
+        <td class="first  creator">
+           
+           <div style="padding-left:20px;" id="post18459">    
+                          <b><u>
+                           la maman de hiba
+                          </u></b><br />
+             21/12/2012<br /> 
+             à 22:44 
+           </div>
+           
+        </td>
+        
+        <td class="last ">
+          
+          <div style="padding:10px;">
+            <div style="font-weight:bold; margin-bottom:10px; font-size:14px;">    "appareil auditif ou implant cocleaire" </div>
+            
+            <div class="contentofpost"><p class="MsoNormal"><span style="font-size: 10pt; font-family: Verdana; background-color: white; background-position: initial initial; background-repeat: initial initial;">Bonjour, je suis une maman d'une petite fille
+prématurée de 6 mois, j'ai bcp souffert avec elle, on a passées des moments
+très difficiles. A l'age de 3 ans j'ai su qu'elle est une malentendante. je ss
+marocaine et j'ai prèsque vu tous les meilleurs médecins ici au Maroc, j'ai fait et refait
+le PEA plusieurs fois pour ma fille et le diagnostique était:surdité bilatérale
+profonde, je lui ai portée un appareil auditif (NIOS S H2O V de phonak) depuis
+un mois, mais je ne ss pas satisfaite des résultats, je sais que c'est tôt pour conclure mais j'ai lu que pour la surdité profonde il faut opté pour l'implant
+cochléaire avant l'age de 4 ans si on veux gagner le langage et il faut garder un appareil auditif pour l'oreille non implanter. svp aidez moi. est ce que l'implant et moins gênant que l'appareil auditif vu le jeune âge de ma fille? est ce qu'il est plus efficace? comment ça était pour vous ou pour quelqu'un que vous connaissais s'il vous
+plait je veux tous savoir est ce que vous entendez bien et est ce que vous
+communiquez bien,vous avez vu une orthophoniste. après l'opération qu'avez vous fait?</span><span style="background-color: white; font-family: Verdana; font-size: 10pt;">de quoi vous me conseillez svp
+j'attend votre réponse.</span></p><p class="MsoNormal"><span style="background-color: white; font-family: Verdana; font-size: 10pt;">une maman inquiétte</span></p></div>
+            
+              
+                             
+          </div>
+          
+        </td>
+      </tr>
+             <tr >
+        <td class="first lastBottomLeft creator">
+           
+           <div style="padding-left:20px;" id="post18460">    
+                          <b><u>
+                           la maman de hiba
+                          </u></b><br />
+             21/12/2012<br /> 
+             à 22:53 
+           </div>
+           
+        </td>
+        
+        <td class="last lastBottomRight">
+          
+          <div style="padding:10px;">
+            <div style="font-weight:bold; margin-bottom:10px; font-size:14px;">   Re :   "appareil auditif ou implant cocleaire" </div>
+            
+            <div class="contentofpost">nous vous en faite pas ts irra bien</div>
+            
+              
+                             
+          </div>
+          
+        </td>
+      </tr>
+  
+</table>
+
+
+
+
+
+<link rel="stylesheet" href="/extension/digital/design/forumsante/javascript/tinyeditor/style.css" />
+<script type="text/javascript" src="/extension/digital/design/forumsante/javascript/tinyeditor/tinyeditor.js"></script>
+<div id="newSubject">
+    <div class="head">Répondre</div>
+    <div class="content">
+    
+      <div style="float:left;">Texte</div> <textarea id="texte"></textarea>
+      <div style="clear:both;height:25px;"></div>
+      
+      <div style="float:left;margin-right:15px;line-height:5px;">
+        <span>Saisissez les caractères<br /> apparaissant dans l'image</span>  
+        <input  style="width:75px" type="text" name="captchaValue" class="captchaValue label"/>
+      </div>
+      
+      <div id="captcha" style="float:left;line-height:15px;">
+        <div class="image" style="float:left; margin-right:7px; width:160px; height:71px;"></div>
+        <b>Difficile à lire ?</b><br /> <span class="change" style="cursor:pointer;">Changer&nbsp;l'image</span>
+      </div>
+      <div style="clear:both;"></div>
+      
+      <div class="bigBouton" style="margin-left:268px;"><input style="width:81px;" type="button" value="Envoyer"/></div>
+      <div class="wait orange" style="font-size:13px;text-align:center;display:none;"><img src="/extension/digital/design/forumsante/images/loading.gif"/></div>
+      <div class="msgError smallMention bleu" style="margin-bottom:15px;"></div>
+      
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+function instanceEditor(theid,largeur){
+    var theEditor = new TINY.editor.edit('editor',{
+    	id:theid,
+    	width:largeur,
+    	height:175,
+    	cssclass:'te',
+    	controlclass:'tecontrol',
+    	rowclass:'teheader',
+    	dividerclass:'tedivider',
+    	controls:['bold','italic','underline','strikethrough','|','subscript','superscript','|',
+    			  'orderedlist','unorderedlist','|','outdent','indent','|','leftalign',
+    			  'centeralign','rightalign','blockjustify','|','unformat','|','undo','redo','n',
+    			  'size','link','unlink','|','image'],
+    	footer:false,
+    	xhtml:true,
+    	cssfile:'style.css',
+    	bodyid:'editor'+theid,
+    	footerclass:'tefooter',
+    	toggle:{text:'source',activetext:'wysiwyg',cssclass:'toggle'},
+    });
+}
+
+instanceEditor('texte',584);
+
+</script>
+
+
+
+
+
+
+<script type="text/JavaScript">
+
+$(document).ready(function(){ 
+
+  var idUser = 10;
+
+   $('.editPost').click(function(){ 
+      var theId = $(this).attr('id').split('_')[1]; 
+      var idpost = 'valpost'+theId;
+      if($(this).hasClass('savePost')){
+         $(this).val('Editer');
+         $(this).removeClass('savePost');
+         $(this).closest('div').removeClass('save');
+         var newHtml = $(this).closest('td').find('iframe').contents().find('body').html();
+         $(this).closest('td').find('.contentofpost').empty().append(newHtml);
+         $(this).closest('td').find('.contentofpost').show();
+         $(this).closest('td').find('.te').remove();
+         $('<textarea id="'+idpost+'" style="display:none;">'+newHtml+'</textarea>').insertBefore($(this).closest('td').find('.littleBouton'));         
+         
+         $.ajax({type: "POST",url: siteAccess+"/ezjscore/call/forumsanteFrontMembre::editForumPost",
+          data : { idNode : theId, contenu : newHtml }
+         });
+    
+      } else {
+        $(this).val('Sauvegarder');
+        $(this).addClass('savePost');
+        $(this).closest('div').addClass('save');
+        $(this).closest('td').find('.contentofpost').hide(); 
+        instanceEditor(idpost,486);
+      }  
+      
+   });  
+  
+  
+   $.ajax({type: "POST",url: siteAccess+"/ezjscore/call/forumsanteFrontAnonyme::addVueForumSubject",
+      data : "idSubject="+18458
+    });
+ 
+  $('#retour').click(function(){
+     if($(this).hasClass('clicked')){
+      window.location.reload();
+     } else {
+      window.location.href = $(this).attr('rel');
+     }
+  });
+  
+  
+  /*create post*/
+  
+  var domaine = 'http://forumsante.com';
+  var url = document.location.href.split('/');
+  if(url[3] == 'ezForumsante') { domaine += '/'+url[3]; }
+ 
+  $('#createPost').click(function(){
+    if(!$(this).hasClass('disconnected')){
+       $(this).closest('table').hide();
+       $('#paginationForum').hide();
+       $('#retour').addClass('clicked');
+       genereCaptcha();
+       $('#newSubject').fadeIn();
+    } else {
+       displayAlerte('Vous devez être inscrit pour poster sur le forum.','connect');
+    }
+  });
+  
+  $('#captcha').find('.change').click(function(){
+     genereCaptcha(); 
+   });
+          
+  $('#newSubject').find('.bigBouton').find('input').click(function(){
+     //theEditor.post();
+          
+     $('#newSubject').find('.msgError').empty();
+     
+     var pere = ' 18458 ';
+
+     var texte = $('#newSubject').find('iframe').contents().find('body').html();  
+     var captchaVal = $('#newSubject').find('.content').find('.captchaValue').val(); 
+     var image = '<img src="/extension/digital/design/forumsante/images/warning.png" style="vertical-align:middle" />&nbsp;';
+     
+     if(texte.length < 1){ $('#newSubject').find('.msgError').append(image+'Merci de saisir un texte.'); return false; }
+      
+      $('#newSubject').find('.bigBouton').hide();
+      $('#newSubject').find('.wait').show();  
+      $.ajax({type: "POST",url: siteAccess+"/ezjscore/call/forumsanteFrontMembre::newForumPost",
+      data : { domaine : domaine, captchaVerif : '1', pere : pere, texte : texte, captcha : captchaVal, idUser : idUser },
+      success: function(msg){
+        if(msg == 'error'){
+            $('#newSubject').find('.bigBouton').show();
+      $('#newSubject').find('.wait').hide();
+            $('#newSubject').find('.msgError').append(image+'Les caractères de lìmage ne correspondent pas.');
+        }
+        else {
+          window.location.reload();       
+        }               
+      }});
+       
+   });
+  
+  
+});
+
+
+function genereCaptcha(){ 
+    $.ajax({type: "POST",url: siteAccess+"/ezjscore/call/forumsanteFrontMembre::captcha",
+    success: function(msg){
+      $('#captcha').find('.image').empty().append(msg);               
+    }});  
+}
+    
+</script>
+ 
+
+
+
+	
+ 
+                           
+                      </div>
+                                                                <div id="bottomContent"></div>
+                        
+          
+          
+            
+ <div id="rightBarre"  >    
+
+
+
+
+  
+  <div id="contactPharmacien" >
+    
+            
+            <a id="sendordo" class="btnHomeOrange" href="http://forumsante.com/Envoyez-nous-votre-ordonnance">ENVOYER UNE ORDONNANCE</a>
+
+            
+       
+              <div id="contactPharmacienWrapper" >
+          <a href="javascript:void(0)" id="btnContacter" class="btnHomeOrange h58" >CONTACTER<br/>UN DOCTEUR EN PHARMACIE</a>
+          <div id="btnWrapper" >
+            <button type="button" id="btnBeCall" class="LnkWcbForm-trigger" >Être rappelé</button>
+            <button type="button" id="btnVisio" class="LnkWcbForm-trigger" >Visio</button>
+          </div>
+        </div>
+      
+
+      
+
+      <!-- Linkeo script -->
+      
+        <script type="text/javascript" src="http://wcb.linkeo.com/2.5.0/dist/js/wcb/bouton-core-min.js"></script>
+        <script type="text/javascript" src="http://wcb.linkeo.com/2.5.0/dist/js/lib/jquery-1.4.2/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript">
+             var LnkWcb = LnkWcb || {};
+             LnkWcb.jQuery = jQuery.noConflict(true);
+    		</script>
+      
+        <script language="JavaScript" type="text/javascript" src="/extension/digital/design/forumsante/javascript/visio/js/LnkWcbBouton.js"></script>
+      <!-- End Linkeo script -->
+        <div style="clear:both" ></div>
+  </div>
+                                                         
+
+  <div id="trouverPharma">
+          <h2 class="bleu">Trouvez votre<br /> pharmacie Forum Santé</h2>
+     <a href="http://forumsante.com/Pages/Qui-sommes-nous/Ou-nous-trouver" style="border:0"><img src="/extension/digital/design/forumsante/images/map_france.png" style="position:absolute;top:-33px;right:44px;"/></a>
+     <form action="http://forumsante.com/Pages/Qui-sommes-nous/Ou-nous-trouver" method="GET">
+     <input type="text" name="departement"  placeholder="Code postal"/>
+     <input type="button" id="oksearchcp" value="OK"/>
+     <div class="result bleu smallMentions">  <img style="vertical-align:middle;"src="/extension/digital/design/forumsante/images/warning.png" alt="erreur"/> Code postal non valide ! </div>
+     </form>
+     
+     <script type="text/JavaScript">
+     $(document).ready(function(){
+          $('#trouverPharma input:last').click(function() {
+             var dpt = $('#trouverPharma input').val();
+             if(!testCp(dpt)){ $('#trouverPharma').find('.result:first').show(); return false; }
+             $(this).closest('form').submit();
+          });
+          $('#trouverPharma input:first').keydown(function(e) {
+          if(e.keyCode == 13){$('#trouverPharma input:last').click();return false;}
+      }); 
+     });
+     </script>
+     
+  </div>
+ 
+  
+  
+
+
+
+
+ 
+ 
+
+  
+    
+        <a href="http://forumsante.com/Click-Collect" title="Click And Collect"  id="clickCollect" class="radius">
+      <div class="content">
+       <h2>Commandez en ligne<br /><span style="font-family:arial">&amp;</span> retirez vos achats<br /> en pharmacie</h2>
+      </div>
+    </a>
+
+    
+
+  
+  
+
+
+
+  <div id="fichesConseilsPlusLus" class="radius gradient">
+        <h2 class="bleu">Les fiches conseils<br />les plus lues</h2>
+                <div class="fiche">
+        <h3 class="titre" >
+          <span class="icon" >&#x35;</span><a style="color:#7cbfae" href="/Conseil-Sante/Sexualite/Plaisir/Le-rapport-sexuel-ideal-ne-dure-pas-plus-de-13-minutes"  title="Le rapport sexuel idéal ne dure pas plus de 13 minutes">Le rapport sexuel idéal ne dure pas plus de 13 minutes <i>(26156 vues)</i></a>
+        </h3>
+      </div>
+                <div class="fiche">
+        <h3 class="titre" >
+          <span class="icon" >&#x35;</span><a style="color:#7cbfae" href="/Conseil-Sante/Sexualite/Plaisir/Orgasme-surpuissant-le-Deep-Spot-le-nouveau-point-G"  title="Orgasme surpuissant, le Deep Spot, le nouveau point G !">Orgasme surpuissant, le Deep Spot, le nouveau point G ! <i>(16595 vues)</i></a>
+        </h3>
+      </div>
+                <div class="fiche">
+        <h3 class="titre" >
+          <span class="icon" >&#x35;</span><a style="color:#1d6aad" href="/Conseil-Sante/Sante/Maman-bebe/Peridurale-episiotomie-forceps-cesarienne-ce-que-les-femmes-detestent"  title="Péridurale, épisiotomie, forceps, césarienne... ce que les femmes détestent !">Péridurale, épisiotomie, forceps, césarienne... ce que les femmes détestent ! <i>(8301 vues)</i></a>
+        </h3>
+      </div>
+                <div class="fiche">
+        <h3 class="titre" >
+          <span class="icon" >&#x35;</span><a style="color:#7cbfae" href="/Conseil-Sante/Sexualite/Plaisir/Quelle-sexualite-pendant-la-grossesse"  title="Quelle sexualité pendant la grossesse ?">Quelle sexualité pendant la grossesse ? <i>(7074 vues)</i></a>
+        </h3>
+      </div>
+                <div class="fiche">
+        <h3 class="titre" >
+          <span class="icon" >&#x35;</span><a style="color:#7cbfae" href="/Conseil-Sante/Sexualite/Contraception/Envie-d-avoir-un-bebe-Testez-votre-fertilite"  title="Envie d’avoir un bébé ? Testez votre fertilité !">Envie d’avoir un bébé ? Testez votre fertilité ! <i>(5598 vues)</i></a>
+        </h3>
+      </div>
+      </div>
+  
+      <div id="blocNews">
+    <a id="lanews" href="/Newsletter" title="Newsletter"> <h2 class="orange">Newsletter</h2>  </a>
+    <input type="text" placeholder="Adresse e-mail" id="emailnews">
+    <div class="label">Recevoir la newsletter<br />Forum Santé</div>
+    <input type="button" id="oknews" value="OK"/>
+  </div>
+    
+  
+</div>
+
+
+
+
+<script type="text/JavaScript">
+$(document).ready(function(){
+
+   $('#oknews').click(function(){
+     if(!testMail($('#emailnews').val())){
+       displayAlerte('L\'adresse mail est incorrect.');
+       return false;
+     }
+      $.ajax({type: "POST",url: siteAccess+"/ezjscore/call/forumsanteFrontAnonyme::abonNewsletter",data: 'mail='+$('#emailnews').val()+'&abon=Oui'  });
+      displayAlerte('L\'adresse <b>'+$('#emailnews').val()+'</b> a bien été abonnée à la Newsletter Forum Santé.');
+      $('#emailnews').val('');
+   });
+
+});
+</script>
+               
+                        
+              
+
+
+<div id="footer">
+
+       
+                     <ul>
+          <span>Conseil Santé</span>
+           <li><a href="http://forumsante.com/Conseil-Sante/Psycho" title="Psycho">Psycho</a></li>  <li><a href="http://forumsante.com/Conseil-Sante/Sante" title="Santé">Santé</a></li>  <li><a href="http://forumsante.com/Conseil-Sante/Sexualite" title="Sexualité">Sexualité</a></li>  <li><a href="http://forumsante.com/Conseil-Sante/Beaute" title="Beauté">Beauté</a></li>  <li><a href="http://forumsante.com/Conseil-Sante/Bien-etre" title="Bien-être">Bien-être</a></li>  <li><a href="http://forumsante.com/Conseil-Sante/Nutrition" title="Nutrition">Nutrition</a></li>  <li><a href="http://forumsante.com/Conseil-Sante/Forme" title="Forme">Forme</a></li>  <li><a href="http://forumsante.com/Conseil-Sante/Prevention" title="Prévention">Prévention</a></li>        </ul>
+
+       
+                     <ul>
+          <span>Qui sommes-nous ?</span>
+           <li><a href="http://forumsante.com/Pages/Qui-sommes-nous/Nos-services" title="Nos services">Nos services</a></li>  <li><a href="http://forumsante.com/Pages/Qui-sommes-nous/Ou-nous-trouver" title="Où nous trouver ?">Où nous trouver ?</a></li>        </ul>
+
+       
+       
+
+
+       
+              <ul>
+          <span>Click And Collect</span>
+          <a href="http://forumsante.com/Click-Collect" title="Click And Collect">Commandez et retirez<br />vos achats en pharmacie</a>
+       </ul>
+
+       
+                                   <ul>
+          <span>Posez vos questions<br />à un pharmacien</span>
+          <li><a href="http://forumsante.com/Envoyez-nous-votre-ordonnance" title="Envoyer une ordonnance">Envoyer une ordonnance</a></li>
+          <li><a href="javascript:void(0)" class="callFooter" title="Être rappelé">Être rappelé</a></li>
+          <li><a href="javascript:void(0)" class="visioFooter" title="Visio">Visio</a></li>
+          <li><a href="http://forumsante.com/Forum/Beaute" title="Forum">Forum</a></li>
+       </ul>
+       
+      
+
+
+       
+                     <ul style="width:82px;">
+          <span>Le mag</span>
+            <li><a href="http://forumsante.com/Pages/Le-mag/Forum-Sante-magazine" title="Forum Santé magazine">Forum Santé magazine</a></li>        </ul>
+
+      
+      <ul style="margin:0;width:115px;">
+                <span>L'appli</span>
+          <li style="margin-bottom:10px;"><a href="http://forumsante.com/Pages/L-appli" title="L'appli">Téléchargez l'appli Forum Santé</a></li> 
+      </ul>
+
+      
+      <ul style="margin:0;width:97px;">
+                <span><a href="http://forumsante.com/Actualites" title="Actualités">Actualités</a></span>
+      </ul>
+
+       <div style="clear:both;"></div>
+
+</div>
+
+<div id="subFooter">
+  <span class="digitalConcept">
+      Réalisation <a href="http://digitalconcept.fr" target="_blank" title="Digital Concept" class="digitalLinkFooter">  Digital Concept </a> - 2016
+  </span>
+  <span class="mentions" style="float:right">
+            <a href="http://forumsante.com/Pages/Mentions-legales">Mentions légales</a>
+  </span>
+</div>
+
+
+
+
+<script type="text/JavaScript">
+$(document).ready(function(){
+$('.visioFooter').click(function(){ $('#btnVisio').click(); });
+$('.callFooter').click(function(){ $('#btnBeCall').click(); });
+});
+</script>
+
+
+
+          
+              
+                  <!--[if IE]>
+                  <script type="text/javascript" event="FSCommand(command,args)" for="flash">
+                    eval(args);
+                  </script>
+                  <![endif]-->
+          
+                            
+                            
+          
+                                
+                    
+          
+            </div>
+          
+          
+          
+          <script type="text/JavaScript">
+          
+          
+          
+          $(document).ready(function(){
+                    
+             $('.partage_mail').click(function(){
+               window.scrollTo(0,200);
+            });
+          
+          
+          });
+          
+          </script>
+          
+                
+      
+      
+      
+      
+            
+      
+                          <script>
+        
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', 'UA-52718905-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+
+
+      </body>
+      </html>
+ 

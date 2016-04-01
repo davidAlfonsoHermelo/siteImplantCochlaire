@@ -1,0 +1,102 @@
+﻿
+
+
+
+Modelisation XML de la base textometrique (le metier = le cadre et la trame), importable et echangeable avec d'autres plateformes
+
+
+Jeudi 14 Janvier 2016  18:47:34         Ce document n'est pas encore publie.
+
+
+
+Le Trameur 12.98. Jeudi 14 Janvier 2016  18:47:34
+
+
+
+Fichier traite
+globaldump-3.txt
+
+
+Encodage
+utf-8
+
+
+Nombre d'items
+666607
+
+
+Nombre de délimiteurs
+358245
+
+
+Nombre d'occurrences de forme
+308362
+
+
+Nombre de formes
+20099
+
+
+Nombre d'hapax
+9860
+
+
+Fréquence maximale
+9950
+
+
+Forme maximale
+the
+
+
+Délimiteurs
+. ,:;!?/_-"'()[]{}§$|*><=+ «»
+
+
+Etiquetage Treetagger
+NON
+
+
+
+
+
+
+
+
+1
+1_concordance_14_0_2016_19_29_59.xml
+Concordance (forme) : Sélection de positions
+
+
+2
+2_concordance_14_0_2016_19_29_59.xml
+Concordance (forme) : Sélection de positions
+
+
+3
+3_concordance_14_0_2016_19_29_59.xml
+Concordance (forme) : Sélection de positions
+
+
+
+
+index_14_0_2016_19_29_59.xml
+Sommaire
+
+
+1
+1_concordance_14_0_2016_19_29_59.xml
+Concordance (forme) : Sélection de positions
+
+
+2
+2_concordance_14_0_2016_19_29_59.xml
+Concordance (forme) : Sélection de positions
+
+
+3
+3_concordance_14_0_2016_19_29_59.xml
+Concordance (forme) : Sélection de positions
+
+
+

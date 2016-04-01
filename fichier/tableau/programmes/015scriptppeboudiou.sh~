@@ -1,0 +1,209 @@
+#!/bin/bash
+# charset=utf-8
+# made by Garganta and perfected by Capybara & le troll
+
+
+
+######################################################## Intro ########################################################
+
+
+####### Supression des anciens fichiers pour éviter des résidus parasites à chaque nouveau lancement du script 
+
+rm -r ../contextes/*
+rm -r ../pages_aspirees/*
+rm -r ../pages_dump/*
+
+####### supression optionnelle des tableaux précédents
+#rm -r ../tableaux/*
+
+
+####### Objets et fonctions préparatoires
+
+echo "Ecrivez un nom pour le tableau (pas besoin d'ecrire .html)" ;
+read nom_tableau ;
+
+dossier_urls=../urls
+#fichier_tableau=../tableaux/$nom_tableau.html 
+fichier_tableau=../tableaux/$nom_tableau.html 
+
+exec &> sortie.log
+
+echo $dossier_urls
+echo $fichier_tableau
+
+compteur_tableau=1 ;
+motif="((coc(h)?l(é|e)?a(i)?r(e|s)*?)?( )?implant(e|s)*?( )?(coc(h)?l(é|e)?a(i)?r(e|s)*?)?)|(\b( |')IC\b|\b CI(^-)\b)"
+bouton="(^[ \t]+)(\+|\*|o|\#|%)" #NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!
+
+
+######################################################## Main ########################################################
+
+####### Ouverture du fichier tableau
+echo "<html><head></head><body>" > $fichier_tableau ;
+
+####### Première boucle 'for' : lecture de chacun des fichiers contenant des urls (division des fichiers par langue), création du tableau (1 par fichier contenant des urls)
+for fichier in `ls $dossier_urls`
+{
+	compteur_ligne=1 ;
+	
+	echo "<table align=\"center\" border =\"1\">" >> $fichier_tableau ;
+	echo "<tr><td align = \"center\" colspan=\"9\">Tableau $compteur_tableau </td></tr>" >> $fichier_tableau ;
+	echo "<tr><td>--</td><td>- URL de la page -</td><td>- Page Aspir&eacute;e -</td><td>- Encodage -</td><td>- Converti en -</td><td>- Text Dump -</td><td>- Contexte Dump-</td><td>- Contexte HTML -</td><td>- Index -</td></tr>" >>$fichier_tableau
+	
+####### Deuxième boucle 'for' :  lecture listée de chaque url contenue dans chacun des fichiers spécifiés dans la première boucle 'for'
+	for line in `cat $dossier_urls/$fichier`
+	
+	
+######################### Procésus d'aspiration	#########################
+	{
+		wget $line -O ../pages_aspirees/$compteur_tableau-$compteur_ligne.html ; 
+		# il existe une méthode optionnelle en utilisant 'curl'
+		
+####### Première condition 'if' : si l'aspiration s'est bien déroulée on tente d'obtenir l'encodage via le 'charset' de la page aspirée
+		if [[ $? == 0 ]]
+			then 
+			encodagegrep=$(egrep --binary-file=text -oi -m 1 "meta(.*)charset[^=]*?=*?\"?[^\"\']+?" ../pages_aspirees/$compteur_tableau-$compteur_ligne.html | egrep --binary-file=text -oi "charset[^=]*?=*?\"?[^\"\']+?" | cut -f2 -d= | tr -d " \"" | tr [A-Z] [a-z]) ; # UTF-8 ou ISO-0000
+			echo $encodagegrep ;
+			
+			
+####### Deuxième condition 'if' : si l'encodage de la page aspirée est de l'utf-8 
+			if [[ $encodagegrep == "utf-8" ]]
+				then
+				
+				# dump + contexte + index
+				lynx -dump -nolist -assume_charset=$encodagegrep -display_charset=$encodagegrep $line | egrep -v $bouton > ../pages_dump/$compteur_tableau-$compteur_ligne.txt ;
+                #NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!
+				
+				egrep -i -1 $motif ../pages_dump/$compteur_tableau-$compteur_ligne.txt > ../contextes/$compteur_tableau-$compteur_ligne.txt ;
+				egrep -o "\w+" ../pages_dump/$compteur_tableau-$compteur_ligne.txt | sort | uniq -c | sort -t _ -k 2 -g | sort -r > ../pages_dump/$compteur_tableau-${compteur_ligne}_index.txt ;
+				
+				# remplissage tableau
+				echo "<tr><td>Lien n&deg; $compteur_ligne</td><td><a href=\"$line\">URL n&deg;$compteur_ligne</a></td><td><a href=\"../pages_aspirees/$compteur_tableau-$compteur_ligne.html\">PA n&deg;$compteur_ligne</a></td><td>$encodagegrep</td><td>--</td><td><a href=\"../pages_dump/$compteur_tableau-$compteur_ligne.txt\"> Text Dump n&deg;$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-$compteur_ligne.txt\"> Contexte Dump $compteur_tableau-$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-$compteur_ligne.html\" > Contexte html $compteur_tableau-$compteur_ligne </a></td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_index.txt\">Index n&deg;$compteur_tableau-$compteur_ligne</a></td></tr>" >> $fichier_tableau ;
+				
+				#dump global + contexte global
+				cat ../pages_dump/$compteur_tableau-$compteur_ligne.txt >> ../pages_dump/globaldump-$compteur_tableau.txt ;
+				cat ../contextes/$compteur_tableau-$compteur_ligne.txt >> ../contextes/globalcontextes-$compteur_tableau.txt ;
+
+				#contextes mini-grep
+				
+				#perl ../minigrepmultilingue-v2.2-regexp/minigrepmultilingue.pl "utf-8" ../pages_dump/$compteur_tableau-$compteur_ligne.txt ../minigrepmultilingue-v2.2-regexp/motif-regexp.txt ;
+				#mv ../minigrepmultilingue-v2.2-regexp/resultat-extraction.html ../contextes/$compteur_tableau-$compteur_ligne.html ;
+			
+			
+####### 'Else' complémentaire de la deuxième condition 'if' : si l'encodage de la page aspirée n'est pas de l'utf-8
+			else
+				encodageiconv=$(iconv -l | egrep -oi "\b$encodagegrep\b") ;
+				
+####### Troisième condition 'if' : si l'encodage de la page aspirée est connue de 'iconv'
+				if [[ $encodageiconv == "" ]]
+					then
+					encodagefile=$(file -i ../pages_aspirees/$compteur_tableau-$compteur_ligne.html | cut -f2 -d=) ;
+					encodageiconv=$(iconv -l | egrep -oi "\b$encodagefile\b") ;
+						
+####### Quatrième condition 'if' : si l'encodage connu de 'file' est de l'utf-8
+						if [[ $encodagefile == "utf-8" ]]
+						then
+						
+							# dump + contexte + index
+							lynx -dump -nolist -assume_charset=$encodagegrep -display_charset=$encodagegrep $line | egrep -v $bouton > ../pages_dump/$compteur_tableau-$compteur_ligne.txt ;
+							#NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!
+							
+							egrep -i -1 $motif ../pages_dump/$compteur_tableau-$compteur_ligne.txt > ../contextes/$compteur_tableau-$compteur_ligne.txt ;
+							egrep -o "\w+" ../pages_dump/$compteur_tableau-$compteur_ligne.txt | sort | uniq -c | sort -t _ -k 2 -g | sort -r > ../pages_dump/$compteur_tableau-${compteur_ligne}_index.txt ;
+							echo "encodage file : $encodafile" ;
+							
+							# remplissage tableau
+							echo "<tr><td>Lien n&deg; $compteur_ligne</td><td><a href=\"$line\">URL n&deg;$compteur_ligne</a></td><td><a href=\"../pages_aspirees/$compteur_tableau-$compteur_ligne.html\">PA n&deg;$compteur_ligne</a></td><td>$encodagefile</td><td>--</td><td><a href=\"../pages_dump/$compteur_tableau-$compteur_ligne.txt\"> Text Dump n&deg;$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-$compteur_ligne.txt\"> Contexte Dump $compteur_tableau-$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-$compteur_ligne.html\" > Contexte html $compteur_tableau-$compteur_ligne </a></td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_index.txt\">Index n&deg;$compteur_tableau-$compteur_ligne</a></td></tr>" >> $fichier_tableau ;
+							
+							#dump global + contexte global
+							cat ../pages_dump/$compteur_tableau-$compteur_ligne.txt >> ../pages_dump/globaldump-$compteur_tableau.txt ;
+							cat ../contextes/$compteur_tableau-$compteur_ligne.txt >> ../contextes/globalcontextes-$compteur_tableau.txt ;
+							
+							#contextes mini-grep
+				
+							#perl ../minigrepmultilingue-v2.2-regexp/minigrepmultilingue.pl "utf-8" ../pages_dump/$compteur_tableau-$compteur_ligne.txt ../minigrepmultilingue-v2.2-regexp/motif-regexp.txt ;
+							#mv ../minigrepmultilingue-v2.2-regexp/resultat-extraction.html ../contextes/$compteur_tableau-$compteur_ligne.html ;
+						
+####### 'Else' complémentaire de la quatrième condition 'if' : si l'encodage connu de 'file' n'est pas de l'utf-8
+						else
+							
+####### Cinquième condition 'if' : si l'encodage connu de 'file' n'est pas de l'utf-8 mais il est connu de 'iconv'
+							if [[ $encodageiconv == "" ]]
+							then
+							
+							# remplissage tableau
+							echo "<tr><td>Lien n&deg; $compteur_ligne</td><td><a href=\"$line\">URL n&deg;$compteur_ligne</a></td><td><a href=\"../pages_aspirees/$compteur_tableau-$compteur_ligne.html\">PA n&deg;$compteur_ligne</a></td><td> Non sp&eacute;cifi&eacute; </td><td> -- </td><td> -- </td><td> -- </td><td> -- </td><td> -- </td></tr>" >>$fichier_tableau ;
+							
+####### 'Else' complémentaire de la cinquième condition 'if' : si l'encodage connu de 'file' n'est pas de l'utf-8 et il n'est pas connu de 'iconv'
+							else
+								
+								# dump + conversion iconv + contexte + index
+								lynx -dump -nolist -assume_charset=$encodagegrep -display_charset=$encodagegrep $line | egrep -v $bouton > ../pages_dump/$compteur_tableau-$compteur_ligne.txt ;
+								#NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!
+								
+								iconv -f $encodageiconv -t utf-8 ../pages_dump/$compteur_tableau-$compteur_ligne.txt > ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt ;
+								egrep -i -1 $motif ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt > ../contextes/$compteur_tableau-${compteur_ligne}_UTF8.txt ;
+								egrep -o "\w+" ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt | sort | uniq -c | sort -t _ -k 2 -g | sort -r > ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8_index.txt ;
+								
+								# remplissage tableau
+								echo "<tr><td>Lien n&deg; $compteur_ligne</td><td><a href=\"$line\">URL n&deg;$compteur_ligne</a></td><td><a href=\"../pages_aspirees/$compteur_tableau-$compteur_ligne.html\">PA n&deg;$compteur_ligne</a></td><td>$encodagefile</td><td>utf-8</td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt\"> Text Dump n&deg;$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-${compteur_ligne}_UTF8.txt\"> Contexte Dump $compteur_tableau-$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-${compteur_ligne}_UTF8.html\" > Contexte html $compteur_tableau-$compteur_ligne </a></td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8_index.txt\">Index n&deg;$compteur_tableau-$compteur_ligne</a></td></tr>" >> $fichier_tableau ;
+								
+								#dump global + contexte global
+								cat ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt >> ../pages_dump/globaldump-$compteur_tableau.txt ;
+								cat ../contextes/$compteur_tableau-${compteur_ligne}_UTF8.txt >> ../contextes/globalcontextes-$compteur_tableau.txt ;
+								
+								#contextes mini-grep
+								
+								#perl ../minigrepmultilingue-v2.2-regexp/minigrepmultilingue.pl "utf-8" ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt ../minigrepmultilingue-v2.2-regexp/motif-regexp.txt ;
+								#mv ../minigrepmultilingue-v2.2-regexp/resultat-extraction.html ../contextes/$compteur_tableau-${compteur_ligne}_UTF8.html ;
+							fi
+						fi
+					
+####### 'Else' complémentaire de la troisième condition 'if' : si l'encodage de la page aspirée n'est pas connue de 'iconv'
+				else
+					
+					# dump + conversion iconv + contexte + index
+					lynx -dump -nolist -assume_charset=$encodagegrep -display_charset=$encodagegrep $line | egrep -v $bouton > ../pages_dump/$compteur_tableau-$compteur_ligne.txt ;
+					#NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!NOUVEAU!
+					
+					iconv -f $encodageiconv -t utf-8 ../pages_dump/$compteur_tableau-$compteur_ligne.txt > ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt ;
+					egrep -i -1 $motif ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt > ../contextes/$compteur_tableau-${compteur_ligne}_UTF8.txt ;
+					egrep -o "\w+" ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt | sort | uniq -c | sort -t _ -k 2 -g | sort -r > ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8_index.txt ;
+					
+					# remplissage tableau
+					echo "<tr><td>Lien n&deg; $compteur_ligne</td><td><a href=\"$line\">URL n&deg;$compteur_ligne</a></td><td><a href=\"../pages_aspirees/$compteur_tableau-$compteur_ligne.html\">PA n&deg;$compteur_ligne</a></td><td>$encodagegrep</td><td>utf-8</td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt\"> Text Dump n&deg;$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-${compteur_ligne}_UTF8.txt\"> Contexte Dump $compteur_tableau-$compteur_ligne</a></td><td><a href=\"../contextes/$compteur_tableau-${compteur_ligne}_UTF8.html\" > Contexte html $compteur_tableau-$compteur_ligne </a></td><td><a href=\"../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8_index.txt\">Index n&deg;$compteur_tableau-$compteur_ligne</a></td></tr>" >> $fichier_tableau ;
+					
+					#dump global + contexte global
+					cat ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt >> ../pages_dump/globaldump-$compteur_tableau.txt ;
+					cat ../contextes/$compteur_tableau-${compteur_ligne}_UTF8.txt >> ../contextes/globalcontextes-$compteur_tableau.txt ;
+					
+					#contextes mini-grep
+					
+					#perl ../minigrepmultilingue-v2.2-regexp/minigrepmultilingue.pl "utf-8" ../pages_dump/$compteur_tableau-${compteur_ligne}_UTF8.txt ../minigrepmultilingue-v2.2-regexp/motif-regexp.txt ;
+					#mv ../minigrepmultilingue-v2.2-regexp/resultat-extraction.html ../contextes/$compteur_tableau-${compteur_ligne}_UTF8.html ;
+				fi
+			fi
+		fi
+		
+		# compteur de ligne
+		let "compteur_ligne=compteur_ligne+1" ;
+	}
+	
+####### Fermeture de chaque tableau
+	echo "</table>" >> $fichier_tableau ;
+	echo "<br />" >> $fichier_tableau ;
+	echo -"<table align=\"center\" border =\"1\">" >> $fichier_tableau ;
+	echo "<tr><td align=\"center\" colspan = \"2\"> Fichiers Globaux du tableau n&deg;$compteur_tableau</td></tr>" >> $fichier_tableau ;
+	echo "<tr><td><a href=\"../pages_dump/globaldump-$compteur_tableau.txt\">Global Dump</a></td><td><a href=\"../contextes/globalcontextes-$compteur_tableau.txt\" > Global Context </a></td></tr>" >> $fichier_tableau ;
+	echo "</table><br /><br />" >> $fichier_tableau ;
+	
+	#compteur de tableau
+	let "compteur_tableau=compteur_tableau+1";
+}
+
+####### Fermeture du fichier tableau
+echo "</body></html>" >> $fichier_tableau ;
+
+
+
+

@@ -1,0 +1,507 @@
+<script language="JavaScript">
+// Note: m-1 to account for javascript Date() syntax
+var timesetter = new Date(2016,01-1,13,18,16,05);
+var day = new Array('Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado');
+var month = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'); 
+var ZoneOffsetMSeconds = timesetter.getTimezoneOffset()*60*1000;
+// adjust time to client's time zone
+// Note: client might have bad time zone settings
+timesetter.setTime(timesetter.getTime()-ZoneOffsetMSeconds);
+var TimeNow = "";
+function MakeTime(){
+	setTimeout("MakeTime();",1000);
+	timesetter.setTime(timesetter.getTime()+1000);
+	var mthN = String(timesetter.getMonth());
+	var mth = month[mthN];
+	var mthday = String(timesetter.getDate());
+	var yrN = String(timesetter.getFullYear());
+	var dayN = String(timesetter.getDay());
+	var dd = day[dayN];
+	var hhN  = timesetter.getHours();
+    if(hhN > 12){
+	   var hh = String(hhN - 12);
+	   var AP = " PM";
+	}else if(hhN == 12){
+	   var hh = "12";
+	   var AP = " PM"; 
+	}else if(hhN == 0){
+	   var hh = "12";
+	   var AP = " AM";     
+	}else{
+	   var hh = String(hhN);
+	   var AP = " AM";
+	}
+    var mm  = String(timesetter.getMinutes());
+    var ss  = String(timesetter.getSeconds());
+	TimeNow =  ((hh < 10) ? " " : "") + hh + ((mm < 10) ? ":0" : ":") + mm + ((ss < 10) ? ":0" : ":") + ss + AP + "  " +dd + " " + mthday + " de " + mth  + ", " + yrN ;
+	return TimeNow;
+}// end function MakeTime
+
+function ShowClock(){
+setTimeout("ShowClock();",1000);
+
+document.getElementById("clock").innerHTML = TimeNow;
+
+window.status = TimeNow;
+
+}// end function ShowClock
+
+</script>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Voces en el Silencio - A la Comunidad Sorda en General</title>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<META HTTP-EQUIV="EXPIRES" CONTENT="0">
+<META NAME="RESOURCE-TYPE" CONTENT="DOCUMENT">
+<META NAME="DISTRIBUTION" CONTENT="GLOBAL">
+<META NAME="AUTHOR" CONTENT="Voces en el Silencio">
+<META NAME="COPYRIGHT" CONTENT="Copyright (c) by Voces en el Silencio">
+<META NAME="KEYWORDS" CONTENT="News, news, New, new, Technology, technology, Headlines, headlines, Nuke, nuke, PHP-Nuke, phpnuke, php-nuke, Geek, geek, Geeks, geeks, Hacker, hacker, Hackers, hackers, Linux, linux, Windows, windows, Software, software, Download, download, Downloads, downloads, Free, FREE, free, Community, community, MP3, mp3, Forum, forum, Forums, forums, Bulletin, bulletin, Board, board, Boards, boards, PHP, php, Survey, survey, Kernel, kernel, Comment, comment, Comments, comments, Portal, portal, ODP, odp, Open, open, Open Source, OpenSource, Opensource, opensource, open source, Free Software, FreeSoftware, Freesoftware, free software, GNU, gnu, GPL, gpl, License, license, Unix, UNIX, *nix, unix, MySQL, mysql, SQL, sql, Database, DataBase, Blogs, blogs, Blog, blog, database, Mandrake, mandrake, Red Hat, RedHat, red hat, Slackware, slackware, SUSE, SuSE, suse, Debian, debian, Gnome, GNOME, gnome, Kde, KDE, kde, Enlightenment, enlightenment, Interactive, interactive, Programming, programming, Extreme, extreme, Game, game, Games, games, Web Site, web site, Weblog, WebLog, weblog, Guru, GURU, guru, Oracle, oracle, db2, DB2, odbc, ODBC, plugin, plugins, Plugin, Plugins">
+<META NAME="DESCRIPTION" CONTENT="Portal de Voces en el Silencio">
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<META NAME="REVISIT-AFTER" CONTENT="1 DAYS">
+<META NAME="RATING" CONTENT="GENERAL">
+<META NAME="GENERATOR" CONTENT="PHP-Nuke Copyright (c) 2005 by Francisco Burzi. This is free software, and you may redistribute it under the GPL (http://phpnuke.org/files/gpl.txt). PHP-Nuke comes with absolutely no warranty, for details, see the license (http://phpnuke.org/files/gpl.txt).">
+<!-- tinyMCE -->
+			<script language="javascript" type="text/javascript" src="includes/tiny_mce/tiny_mce.js"></script>
+			<script language="javascript" type="text/javascript">
+		   	tinyMCE.init({
+	      		mode : "textareas",
+				theme : "default",
+				language : "",
+				editor_css : "themes/Sunset/style/editor.css",
+				force_p_newlines: "false",
+				force_br_newlines: "true"
+		   	});
+			</script>
+			<!-- /tinyMCE --><link rel="alternate" type="application/rss+xml" title="RSS" href="backend.php">
+<LINK REL="StyleSheet" HREF="themes/Sunset/style/style.css" TYPE="text/css">
+
+
+
+
+
+</head><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47314054-1', 'voces.org.ar');
+  ga('send', 'pageview');
+
+</script>
+
+<body onLoad="MakeTime(); ShowClock()" leftmargin="0" topmargin="0" bgcolor="#FFC53B" text="#000000" link="#ffcc99" vlink="#035D8A"><center><table border=0 width=100% cellpadding=3 cellspacing=0><tr><td width=19%>
+
+<a href=><img src=themes/Sunset/images/logo-voces.gif Alt="Bienvenido a Voces en el Silencio" border=0></a>
+</td>
+<td align=left><center><a href="banners.php?op=click&amp;bid=5" target="_blank"><img src="/images/banners/banner_asam.gif" border="0" alt='Asam' title='Asam'></a></center></td><td align=left>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="120" height="120">
+                    <param name=movie value="/themes/Sunset/images/barra/voces.swf">
+                    <param name=quality value=high>
+                    <embed src="/themes/Sunset/images/barra/voces.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="120" height="120">
+                    </embed> 
+                  </object>
+</td></tr></table>
+<table width="100%" border=0> 
+  <tbody> 
+  <tr> 
+    <td align=left width="19%"> 
+      <div align="left">
+Bienvenido 
+</div>
+    </td>
+      <TD vAlign=bottom align=left width="13%"> 
+      <DIV align=center><A 
+      href="modules.php?name=Your_Account"><IMG 
+      height=28 alt="Su Cuenta" 
+      src="/themes/Sunset/images/barra/user.gif" width=15 
+      border=0>Su cuenta</A></DIV>
+      </TD>
+      <TD vAlign=bottom align=left width="8%"> 
+      <DIV align=center><A 
+      href="modules.php?name=FAQ"><IMG height=19 
+      alt="Preguntas Frecuentes" 
+      src="/themes/Sunset/images/barra/faq.gif" width=20 
+      border=0>Faqs</A></DIV>
+      </TD>
+      <TD vAlign=bottom align=left width="20%"> 
+        <DIV align=center><A 
+      href="modules.php?name=Stories_Archive"><IMG 
+      height=16 alt="Archivo de Historias" 
+      src="/themes/Sunset/images/barra/archivo.gif" width=20 
+      border=0>Archivo de Historias</A></DIV>
+      </TD>
+      <TD vAlign=bottom align=left width="15%"> 
+        <DIV align=center><A 
+      href="modules.php?name=Submit_News"><IMG height=18 
+      alt="Enviar Noticias" 
+      src="/themes/Sunset/images/barra/enviar_noticia.gif" 
+      width=20 border=0>Enviar Noticias</A></DIV>
+      </TD>
+
+    <td valign=bottom align=left width="7%"> 
+      <div align="center">
+    </div>
+    </td>
+    <td valign=bottom width="38%"> 
+      <div id=clock align=right></div>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td valign=top width=140>
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left3.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=00CC99 width="100%"><b><font size="2" color="#FFFFFF">Menu Principal</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right3.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=00CC99><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=00CC99><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<strong><big>·</big></strong>
+<a href="/index.php">Inicio</a><br>
+<strong><big>·</big></strong>
+<a href="modules.php?name=Top">Top 20</a><br>
+<strong><big>·</big></strong>
+<a href="modules.php?name=Stories_Archive">Archivo de Historias</a><br>
+<strong><big>·</big></strong>
+<a href="modules.php?name=Search">Busqueda</a><br>
+<strong><big>·</big></strong>
+<a href="modules.php?name=Topics">Seleccion por temas</a>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom3.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left3.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=00CC99 width="100%"><b><font size="2" color="#FFFFFF">Libro: Voces o Silencio</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right3.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=00CC99><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=00CC99><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<div align="center" style="text-align: center">&quot;... &ldquo;<em>Voces o silencio</em>&rdquo;,&nbsp;el texto no s&oacute;lo aporta &ndash;y mucho&ndash; al trabajo de los profesionales que desarrollan su tarea con sujetos con sordera o hipoacusia, sino tambi&eacute;n a esos sujetos y, fundamentalmente, a su entorno familiar...&quot;<br>Para m&aacute;s informaci&oacute;n <a href="/cdn-cgi/l/email-protection#bad3d4dcd5faccd5d9dfc994d5c8dd94dbc8"><span class="__cf_email__" data-cfemail="7b12151d143b0d14181e085514091c551a09">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */</script></a><br><br></div>   <div style="text-align: center"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom3.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left1.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=0066CC width="100%"><b><font size="2" color="#FFFFFF">Usuarios Conectados</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right1.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=0066CC><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=0066CC><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<form onsubmit="this.submit.disabled='true'" action="modules.php?name=Your_Account" method="post"><img src="images/blocks/group-4.gif" height="14" width="17"> Bienvenido, <b>Anonymous</b>
+<hr>Nickname <input type="text" name="username" size="10" maxlength="25"><br>Contraseña <input type="password" name="user_password" size="10" maxlength="20"><br><input type="hidden" name="random_num" value="117012"><input type="hidden" name="gfx_check" value="950466"><input type="hidden" name="op" value="login"><input type="submit" value="Login">
+ (<a href="modules.php?name=Your_Account&amp;op=new_user">Regístrate</a>)<hr><img src="images/blocks/group-2.gif" height="14" width="17"> <b><u>Membresía:</u></b><br>
+<img src="images/blocks/ur-moderator.gif" height="14" width="17"> Último: <a href="modules.php?name=Your_Account&amp;op=userinfo&amp;username=gracielavillaverde"><b>gracielavillaverde</b></a><br>
+<img src="images/blocks/ur-author.gif" height="14" width="17"> Nuevos Hoy: <b>0</b><br>
+<img src="images/blocks/ur-admin.gif" height="14" width="17"> Nuevos Ayer: <b>0</b><br>
+<img src="images/blocks/ur-guest.gif" height="14" width="17"> Total: <b>8736</b><br>
+<hr>
+<img src="images/blocks/group-3.gif" height="14" width="17"> <b><u>Gente en línea:</u></b>
+<br>
+<img src="images/blocks/ur-anony.gif" height="14" width="17"> Visitantes: <b>59</b><br>
+<img src="images/blocks/ur-member.gif" height="14" width="17"> Miembros: <b>0</b><br>
+<img src="images/blocks/ur-registered.gif" height="14" width="17"> Total: <b>59</b><br>
+</form>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom1.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left1.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=0066CC width="100%"><b><font size="2" color="#FFFFFF">Usuarios</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right1.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=0066CC><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=0066CC><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<strong><big>·</big></strong>
+<a href="modules.php?name=Forums">Foros</a><br>
+<strong><big>·</big></strong>
+<a href="modules.php?name=Your_Account">Su Cuenta</a><br>
+<strong><big>·</big></strong>
+<a href="modules.php?name=Submit_News">Enviar Noticias</a><br>
+<strong><big>·</big></strong>
+<a href="modules.php?name=Private_Messages">Mensajes Privados</a><br>
+<strong><big>·</big></strong>
+<a href="modules.php?name=Feedback">Sugerencias</a><br>
+<strong><big>·</big></strong>
+<a href="modules.php?name=Recommend_Us">Recomiendenos</a><br>
+<strong><big>·</big></strong>
+<a href="modules.php?name=Web_Links">Links - Enlaces</a>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom1.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left3.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=00CC99 width="100%"><b><font size="2" color="#FFFFFF">Preguntas Frecuentes</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right3.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=00CC99><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=00CC99><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<table width="100%" border="0">
+  <tr>
+    <td width="2%"><strong><big>·</big></strong></td>
+    <td width="98%"><a href="modules.php?name=FAQ&myfaq=yes&id_cat=1&categories=Voces+en+el+Silencio">Voces 
+      en el Silencio</a></td>
+  </tr>
+  <tr>
+    <td width="2%"><strong><big>·</big></strong></td>
+    <td width="98%"><a href="modules.php?name=FAQ&myfaq=yes&id_cat=2&categories=C%F3mo+usar+el+sitio%3F">Como 
+      usar el sitio?</a></td>
+  </tr>
+  <tr>
+    <td width="2%"><strong><big>·</big></strong></td>
+    <td width="98%"><a href="modules.php?name=FAQ&myfaq=yes&id_cat=3&categories=%BFPuedo+cambiar+la+contrase%F1a%3F">Puedo 
+      cambiar la contraseña</a></td>
+  </tr>
+  <tr>
+    <td width="2%"><strong><big>·</big></strong></td>
+    <td width="98%"><a href="modules.php?name=FAQ&myfaq=yes&id_cat=4&categories=%BFC%F3mo+se+editan+los+datos+de+Su+Cuenta%3F">Como 
+      se editan los datos de su cuenta</a> </td>
+  </tr>
+</table>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom3.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+</td><td>&nbsp;</td><td valign=top width=100%>
+
+
+<table width="100%" border="0"><tr><td valign="top" width="100%">
+<table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor=035D8A><tr><td>
+<table width="100%" border="0" cellspacing="1" cellpadding="5" bgcolor=FFFFFF><tr><td>
+<a href=modules.php?name=News&amp;new_topic=1><img src=images/topics/voces.jpg Alt="Voces en el Silencio" border=0 align=right></a>
+<img src="themes/Sunset/images/bullet.gif" border=0 hspace=3><font size=2><b><a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=47"><font class="storycat">Congreso_Sordos</font></a>: A la Comunidad Sorda en General</b></font>
+<br>
+<font size=1 color=035D8A>Editado el <a href="">Voces</a> el Martes a las 13:13:28, el 18 noviembre  del 2003<br>
+Contribución de <a href=modules.php?name=Private_Messages&mode=post&u=443>Voces</a><br><br>
+<font size=2 color=000000>Por <b>Pablo Lemmo y Marita Druetta</b>
+<br>A la Comunidad Sorda en General <br>
+(Sordos Oralistas, Sordos con LSA, Hipoacúsicos, Sordos Implantados, etc.)
+<br>
+Como Coordinadores Generales de la Confederación Argentina de Sordomudos, nos permitimos hacer uso de unas palabras ... <br><br>a la Comunidad Sorda Argentina en referencia al debate entre nosotros por un comunicado nuestro realizado después del 2º Congreso Nacional de Sordos.
+<br><br>
+Estamos recibiendo críticas de unas cuantas personas Sordas oralistas e implantadas (por separado) y además de felicitaciones de otras varias personas Sordas.
+<br><br>
+A todos les queremos decir que NO estamos MARGINANDO A NADIE! Es así de claro.
+<br><br>
+Simplemente estuvimos volcando información de lo que recibimos en el 14º Congreso Mundial de Sordos realizado en Julio de este año en Montreal, Canadá, que en la Argentina NUNCA se habló.
+<br><br>
+En el 2º Congreso Nacional de Sordos hemos dicho: “No hay que marginar a los Sordos oralistas por que fueron educados así desde su niñez”.
+<br><br>
+En varias charlas dijimos: “El Implante Coclear no es una solución para TODOS. Sino para ALGUNOS. Si a esos ALGUNOS les resultan favorables bienvenidos sean. Pero para seleccionar a esos ALGUNOS deberían realizarse rigurosas investigaciones en la audición de la persona que opte por la intervención quirúrgica. Por que la verdad es que el Implante NO es una solución para  todas las personas COMO LO ANDAN DICIENDO LOS PROFESIONALES MÉDICOS”.
+<br><br>NUNCA hemos dicho rotundamente que NO al Implante ni al Oralismo.
+<br><br>
+Solo hemos volcado información que nunca hemos recibido.
+Y ahora se arma una revuelta, una especie de guerra entre Oralistas, Sordos e implantados, cada uno con el afán de defender lo suyo. 
+<br><br>
+Y saben por que se arma eso?<br>
+Por que estamos actuando por nuestras cuentas.<br>
+Ahora vemos el ímpetu y la sabiduría que tenemos todos, no podemos actuar solos. Y todos nosotros lo sabemos.
+Cualquiera puede estar equivocado, cualquiera puede aceptar su error, cualquiera puede tener razón. Todos somos humanos. Para mejorar nuestra humanidad deberíamos trabajar juntos dentro de la Confederación Argentina de Sordomudos.
+Decimos trabajar juntos. Y eso debemos hacer. 
+<br><br>
+Cualquiera que se sienta ofendido por las palabras que hemos volcado, sea en el 2ª Congreso Nacional de Sordos, en nuestro e-mail “El día después II”, ó en este mismo e-mail, les pedimos perdón por que no queremos “guerras”, sino que queremos salvar a los niños sordos que nacen cada día y darles la mejor educación que pueda existir.<br>
+Si seguimos criticándonos, nosotros no seremos los que sufrimos, sino que serán los inocentes niños sordos del mañana.<br><br>
+TODOS nosotros estamos sufriendo las imposibilidades de oir, por más que uno sea oralista ó  implantado, siempre tendrá “algo” que lo dejará incómodo.
+Para que se solucionen todas estas incomodidades, debemos trabajar juntos para que, cada uno con su experiencia vivida, compartamos obligaciones y derechos como seres humanos.
+<br><br>
+La importancia es que debemos mostrar a la sociedad oyente, a los profesionales médicos, a los profesionales docentes la diversidad de posibilidades comunicativas para los niños sordos. Por que hoy en día muchos docentes dicen que la única manera de comunicación de la persona sorda es por la vía oral por que si no quedará marginada de la sociedad. Eso es mentira.<br>
+Los profesionales médicos dicen que la única manera de mejorar la comunicación del sordo es el implante coclear. También es mentira.<br>
+Es mentira por que hay otras opciones de mejorar la comunicación. Por qué no las muestran?
+Se deben poner TODAS las cartas en la mesa.
+<br><br>
+Y nosotros, los sordos, no debemos pensar en nosotros mismos por que eso es egoísta.
+Debemos pensar en el futuro del niño sordo. En darle la mejor educación que se pueda.
+El oralismo, el implante ó las señas se dará DE ACUERDO AL DESARROLLO DEL NIÑO. No de manera forzosa. <br><br>
+
+Nos estamos preguntando hoy, como en el Hospital Garrahan se realizaron implantes cocleares a trescientos bebés con problemas auditivos, se  hicieron los estudios para comprobar que el bebé pueda oir normalmente cuando crezca?<br> 
+Que pasará cuando llegue el momento en que el implante, a esa persona, ya no le rinda?<br>
+
+Estos son nuestros objetivos. Al niño hay que darle todas las posibilidades. No ocultarlas.<br>
+<br>
+Reiteramos que NO MARGINAMOS a ningúna persona Sorda oralista ó implantada.
+Sino que los invitamos a trabajar juntos dentro de la Confederación Argentina de Sordomudos.
+“El que solo habla no progresa, el que hace aprende y progresa”
+Comencemos a trabajar ya por que cada día nacen más niños sordos.
+<br><br>
+Al mismo tiempo informamos que en la Confederación ya está formada una Sub-comisión de Educación y otra de Salud que son los Departamentos adecuados para que consideren estos debates y comencemos a investigar cuál será la manera más adecuada para cada niño Sordo. Por lo tanto si alguién tiene ideas ó sugerencias pueden pasar por las mismas ó simplemente insertarse para trabajar codo a codo con los demás.
+<br><br>Nosotros, ya lo hemos dicho varias veces, necesitamos de TODOS ustedes para compartir proyectos por que NO somos los que sabemos TODO. <br>
+Gracias.<br>
+<b>Pablo Lemmo y Marita Druetta</b><br>
+</font><br><br>
+</td></tr></table>
+</td></tr></table>
+
+</td><td>&nbsp;</td><td valign="top">
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left3.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=00CC99 width="100%"><b><font size="2" color="#FFFFFF">Enlaces Relacionados</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right3.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=00CC99><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=00CC99><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<font class="content"><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=Search&amp;topic=1">Más Acerca de Voces en el Silencio</a><br>
+<strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=Search&amp;author=Voces">Noticias de Voces</a>
+</font><br><hr noshade width="95%" size="1"><center><font class="content"><b>Noticia más leída sobre Voces en el Silencio:</b><br>
+<a href="modules.php?name=News&file=article&sid=801">Inicio Curso Gratuito de Lengua de Señas</a></font></center><br>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom3.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left1.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=0066CC width="100%"><b><font size="2" color="#FFFFFF">Votos del Artículo</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right1.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=0066CC><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=0066CC><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<center>Puntuación Promedio: <b>4.45</b><br>votos: <b>11</b><br><br><img src="images/articles/stars-4.gif" border="1"></center><br><form action="modules.php?name=News" method="post"><center>Por favor tómate un segundo y vota por este artículo:</center><br><input type="hidden" name="sid" value="862"><input type="hidden" name="op" value="rate_article"><input type="radio" name="score" value="5"> <img src="images/articles/stars-5.gif" border="0" alt="Excelente" title="Excelente"><br><input type="radio" name="score" value="4"> <img src="images/articles/stars-4.gif" border="0" alt="Muy Bueno" title="Muy Bueno"><br><input type="radio" name="score" value="3"> <img src="images/articles/stars-3.gif" border="0" alt="Bueno" title="Bueno"><br><input type="radio" name="score" value="2"> <img src="images/articles/stars-2.gif" border="0" alt="Regular" title="Regular"><br><input type="radio" name="score" value="1"> <img src="images/articles/stars-1.gif" border="0" alt="Malo" title="Malo"><br><br><center><input type="submit" value="¡Grabar mi Voto!"></center></form>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom1.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left2.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=996633 width="100%"><b><font size="2" color="#FFFFFF">Opciones</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right2.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=996633><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=996633><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<br>&nbsp;<img src='images/print.gif' border='0' alt='Versión Imprimible' title='Versión Imprimible'> <a href="modules.php?name=News&amp;file=print&amp;sid=862">Versión Imprimible</a><br><br></center>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom2.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+</td></tr></table>
+
+
+<!-- COMMENTS NAVIGATION BAR START -->
+
+<a name="comments"></a>
+<table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#FFCC99"><tr><td>
+<table width="100%" border="0" cellspacing="1" cellpadding="8" bgcolor="#FFFFE6"><tr><td>
+<table width="100%" border="0" cellspacing="1" cellpadding="2">
+<tr><td bgcolor="#FFCC99" align="center"><font class="content" color="FFFFFF">"A la Comunidad Sorda en General" | <a href="modules.php?name=Your_Account"><font color="FFFFFF">Entrar/Crear Cuenta</font></a> | <B>4</B> Comentarios | <a href='modules.php?name=Search&type=comments&sid=862'>Buscar Discusión</a></font></td></tr>
+<tr><td bgcolor="#FFFFE6" align="center" width="100%">
+<tr><td bgcolor="#FFCC99" align="center"><font class="tiny">Los comentarios son propiedad de quien los envió. No somos responsables por su contenido.</font></td></tr></table>
+
+<!-- COMMENTS NAVIGATION BAR END -->
+
+</td></tr></table></td></tr></table>
+<br><table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#FFCC99"><tr><td>
+<table width="100%" border="0" cellspacing="1" cellpadding="8" bgcolor="#FFFFE6"><tr><td>
+<center>No se permiten comentarios Anónimos, <a href="modules.php?name=Your_Account&amp;op=new_user">Regístrate</a> por favor</center></td></tr></table></td></tr></table>
+<br><table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#FFCC99"><tr><td>
+<table width="100%" border="0" cellspacing="1" cellpadding="8" bgcolor="#FFFFE6"><tr><td>
+<a name="103"></a><table width="99%" border="0"><tr bgcolor="#FFFFE6"><td width="500"><b>Re: A la Comunidad Sorda en General</b> <font class="content">(Puntuación 1)<br>por Anahi el Martes a las 18:26:50, el 18 noviembre  del 2003<br>(<a href="modules.php?name=Your_Account&amp;op=userinfo&amp;username=Anahi">Información del Usuario</a> | <a href="modules.php?name=Private_Messages&amp;mode=post&amp;u=12">Enviar un Mensaje</a>) </font></td></tr><tr><td>Prezados Pablo e Marita,<br>
+<br>
+Estou quase que totalmente de acordo com a carta de vocês, salvo numa exceção. É aquela que diz respeito ao fato de que os médicos dizem que o implante coclear é a única maneira de melhorar a comunicação dos surdos:<br>
+<br>
+1. "Por que la verdad es que el Implante NO es una solución para  todas las personas COMO LO ANDAN DICIENDO LOS PROFESIONALES MÉDICOS”;<br>
+<br>
+2. "Los profesionales médicos dicen que la única manera de mejorar la comunicación del sordo es el implante coclear. También es mentira."<br>
+<br>
+Permita-me lhes dizer que isso não é verdade, pelo menos aqui no Brasil. Desde o momento da candidatura ao implante coclear, todos os surdos candidatos são devidamente avisados  sobre muitos aspectos, um deles exatamente o fato de que o implante coclear NÃO se aplica a todos os casos de surdos. Eu mesma, como surda implantada, quando pessoas vêm me pedir informações sobre implante coclear, já deixo claro isso, pois todos pensam que o IC é "um milagre de uma hora para outra". De fato, não é. Mais do que um milagre, é um processo de aprendizagem novo do ouvir e a esse processo é que chamam de milagre, posto que é um processo demorado e que exige extrema paciência, variando de pessoa para pessoa. Todos os profissionais médicos deixam claro isso e eu mesma já sabia como seria o processo em mim. Só para vocês verem um pequeno detalhe: aqui no Brasil, um dos requisitos gerais para um surdo ser forte potencial candidato ao IC é justamente o de ele possuir uma excelente oralidade. Em outras palavras, ser um surdo oralizado (ou oralista, tanto faz) o torna potencial candidato ao IC. Agora, existem casos de surdos implantados que são sinalizados, isto é, foram educados na língua de sinais, não possuindo domínio da linguagem oral. São raros, é verdade, mas existem.<br>
+<br>
+Era isso que eu precisava lhes esclarecer. No resto da carta, estão de parabéns.<br>
+<br>
+Cordiais saudações desde Brasil,<br>
+<br>
+Anahi GM - surda oralizada e implantada.<br>
+</td></tr></table><br><br></ul><hr noshade size="1"></td></tr></table></td></tr></table>
+<br><table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#FFCC99"><tr><td>
+<table width="100%" border="0" cellspacing="1" cellpadding="8" bgcolor="#FFFFE6"><tr><td>
+<a name="104"></a><table width="99%" border="0"><tr bgcolor="#FFFFE6"><td width="500"><b>Re: A la Comunidad Sorda en General</b> <font class="content">(Puntuación 1)<br>por El_Condor el Martes a las 19:14:28, el 18 noviembre  del 2003<br>(<a href="modules.php?name=Your_Account&amp;op=userinfo&amp;username=El_Condor">Información del Usuario</a> | <a href="modules.php?name=Private_Messages&amp;mode=post&amp;u=628">Enviar un Mensaje</a>) </font></td></tr><tr><td>Pablo... pongamos ciertas cosas en su lugar.<br><br>
+A) Primero decis que no fue tu intención discriminar al implantado: <br><br>
+Pusiste esta oración: "no necesitamos ir contra la naturaleza llenando de artificios tecnológicos nuestro cuerpo humano como con el implante coclear, que es una obra malvada de los humanos que creen que es la fórmula mágica para hacernos oyentes. "<br><br>
+Entonces al calificar de "obra malvada" al implante coclear, ya está claramente dando lugar a una interpretación discriminatoria de parte del lector.  Si vos personalmente, Pablo Lemmo, decis que nunca marginas, nunca discriminas al implantado, por favor volvee a leer el párrafo que escribiste porque justamente diste la impresión de discriminar al implantado, y peor causaste la impresión de que es tu postura<br><br>
+Es por eso que se armó la revuelta. <br><br>
+B) Ahora decis en tu otro append esto: <br><br>
+"El Implante Coclear no es una solución para TODOS. Sino para ALGUNOS. Si a esos ALGUNOS les resultan favorables bienvenidos sean. Pero para seleccionar a esos ALGUNOS deberían realizarse rigurosas investigaciones en la audición de la persona que opte por la intervención quirúrgica. Por que la verdad es que el Implante NO es una solución para todas las personas COMO LO ANDAN DICIENDO LOS PROFESIONALES MÉDICOS”. <br><br>
+Aca estás diciendo que los profesionales médicos andan diciendo que el implante coclear no es una solución <br><br>
+En el mismo append pones esta otra oracion: Los profesionales médicos dicen que la única manera de mejorar la comunicación del sordo es el implante coclear<br><br>
+Pablo, estás deslizando una contradicción en lo que decis: En un mismo append, en un lado decis que los médicos dicen que el implante coclear no es una solución para todas las personas al mismo tiempo que en otro lado decis que los profesionales medicos dicen que la unica manera de mejorar la comunicación del sordo es el implante coclear <br><br>
+Entonces, Pablo, te recomiendo que replantes tu postura, pienses en lo que decis antes de decir cosas porque las contradicciones solo aportan confusiones<br><br>
+C) Decis: ¿Que pasará en el futuro cuando a los implantados no les rinda?  La respuesta es: NO lo sabemos.  La tecnología está permanentemente innovandose.  ¿Cómo era la tecnología hace 30 años?  Solo existía audifono de caja que no suministraba suficiente resto auditivo.  Luego evoluciónó hacia el audifono retroauricular y ahora existe implante coclear, audifonos digitales, audífonos implantables.  <br><br>
+Quizá mañana haya cultivo de células cilliadas, el implante coclear interno que no requiera el uso de procesador de habla<br><br>
+Lo unico concreto que si puedo decirte es no me parece argumento sólido como para definir una postura en contra del implante. <br><br>
+Si yo no hubiera implantado, no estaría hablando por teléfono, ni escuchando música, ni experimentando sensaciones emocionales que transmite la música, etc.  Quizá algún día se me rompa el implante, o ya no me rinda más.  Al menos ya habré disfrutado mi vida<br><br>
+Si no estás marginando a nadie tal como decís entonces debes replantear la postura, el texto del mensaje en que escribis<br><br>
+La vida es un riesgo, esa es la realidad que hay que aceptarla. <br><br>
+</td></tr></table><br><br><ul><li><font class="content" color="000000"><a href="modules.php?name=News&amp;file=comments&amp;op=showreply&amp;tid=105&amp;sid=862&amp;pid=104&mode=thread&order=0&thold=0#105">La tecnología tiene sus engaños</a> por pacho el Miércoles a las 16:53:32, el 19 noviembre  del 2003</font><br><ul><li><font class="content" color="000000"><a href="modules.php?name=News&amp;file=comments&amp;op=showreply&amp;tid=109&amp;sid=862&amp;pid=105&mode=thread&order=0&thold=0#109">Re: La tecnología tiene sus engaños</a> por Rosario el Martes a las 15:39:24, el 25 noviembre  del 2003</font><br></ul></ul><hr noshade size="1"></td></tr></table></td></tr></table>
+</td></tr></table></td></tr></table><span class="footmsg">
+<a href="http://phpnuke.org">PHP-Nuke</a> Copyright &copy; 2005 by Francisco Burzi. This is free software, and you may redistribute it under the <a href="http://phpnuke.org/files/gpl.txt">GPL</a>. PHP-Nuke comes with absolutely no warranty, for details, see the <a href="http://phpnuke.org/files/gpl.txt">license</a>.<br>Página Generada en: 0.15 Segundos<br>
+</span>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>
